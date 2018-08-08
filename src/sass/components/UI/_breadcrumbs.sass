@@ -1,0 +1,23 @@
+.breadcrumb
+    &-item
+        font-family: CorpidE1sSCd
+        font-size: 16px
+        text-align: justify
+        color: $title_dark
+        display: inline-block
+        position: relative
+        margin-right: 24px
+        line-height: 1
+        &:not(:last-child):after
+            content: '>'
+            position: absolute
+            top: 50%
+            right: -18px
+            transform: translateY(-50%)
+            color: $title_dark
+        &.active
+            color: #6f6f6e
+        &:nth-last-of-type(2)
+            border-bottom: 1px solid $title_dark
+            &::after
+                color: #6f6f6e

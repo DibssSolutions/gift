@@ -1,0 +1,16 @@
+---
+title: Index page
+---
+{# IMPORTING COMPONENTS  #}
+{% import "components/_title-big.html" as titleBig %}
+
+{# MAIN LAYOUT #}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% include "components/_select.html" %}
+{% include "components/_breadcrumb.html" %}
+{{titleBig.block('Please login or continue as guest')}}
+
+{% endblock %}
