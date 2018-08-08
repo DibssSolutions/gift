@@ -1,4 +1,12 @@
-<select name='select-green' id="select1" class="js-select" >
+{% macro s(props) %}
+    <select name='{{props.name}}' id="{{props.id}}" class="js-select" data-placeholder="{{props.placeholder}}e">
+        {% for option in props.options %}
+            <option value='{{option.value}}'>{{option.title}}</option>
+        {% endfor %}
+    </select>
+{% endmacro %}
+{# 
+<select name='select-green' id="select1" class="js-select" data-placeholder="Select a state">
     <option value='Birthday' >Occasions</option>
     <option value='Just Because' >Any Occasion</option>
     <option value='Christmas'>Christmas</option>
@@ -34,4 +42,4 @@
     <option value='Gifts For Loved Ones'>Gifts For Loved Ones</option>
     <option value='Gifts For Men'>Gifts For Men</option>
     <option value='Gifts For Women'>Gifts For Women</option>
-</select>
+</select> #}

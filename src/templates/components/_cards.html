@@ -1,0 +1,16 @@
+{% import "components/_select.html" as select %}
+
+{% macro card(props) %} 
+    {% for prop in props %}
+        <div class="card {{prop.size}}">
+            <div class="card__image" style='background-color: url(img/{{prop.image.src}})'></div>
+            <h3 class="card__title">{{prop.title}}</h3>
+            <div class="card__divider"></div>
+            <div class="card__id-wrapper"><span>ID:</span><span class="card__id">{{prop.id}}</span></div>
+            <div class="card__price">from {{prop.price}}</div>
+            <div class="card__select">
+                  {{select.s(props.selectOptions)}}
+            </div>
+        </div>
+    {% endfor %}
+{% endmacro %}

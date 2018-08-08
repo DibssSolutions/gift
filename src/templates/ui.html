@@ -1,9 +1,59 @@
 ---
 title: Index page
 ---
-{# IMPORTING COMPONENTS  #}
-{% import "components/_title-big.html" as titleBig %}
+{% set cards = [
 
+{
+	"size": "big",
+	"image": "gift_img_1.jpg",
+	"title": "fsdfs",
+	"id": "1",
+	"price": "333.33",
+	"select": [
+		"name": "sel1",
+		"id": "sel1", 
+		"placeholder": "sel1",
+		"options": [
+			{ 
+				"value": "2", 
+				"title": "Occasions"	
+			},
+			{ 
+				"value": "3", 
+				"title": "Any ocassion"	
+			}
+		]
+	]
+}, 
+{
+	"size": "big",
+	"image": "gift_img_1.jpg",
+	"title": "fsdfs",
+	"id": "1",
+	"price": "333.33",
+	"select": [
+		"name": "sel1",
+		"id": "sel1", 
+		"placeholder": "sel1",
+		"options": [
+			{ 
+				"value": "2", 
+				"title": "Occasions"	
+			},
+			{ 
+				"value": "3", 
+				"title": "Any ocassion"	
+			}
+		]
+	]
+}
+
+
+] %}
+
+{# IMPORTING COMPONENTS  #}
+{% import "components/_titles.html" as titles %}
+{% import "components/_cards.html" as cards %}
 {# MAIN LAYOUT #}
 {% extends "layouts/_layout.html" %}
 
@@ -11,6 +61,12 @@ title: Index page
 
 {% include "components/_select.html" %}
 {% include "components/_breadcrumb.html" %}
-{{titleBig.block('Please login or continue as guest')}}
+{{titles.titleBiggest('Please login or continue as guest')}}
+{{titles.titleBig('March 8 Flowers Gifts')}}
+{{titles.titleMiddle('Customer Reviews:')}}
+
+<div class="text">Falling in love is easy, but staying in love takes devotion. We have put together a bouquet that will help you go that extra mile. Your recipient will receive lovely pink Roses, yellow and purple Alstroemeria, and a stunning Orchid Branch. Add to your Anniversary, ask for forever, or make her smile with Burst Of Romance.</div>
+
+{{cards.card(cards1)}}
 
 {% endblock %}

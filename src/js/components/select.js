@@ -25,5 +25,5 @@ $(document).ready(function() {
   // ===== SELECT 2 =====
 
   let select_2 = $('.js-select');
-  select_2.select2({ placeholder: 'Select a state', width: '250px', dropdownAutoWidth: true, minimumResultsForSearch: Infinity });
-});
+  select_2.select2({ width: '100%', dropdownAutoWidth: true, minimumResultsForSearch: Infinity });
+}); 
