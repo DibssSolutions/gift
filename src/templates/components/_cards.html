@@ -1,16 +1,35 @@
-{% import "components/_select.html" as select %}
+{% import "components/_select.html" as select_builder %}
+{% import "partials/_mixins.html" as mixins %}
 
-{% macro card(props) %} 
+{% macro card(props) %}
     {% for prop in props %}
-        <div class="card {{prop.size}}">
-            <div class="card__image" style='background-color: url(img/{{prop.image.src}})'></div>
-            <h3 class="card__title">{{prop.title}}</h3>
-            <div class="card__divider"></div>
-            <div class="card__id-wrapper"><span>ID:</span><span class="card__id">{{prop.id}}</span></div>
-            <div class="card__price">from {{prop.price}}</div>
-            <div class="card__select">
-                  {{select.s(props.selectOptions)}}
+        <div class="card card__{{prop.size}}">
+            <div class="card__image" style='background-image: url(./assets/img/general/gifts-1/{{prop.image.src}})'>
+                {% if prop.free_mark %}
+                    <div class="card__freemark">
+                        <img src="./assets/img/general/chocolate-free.png" alt="">
+                    </div> 
+                {% endif %}
             </div>
+            <h3 class="card__title">{{prop.title}}</h3>
+            {% if prop.title_divider %}
+                <div class="card__divider"></div>
+            {% endif %}
+            {% if prop.id %}
+                <div class="card__id">
+                    <span class="card__id--id">ID:</span><span class="card__id--number">{{prop.id}}</span>
+                </div>
+            {% endif %}
+            {% if prop.price %}
+                <div class="card__price">from $
+                    {{prop.price}}
+                </div>
+            {% endif %}
+            {% if prop.select %}
+            <div class="card__select">
+                {{select_builder.sel(prop.select)}}
+            </div>
+            {% endif %}
         </div>
     {% endfor %}
 {% endmacro %}

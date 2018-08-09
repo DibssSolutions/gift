@@ -1,4 +1,4 @@
-{% macro s(props) %}
+{% macro sel(props) %}
     <select name='{{props.name}}' id="{{props.id}}" class="js-select" data-placeholder="{{props.placeholder}}e">
         {% for option in props.options %}
             <option value='{{option.value}}'>{{option.title}}</option>

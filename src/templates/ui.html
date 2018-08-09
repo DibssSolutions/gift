@@ -1,72 +1,238 @@
----
-title: Index page
----
-{% set cards = [
-
-{
-	"size": "big",
-	"image": "gift_img_1.jpg",
-	"title": "fsdfs",
-	"id": "1",
-	"price": "333.33",
-	"select": [
-		"name": "sel1",
-		"id": "sel1", 
-		"placeholder": "sel1",
-		"options": [
-			{ 
-				"value": "2", 
-				"title": "Occasions"	
-			},
-			{ 
-				"value": "3", 
-				"title": "Any ocassion"	
-			}
-		]
-	]
-}, 
-{
-	"size": "big",
-	"image": "gift_img_1.jpg",
-	"title": "fsdfs",
-	"id": "1",
-	"price": "333.33",
-	"select": [
-		"name": "sel1",
-		"id": "sel1", 
-		"placeholder": "sel1",
-		"options": [
-			{ 
-				"value": "2", 
-				"title": "Occasions"	
-			},
-			{ 
-				"value": "3", 
-				"title": "Any ocassion"	
-			}
-		]
-	]
-}
-
-
-] %}
-
+--- title: Index page ---
 {# IMPORTING COMPONENTS  #}
 {% import "components/_titles.html" as titles %}
 {% import "components/_cards.html" as cards %}
+
+{% set cards1 = [
+
+		{
+				"size": "big",
+				"image": {
+						"src": "gift_img_1.jpg"
+				},
+				"free_mark": true,
+				"title": "Endless Connection Necklace in Rose",
+				"title_divider": true,
+				"id": "11019",
+				"price": "333.33",
+				"select": {
+						"name": "sel1",
+						"id": "sel1",
+						"placeholder": "sel1",
+						"options": [
+								{
+										"value": "1",
+										"title": "€ 526.83 (EUR)"
+								}, {
+										"value": "2",
+										"title": "€ 126.83 (EUR)"
+								}
+						]
+				}
+		}, {
+				"size": "big",
+				"image": {
+						"src": "gift_img_1.jpg"
+				},
+				"title": "Morning Delights Coffee Cake",
+				"title_divider": true,
+				"id": "5056",
+				"price": "333.33",
+				"select": {
+						"name": "sel2",
+						"id": "sel2",
+						"placeholder": "sel1",
+						"options": [
+								{
+										"value": "2",
+										"title": "Occasions"
+								}, {
+										"value": "3",
+										"title": "Any ocassion"
+								}
+						]
+				}
+		}, {
+				"size": "big",
+				"image": {
+						"src": "gift_img_2.jpg"
+				},
+				"title": "Mixed Tulips Selection",
+				"title_divider": true,
+				"id": "8056",
+				"price": "Price selection",
+				"select": {
+						"name": "sel3",
+						"id": "sel3",
+						"placeholder": "sel1",
+						"options": [
+								{
+										"value": "1",
+										"title": "€ 526.83 (EUR)"
+								}, {
+										"value": "2",
+										"title": "€ 526.83 (EUR)"
+								}, {
+										"value": "3",
+										"title": "€ 526.83 (EUR)"
+								}, {
+										"value": "4",
+										"title": "€ 526.83 (EUR)"
+								}
+						]
+				}
+		}, {
+				"size": "big",
+				"image": {
+						"src": "gift_img_4.jpg"
+				},
+				"title": "Twist of Fate Adjustable Ring",
+				"title_divider": true,
+				"id": "11024",
+				"price": "Price selection",
+				"select": {
+						"name": "sel4",
+						"id": "sel4",
+						"placeholder": "sel4",
+						"options": [
+								{
+										"value": "1",
+										"title": "€ 526.83 (EUR)"
+								}, {
+										"value": "2",
+										"title": "€ 526.83 (EUR)"
+								}, {
+										"value": "3",
+										"title": "€ 526.83 (EUR)"
+								}, {
+										"value": "4",
+										"title": "€ 526.83 (EUR)"
+								}
+						]
+				}
+		}, {
+				"size": "big",
+				"image": {
+						"src": "gift_img_1.jpg"
+				},
+				"free_mark": true,
+				"title": "Endless Connection Necklace in Rose",
+				"title_divider": true,
+				"id": "11019",
+				"price": "333.33",
+				"select": {
+						"name": "sel5",
+						"id": "sel5",
+						"placeholder": "sel5",
+						"options": [
+								{
+										"value": "1",
+										"title": "€ 526.83 (EUR)"
+								}, {
+										"value": "2",
+										"title": "€ 126.83 (EUR)"
+								}
+						]
+				}
+		}, {
+				"size": "big",
+				"image": {
+						"src": "gift_img_1.jpg"
+				},
+				"title": "Morning Delights Coffee Cake",
+				"title_divider": true,
+				"id": "5056",
+				"price": "333.33",
+				"select": {
+						"name": "sel6",
+						"id": "sel6",
+						"placeholder": "sel6",
+						"options": [
+								{
+										"value": "2",
+										"title": "Occasions"
+								}, {
+										"value": "3",
+										"title": "Any ocassion"
+								}
+						]
+				}
+		}, {
+				"size": "big",
+				"image": {
+						"src": "gift_img_2.jpg"
+				},
+				"title": "Mixed Tulips Selection",
+				"title_divider": true,
+				"id": "8056",
+				"price": "Price selection",
+				"select": {
+						"name": "sel7",
+						"id": "sel7",
+						"placeholder": "sel7",
+						"options": [
+								{
+										"value": "1",
+										"title": "€ 526.83 (EUR)"
+								}, {
+										"value": "2",
+										"title": "€ 526.83 (EUR)"
+								}, {
+										"value": "3",
+										"title": "€ 526.83 (EUR)"
+								}, {
+										"value": "4",
+										"title": "€ 526.83 (EUR)"
+								}
+						]
+				}
+		}, {
+				"size": "big",
+				"image": {
+						"src": "gift_img_4.jpg"
+				},
+				"title": "Twist of Fate Adjustable Ring",
+				"title_divider": true,
+				"id": "11024",
+				"price": "Price selection",
+				"select": {
+						"name": "sel8",
+						"id": "sel8",
+						"placeholder": "sel8",
+						"options": [
+								{
+										"value": "1",
+										"title": "€ 526.83 (EUR)"
+								}, {
+										"value": "2",
+										"title": "€ 526.83 (EUR)"
+								}, {
+										"value": "3",
+										"title": "€ 526.83 (EUR)"
+								}, {
+										"value": "4",
+										"title": "€ 526.83 (EUR)"
+								}
+						]
+				}
+		}
+] %}
+
 {# MAIN LAYOUT #}
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
+		<div class="inner">
+				{% include "components/_select.html" %}
+				{% include "components/_breadcrumb.html" %}
+				{{titles.titleBiggest('Please login or continue as guest')}}
+				{{titles.titleBig('March 8 Flowers Gifts')}}
+				{{titles.titleMiddle('Customer Reviews:')}}
 
-{% include "components/_select.html" %}
-{% include "components/_breadcrumb.html" %}
-{{titles.titleBiggest('Please login or continue as guest')}}
-{{titles.titleBig('March 8 Flowers Gifts')}}
-{{titles.titleMiddle('Customer Reviews:')}}
+				<div class="text">Falling in love is easy, but staying in love takes devotion. We have put together a bouquet that will help you go that extra mile. Your recipient will receive lovely pink Roses, yellow and purple Alstroemeria, and a stunning Orchid Branch. Add to your Anniversary, ask for forever, or make her smile with Burst Of Romance.</div>
 
-<div class="text">Falling in love is easy, but staying in love takes devotion. We have put together a bouquet that will help you go that extra mile. Your recipient will receive lovely pink Roses, yellow and purple Alstroemeria, and a stunning Orchid Branch. Add to your Anniversary, ask for forever, or make her smile with Burst Of Romance.</div>
-
-{{cards.card(cards1)}}
+				<div class="cards">{{cards.card(cards1)}}</div>
+		</div>
+		{% include "partials/_footer.html" %}
 
 {% endblock %}
