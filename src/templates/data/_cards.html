@@ -1,22 +1,16 @@
---- title: Index page ---
-{# IMPORTING COMPONENTS  #}
-{% import "components/_titles.html" as titles %}
-{% import "components/_cards.html" as cards %}
-
-{% set cards1 = [
-
+{% set cardsCategoryPage = [
 		{
 				"size": "big",
 				"image": {
 						"src": "gift_img_1.jpg"
 				},
 				"free_mark": true,
-				"title": "Endless Connection Necklace in Rose",
+				"title": "Endless Connection Necklace in Rose ",
 				"title_divider": true,
 				"id": "11019",
 				"price": "333.33",
 				"select": {
-						"name": "sel1",
+						" name ": "sel1",
 						"id": "sel1",
 						"placeholder": "sel1",
 						"options": [
@@ -63,15 +57,15 @@
 				"price": "Price selection",
 				"select": {
 						"name": "sel3",
-						"id": "sel3",
-						"placeholder": "sel1",
+						"id": " sel3 ",
+						"placeholder": "sel3",
 						"options": [
 								{
 										"value": "1",
-										"title": "€ 526.83 (EUR)"
+										" title ": "€ 526.83 (EUR)"
 								}, {
 										"value": "2",
-										"title": "€ 526.83 (EUR)"
+										" title ": "€ 526.83 (EUR)"
 								}, {
 										"value": "3",
 										"title": "€ 526.83 (EUR)"
@@ -139,9 +133,9 @@
 				"image": {
 						"src": "gift_img_1.jpg"
 				},
-				"title": "Morning Delights Coffee Cake",
+				"title": "Morning Delights Coffee Cake ",
 				"title_divider": true,
-				"id": "5056",
+				"id": " 5056 ",
 				"price": "333.33",
 				"select": {
 						"name": "sel6",
@@ -193,8 +187,8 @@
 				},
 				"title": "Twist of Fate Adjustable Ring",
 				"title_divider": true,
-				"id": "11024",
-				"price": "Price selection",
+				"id": " 11024 ",
+				"price": "priceselection",
 				"select": {
 						"name": "sel8",
 						"id": "sel8",
@@ -203,6 +197,7 @@
 								{
 										"value": "1",
 										"title": "€ 526.83 (EUR)"
+
 								}, {
 										"value": "2",
 										"title": "€ 526.83 (EUR)"
@@ -217,26 +212,3 @@
 				}
 		}
 ] %}
-
-{# MAIN LAYOUT #}
-{% extends "layouts/_layout.html" %}
-
-{% block content %}
-		<div class="inner">
-				{% include "components/_select.html" %}
-				{% include "components/_breadcrumb.html" %}
-				{{titles.titleBiggest('Please login or continue as guest')}}
-				{{titles.titleBig('March 8 Flowers Gifts')}}
-				{{titles.titleMiddle('Customer Reviews:')}}
-
-				<div class="text">Falling in love is easy, but staying in love takes devotion. We have put together a bouquet that will help you go that extra mile. Your recipient will receive lovely pink Roses, yellow and purple Alstroemeria, and a stunning Orchid Branch. Add to your Anniversary, ask for forever, or make her smile with Burst Of Romance.</div>
-
-				{% include "components/_dropdown.html" %}
-
-				<div class="cards">{{cards.card(cards1)}}</div>
-
-				{% include "components/_buttons.html" %}
-		</div>
-		{% include "partials/_footer.html" %}
-
-{% endblock %}

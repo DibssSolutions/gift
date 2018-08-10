@@ -1,0 +1,81 @@
+{% set dd = [
+		{
+				"title": 'Customer Care',
+				"list": [
+						{
+								"text": "Contact Us 24x7",
+								"link": "#"
+						}, {
+								"text": "About Us",
+								"link": "#"
+						}, {
+								"text": "Delivery Policy",
+								"link": "#"
+						}, {
+								"text": "Delivery Area",
+								"link": "#"
+						}, {
+								"text": "FAQ",
+								"link": "#"
+						}, {
+								"text": "How to Order",
+								"link": "#"
+						}, {
+								"text": "Payments",
+								"link": "#"
+						}, {
+								"text": "Testimonials",
+								"link": "#"
+						}, {
+								"text": "Track Order",
+								"link": "#"
+						}
+				]
+		}, 
+		{
+				"title": 'Customer Care',
+				"list": [
+						{
+								"text": "Contact Us 24x7",
+								"link": "#"
+						}, {
+								"text": "About Us",
+								"link": "#"
+						}, {
+								"text": "Delivery Policy",
+								"link": "#"
+						}, {
+								"text": "Delivery Area",
+								"link": "#"
+						}, {
+								"text": "FAQ",
+								"link": "#"
+						}, {
+								"text": "How to Order",
+								"link": "#"
+						}, {
+								"text": "Payments",
+								"link": "#"
+						}, {
+								"text": "Testimonials",
+								"link": "#"
+						}, {
+								"text": "Track Order",
+								"link": "#"
+						}
+				]
+		}
+] %}
+
+{% for drop in dd %}
+		<div class="dropdown js-dropdown-on-click">
+				<h4 class="js-dropdown-btn dropdown__trigger">{{drop.title}}</h4>
+				<ul class="dropdown__list">
+						{% for item in drop.list %}
+								<li class="dropdown__item">
+										<a href="{{item.link}}" class="dropdown__link">{{item.text}}</a>
+								</li>
+						{% endfor %}
+				</ul>
+		</div>
+{% endfor %}

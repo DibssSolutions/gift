@@ -1,0 +1,60 @@
+.shopping-btn
+	display: inline-block
+	vertical-align: middle
+	position: relative
+	padding: 14px
+	background-color: $main-green
+	font-family: CorpidE1sSCd
+	font-size: 17px
+	font-weight: bold
+	font-style: normal
+	font-stretch: normal
+	line-height: normal
+	letter-spacing: -0.4px
+	text-align: center
+	color: #ffffff
+	text-transform: uppercase
+	&:after
+		position: absolute
+		content: ''
+		top: 0
+		height: 100%
+		width: 2px
+		background-color: #fff
+		right: 40px
+	&__icon
+		display: inline-block
+		vertical-align: middle
+		margin-left: 40px
+		.icon
+			fill: #fff
+	&__list
+		opacity: 0
+		visibility: hidden
+		transition: 0.5s visibility, 0.5s opacity
+		background-color: $light-green
+		border-left: 2px solid $main-green
+		border-right: 2px solid $main-green
+	&__item
+		padding: 14px
+		border-bottom: 2px solid $main-green
+		
+	&__link
+		font-family: CorpidE1sSCd
+		font-size: 17px
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: 1.29
+		letter-spacing: -0.4px
+		text-align: left
+		color: #333333
+
+.shopping
+	display: inline-block
+	overflow: hidden
+	&.is-open
+		.shopping-btn__list
+			opacity: 1
+			visibility: visible
+			transition: 0.5s visibility, 0.5s opacity
