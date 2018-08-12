@@ -1,4 +1,8 @@
 import 'tooltipster';
 $(document).ready(function() {
-  $('.js-tooltip').tooltipster();
+  $('.js-tooltip-right').tooltipster({
+    side: ['right', 'left', 'top', 'bottom'],
+    trigger: 'click'
+  });
+  $('.js-tooltip').tooltipster({ trigger: 'click' });
 });

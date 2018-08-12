@@ -1,0 +1,97 @@
+{% set c= [
+		{
+				"title": 'Customer Care',
+				"list": [
+						{
+								"text": "Contact Us 24x7",
+								"link": "#"
+						}, {
+								"text": "About Us",
+								"link": "#"
+						}, {
+								"text": "Delivery Policy",
+								"link": "#"
+						}, {
+								"text": "Delivery Area",
+								"link": "#"
+						}, {
+								"text": "FAQ",
+								"link": "#"
+						}, {
+								"text": "How to Order",
+								"link": "#"
+						}, {
+								"text": "Payments",
+								"link": "#"
+						}, {
+								"text": "Testimonials",
+								"link": "#"
+						}, {
+								"text": "Track Order",
+								"link": "#"
+						}
+				]
+		}, 
+		{
+				"title": 'Customer Care',
+				"list": [
+						{
+								"text": "Contact Us 24x7",
+								"link": "#"
+						}, {
+								"text": "About Us",
+								"link": "#"
+						}, {
+								"text": "Delivery Policy",
+								"link": "#"
+						}, {
+								"text": "Delivery Area",
+								"link": "#"
+						}, {
+								"text": "FAQ",
+								"link": "#"
+						}, {
+								"text": "How to Order",
+								"link": "#"
+						}, {
+								"text": "Payments",
+								"link": "#"
+						}, {
+								"text": "Testimonials",
+								"link": "#"
+						}, {
+								"text": "Track Order",
+								"link": "#"
+						}
+				]
+		}
+] %}
+
+{% for item in c %}
+		<div class="js-collapse collapse">
+				<h4 class="js-collapse-header collapse__header">{{item.title}}</h4>
+				<ul class="js-collapse-list collapse__list">
+						{% for list in item.list %}
+								<li class="collapse__item">
+										<a href="{{list.link}}" class="collapse__link">{{list.text}}</a>
+								</li>
+						{% endfor %}
+				</ul>
+		</div>
+{% endfor %}
+
+<div class="stars-1">
+	<span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+</div>
+<div class="stars-2">
+	<span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+</div>
+<div class="stars-3">
+	<span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+</div>
+<div class="stars-4">
+	<span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+</div>
+<div class="stars-5">
+	<span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+</div>

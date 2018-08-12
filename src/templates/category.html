@@ -15,6 +15,8 @@ as titles %}
 {% block
 content %}
 
+
+
 		<div class="special">
 				<div class="inner">
 						<h4 class="special__title">
@@ -31,8 +33,10 @@ content %}
 		<div class="inner">
 				<div class="categoryGBO-breadcrumb">
 						{# BREADCRUMBS #}
-						{{breadcrumb.make([ {"text": "Home", "link": "#"}, {"text": "Catalog", "link": "#"}, {"text": "March 8
-		Flowers Gifts", "link": "#", "active": true} ]) }}
+						{{breadcrumb.make([ 
+						{"text": "Home", "link": "#"},
+						{"text": "Catalog", "link": "#"},
+						{"text": "March 8 Flowers Gifts", "link": "#", "active": true} ]) }}
 				</div>
 
 				<!-- FILTERING AREA -->
@@ -83,6 +87,6 @@ content %}
 				</div>
 
 		</div>
-
+		{% include "components/_subscribe.html" %}
 		{% include "partials/_footer.html" %}
 {% endblock %}

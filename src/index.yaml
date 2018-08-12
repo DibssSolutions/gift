@@ -5,5 +5,7 @@ PageList:
   ready: 50
 - file: ui.html
   ready: 50
-- file: categoryGBO.html
+- file: category.html
+  ready: 50
+- file: shopping-page.html
   ready: 50
