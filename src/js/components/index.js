@@ -1,5 +1,5 @@
 import './menu';
-import './select';
+// import './select';
 import './_slider';
 import './_slider-with-arrows';
 import './_tooltip';

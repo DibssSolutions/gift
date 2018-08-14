@@ -9,20 +9,26 @@ $(document).ready(function() {
     slider.owlCarousel({
       onInitialized: sliderVisible,
       loop: true,
+      // center: true,
       dots: false,
       smartSpeed: 500,
-      navText: ['', ''],
-      // autoWidth: true,
+      margin: 0,
+      nav: true,
+      lazyLoad:true,
+      navText: ['<img src="./assets/img/general/back-button.svg">', '<img src="./assets/img/general/back-button.svg">'],
       responsive: {
         0: {
           items: 1,
-          margin: 0
+          margin: 0,
+          nav: true
         },
         678: {
-          items: 2
+          items: 3,
+          nav: true
         },
         1024: {
-          items: 4
+          items: 5,
+          nav: true
         }
       }
     });

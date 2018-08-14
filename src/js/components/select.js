@@ -30,7 +30,8 @@ $(document).ready(function() {
     dropdownAutoWidth: true,
     minimumResultsForSearch: Infinity
   });
-
+  $($('.js-select').data('select2').$container).addClass('select--ordinary');
+  $($('.js-select').data('select2').$dropdown).addClass('select--ordinary');
   // ===== SELECT WITH FLAGS =====
   let selectWithFlags = $('.js-select-flag');
   function addFlag(state) {
@@ -50,17 +51,17 @@ $(document).ready(function() {
     console.log(state.element.dataset.flag);
     return $state;
   }
-  
+
   selectWithFlags.select2({
     templateResult: addFlag,
     width: '100%'
-    // dropdownCss: {'color': 'red'}
   });
+  $($('.js-select-flag').data('select2').$container).addClass('select--flag');
+  $($('.js-select-flag').data('select2').$dropdown).addClass('select--flag');
 
   $(selectWithFlags).on('select2:select', function(e) {
     var newCountryFlag = e.params.data.element.dataset.flag;
     var newFlagSrc = `./img/flags/${newCountryFlag}.png`;
     $('.js-selected-counry-flag').attr('src', newFlagSrc);
   });
-  
 });
