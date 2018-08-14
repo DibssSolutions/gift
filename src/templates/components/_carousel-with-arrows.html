@@ -1,0 +1,34 @@
+{% import "components/_cards.html" as cards_init %}
+
+{% set card_template = [{
+    "size": "big",
+    "image": {
+            "src": "gift_img_1.jpg"
+    },
+    "free_mark": true,
+    "title": "Endless Connection Necklace in Rose ",
+    "link": {
+        "link_link": "#",
+        "link_text": "Details"
+    }
+
+}] %}
+
+<div class="slider-container">
+    <div class="slider-wrapper container-inner">
+        <div class="slider owl-carousel" id="slider">
+            <div class="slide">
+                {{cards_init.card(card_template)}}
+            </div>
+            <div class="slide">
+                {{cards_init.card(card_template)}}
+            </div>
+            <div class="slide">
+                {{cards_init.card(card_template)}}
+            </div>
+            <div class="slide">
+                {{cards_init.card(card_template)}}
+            </div>
+        </div>
+    </div>
+</div>

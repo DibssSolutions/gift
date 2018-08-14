@@ -1,17 +1,18 @@
 <footer class="footer">
 	<div class="footer__container inner">
-		<div class="footer__menus">
+		<div class="footer__container-inner">
+			<div class="footer__menus">
 				{% include "partials/_footer-menu.html" %}
+			</div>
 		</div>
-		
 
-		<div class="footer__divider footer__divider--dark"></div>
+		<div class="footer__divider divider-grey"></div>
 
 		<div class="footer__partners">
 			<img src="./assets/img/general/partners.png" alt="">
 		</div>
 
-		<div class="footer__divider"></div>
+		<div class="footer__divider divider-blue"></div>
 
 		<div class="footer__container-inner payments">
 			<div class="payments__title">
@@ -28,16 +29,21 @@
 			</a>
 		</div>
 
-		<div class="footer__divider"></div>
+		<div class="footer__divider divider-blue"></div>
 
 		<div class="footer__social">
-			{% set soc_icons = ['youtube', 'facebook', 'linkedin', 'twitter', 'googleplus', 'pinterest', 'wordpress'] %} {% for icon
-			in soc_icons %}
-			<div class="footer__social-icon {{icon}}">{{mixins.icon(icon)}}</div>
-			{% endfor %}
+			{% set soc_icons = ['youtube', 'facebook', 'linkedin', 'twitter', 'googleplus', 'pinterest', 'wordpress'] %}
+				{% for icon	in soc_icons %}
+					<a href="#" class="footer__social-icon {{icon}}">{{mixins.icon(icon)}}</a>
+				{% endfor %}
 		</div>
 
-		<div class="footer__divider"></div>
+		<div class="footer__divider divider-blue"></div>
+
+		<div class="footer__copyright">
+			<p>Copyright© 2002-2018</p>
+			<a href="www.drinkablegifts.com">www.drinkablegifts.com</a>
+		</div>
 
 	</div>
 

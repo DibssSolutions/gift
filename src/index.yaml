@@ -5,7 +5,11 @@ PageList:
   ready: 50
 - file: ui.html
   ready: 50
-- file: category.html
+- file: category-page.html
   ready: 50
 - file: shopping-page.html
+  ready: 50
+- file: card-page.html
+  ready: 50
+- file: delivery.html
   ready: 50

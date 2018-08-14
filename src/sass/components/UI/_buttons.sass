@@ -6,7 +6,7 @@
 
 .btn-square
 	position: relative
-	padding: 14px
+	padding: 10px 14px
 	background-color: $main-green
 	font-weight: bold
 	font-style: normal
@@ -17,6 +17,10 @@
 	color: #ffffff
 	text-transform: uppercase
 	transition: background-color 0.5s
+	&__text
+		display: inline-block
+		padding-right: 48px
+		// border-right: 2px solid $white
 	&:after
 		position: absolute
 		content: ''
@@ -28,20 +32,19 @@
 	&__icon
 		display: inline-block
 		vertical-align: middle
-		margin-left: 40px
+		// margin-left: 48px
 		.icon
-			fill: #fff
+			fill: $white
 	&.hover-bg:hover
 		background-color: $dark-green
 		transition: background-color 0.5s
 
 .btn-rounded
-	padding: 12px 30px
-	color: #fff 
+	color: $white
 	border-radius: 4px
 	text-align: center
 	text-transform: uppercase
-	padding: 12px 30px
+	padding: 7px 30px
 	border-radius: 20px
 	&--green 
 		background-color: $main-green
@@ -53,6 +56,17 @@
 	line-height: normal
 	letter-spacing: normal
 	text-align: center
-	color: $dark-green
+	color: $main-green
 	border-bottom: 1px solid  $dark-green
+	+hover
+		color: $dark-green
 
+.btn-load-more
+	position: relative
+	&:after
+		position: absolute
+		content: ''
+		top: 100%
+		left: 50%
+		transform: translateX(-50%)
+		+arr(20, 10, $main-green, b)

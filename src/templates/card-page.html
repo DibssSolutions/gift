@@ -1,0 +1,158 @@
+{# --- title: Index page --- #}
+{# IMPORTING DATA COMPONENTS #}
+{% import "data/_cards.html" as cards_set %}
+{% import "data/_selects.html" as selects_set %}
+{# IMPORTING MIXINS #}
+{% import "partials/_mixins.html" as mixins %}
+{% import "components/_titles.html" as titles %}
+{% import "components/_select.html" as select_builder %}
+{% import "components/_breadcrumb.html" as breadcrumb %}
+
+
+{# MAIN LAYOUT #}
+{% extends "layouts/_layout.html" %}
+{% block content %}
+<div class="special">
+		<div class="inner">
+			<h4 class="special__text">
+				<strong class="special__bold-dark">Happy Women's Day, March, 8!</strong>
+				Order and get
+				<span class="special__bold-light">7%</span>
+				off any order with coupon code:
+    			<span class="special__bold-light">WSR53</span>
+				<strong class="special__bold-dark">- FREE Delivery to Moscow</strong>
+			</h4>
+		</div>
+</div>
+
+<div class="inner">
+	<div class="card-page-breadcrumbs">
+	{# BREADCRUMBS #}
+		{{breadcrumb.make([ 
+    		{"text": "Home", "link": "#"},
+			{"text": "Catalog", "link": "#"},
+            {"text": "Endless Connection Necklace in Rose", "link": "#", "active": true} ]) 
+        }}
+    </div>
+</div>
+<div class="card-page">
+    <div class="card-page__container inner">
+        {# ===== LEFT ===== #}
+        <div class="card-page__left">
+            <div class="card-page__image">
+                <img src="./assets/img/general/gifts-1/card_image.png" alt="">
+            </div>
+            <div class="card-page__go-back">
+                <a href="#" class="go-back">
+                    <span class="go-back__icon">{{mixins.icon('back-button')}}</span>
+                    <span class="go-back__text">Go Back</span>    
+                </a>
+            </div>
+            <div class="card-page__tabs">
+                {% include "components/_tabs.html" %}
+            </div>
+            <div class="card-page__divider divider-green"></div>
+            <div class="card-page__download">
+                <a href="#" class="download-spreadsheet">
+                    <div class="download-spreadsheet__icon">
+                        {{mixins.icon('spreadsheet')}}
+                    </div>
+                    <div class="download-spreadsheet__text">
+                        <div class="download-spreadsheet__title">Corporate & Bulk Orders</div>
+                        <div class="download-spreadsheet__download">Download Spreadsheet</div>
+                    </div>
+                </a>
+            </div>
+            <div class="card-page__divider divider-green"></div>
+            <h3 class="card-page__purchased-number-title">THIS GIFT WAS PURCHASED MORE THAN 1000 TIMES</h3>
+            <div class="card-page__card-list">
+                <img src="./assets/img/general/card-list-on-card-page.png" alt="">
+            </div>
+        </div>
+
+        {# ===== RIGHT ===== #}
+        <div class="card-page__right">
+            <div class="card-page__main-title">
+                {{titles.titleBiggest('Burst Of Romance')}}
+            </div>
+            <div class="card-page__id">
+                <span class="card-page__id--id">Product ID: </span>
+                <span class="card-page__id--number">276</span>
+            </div>
+            <div class="divider-grey"></div>
+                <div class="card-page__total-price">
+                    <div class="select-with-price">
+                        <div class="select-with-price__price">$ 614.95</div>
+                        <div class="select-with-price__select">
+                            {{select_builder.sel(selects_set.priceSelect)}}
+                        </div>
+                    </div>
+                </div>
+            <div class="divider-grey"></div>
+            <div class="card-page__delivery">
+                <div class="card-page__delivery-item">
+                    <div class="location-card">
+                        <h5 class="location-card__title">
+                            Availability and price depend on the delivery location:
+                        </h5>
+                        <div class="location-card__select-wrapper">
+                            <div class="location-card__label">
+                                Change City:
+                            </div>
+                            <div class="location-card__select">
+                                {{select_builder.sel(selects_set.citySelect)}}
+                            </div>
+                        </div>
+                        <div class="location-card__select-wrapper">
+                            <div class="location-card__label">
+                                Change Country:
+                            </div>
+                            <a href="#" class="location-card__country-flag">
+                                <img class="js-selected-counry-flag" src="./assets/img/general/ru.png" alt="">
+                            </a>
+                            <div class="location-card__select location-card__select--countries">
+                                {{select_builder.sel(selects_set.countriesSelect)}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-page__delivery-item">
+                    <div class="time-card">
+                        <div class="time-card__image">
+                            {{mixins.icon('clock-blue')}}
+                        </div>
+                        <h5 class="time-card__title">
+                            Want it Monday, March 5?
+                        </h5>
+                        <div class="card__text">Order within 12 hrs, 19 mins</div>
+                        </div>
+                    </div>
+                </div>
+            <div class="divider-grey"></div>
+            <div class="card-page__budget">
+                
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+								<div class="filter__select-wrapper">
+										<div class="filter__select">
+												{# SELECTOR-2 #}
+												{{select_builder.sel(selects_set.sortingTypesSelect)}}
+										</div>
+										<div class="filter__tooltip js-tooltip" title="This is TOOLTIP!">
+												{{mixins.icon('info')}}
+										</div>
+								</div>
+						
+				{# TITLE #}
+				<div class="category-title">
+					{{titles.titleBig('March 8 Flowers Gifts')}}
+				</div>
+				
+</div>
+
+{% include "components/_subscribe.html" %}
+{% include "partials/_footer.html" %}
+{% endblock %}

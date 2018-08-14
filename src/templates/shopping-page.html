@@ -11,21 +11,22 @@
 content %}
 
 		<div class="inner">
+				{# BREADCRUMBS #}
 				<div class="shopping__breadcrumbs">
-						{# BREADCRUMBS #}
-						{{breadcrumb.make([ 
-							{"text": "Home", "link": "ui.html"}, 
-							{"text": "How to check-table", "link": "#"},
-							{"text": "Shopping Cart", "link": "#", "active": true} ]) 
-						}}
+					{{breadcrumb.make([ 
+						{"text": "Home", "link": "ui.html"}, 
+						{"text": "How to check-table", "link": "#"},
+						{"text": "Shopping Cart", "link": "#", "active": true} ]) 
+					}}
 				</div>
 
 				{# TITLE #}
-				{{titles.titleBiggest('Shopping Cart')}}
-				{# CARDS #}
-
+				<div class="shopping__title">
+					{{titles.titleBiggest('Shopping Cart')}}
+				</div>
+				
 		</div>
-
+		<!-- COUPONS -->
 		<div class="special coupons">
 				<div class="inner">
 						<div class="coupons__title">
@@ -37,7 +38,7 @@ content %}
 						<div class="coupons__form">
 								<form action="" class="coupons-form">
 										<input type="text" class="coupons-form__input" placeholder="Enter Code">
-										<button type="submit coupons-form__submit" class="btn btn-rounded btn-rounded--green">Apply</button>
+										<button type="submit" class="btn btn-rounded btn-rounded--green coupons-form__submit">Apply</button>
 								</form>
 
 						</div>
@@ -47,6 +48,7 @@ content %}
 		<main class="chekout">
 			<div class="checkout__container inner">
 				<div class="checkout__top">
+					<div class="checkout__buttons">
 						<div class="js-dropdown-container shopping">
 								{{button.squareButton({
 									"class": "js-dropdown-btn",
@@ -75,6 +77,7 @@ content %}
 							"icon": "chevron-right"
 							})
 						}}
+					</div>
 				</div>
 				<div class="checkout__table">
 					<table class="check-table">
@@ -152,7 +155,45 @@ content %}
 								</tbody>
 					</table>
 				</div>
+				<div class="checkout__bottom">
+					<div class="checkout__descr">
+						<p>The above subtotal does not include tax and <a href="#" class="green-link">shipping</a>, which will be calculated during checkout after entering the delivery zip code and preferred shipping method.</p>
+						<p>You will have a chance to review the final total before submitting your order.</p>
+					</div>	
+					<div class="checkout__buttons">
+						<div class="js-dropdown-container shopping">
+								{{button.squareButton({
+									"class": "js-dropdown-btn",
+									"text": "CONTINUE SHOPPING",
+									"icon": "chevron-down"		
+									})
+								}}
+								<ul class="shopping__list">
+										<li class="shopping__item">
+												<a href="#" class="shopping__link">Homepage</a>
+										</li>
+										<li class="shopping__item">
+											<a href="#" class="shopping__link">Recently Viewed Item</a>
+										</li>
+										<li class="shopping__item">
+												<a href="#" class="shopping__link">Gifts to CountryX</a>
+										</li>
+										<li class="shopping__item">
+												<a href="#" class="shopping__link">Recently Viewed Item</a>
+										</li>
+								</ul>
+						</div>
+						{{button.squareButton({
+							"class": "hover-bg",
+							"text": "to shopping cart",
+							"icon": "chevron-right"
+							})
+						}}
+					</div>
+				</div>
 			</div>
 		</main>	
+
+		{% include "components/_subscribe.html" %}
 		{% include "partials/_footer.html" %}
 {% endblock %}

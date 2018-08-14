@@ -10,28 +10,19 @@ $(document).ready(function() {
       onInitialized: sliderVisible,
       loop: true,
       dots: false,
-      smartSpeed: 2000,
+      smartSpeed: 500,
+      navText: ['', ''],
       // autoWidth: true,
       responsive: {
         0: {
-          center: true,
           items: 1,
-          margin: 16
+          margin: 0
         },
         678: {
-          center: true,
-          items: 2,
-          margin: 50
+          items: 2
         },
         1024: {
-          center: true,
-          items: 3,
-          margin: 70
-        },
-        1429: {
-          center: true,
-          items: 3,
-          margin: 130
+          items: 4
         }
       }
     });

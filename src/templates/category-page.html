@@ -1,0 +1,89 @@
+{# --- title: Index page --- #} 
+{# IMPORTING DATA COMPONENTS #} 
+{% import "data/_cards.html" as cards_set %} 
+{% import "data/_selects.html" as selects_set %} 
+{# IMPORTING MIXINS #} 
+{% import "partials/_mixins.html" as mixins %} 
+{% import "components/_titles.html" as titles %} 
+{% import "components/_cards.html" as cards_init %} 
+{% import "components/_select.html" as select_builder %}
+{% import "components/_breadcrumb.html" as breadcrumb %} 
+{% import "components/_range.html" as range_input %} 
+{# MAIN LAYOUT#}
+{% extends "layouts/_layout.html" %} {% block content %}
+
+<div class="special">
+	<div class="inner">
+		<h4 class="special__text">
+			<strong class="special__bold-dark">Happy Women's Day, March, 8!</strong>
+			Order and get
+			<span class="special__bold-light">7%</span>
+			off any order with coupon code:
+			<span class="special__bold-light">WSR53</span>
+			<strong class="special__bold-dark">- FREE Delivery to Moscow</strong>
+		</h4>
+	</div>
+</div>
+
+<div class="inner">
+	<div class="category-breadcrumb">
+		{# BREADCRUMBS #} {{breadcrumb.make([ {"text": "Home", "link": "#"}, {"text": "Catalog", "link": "#"}, {"text": "March 8
+		Flowers Gifts", "link": "#", "active": true} ]) }}
+	</div>
+	<!-- FILTERING AREA -->
+	<div class="filter">
+		<div class="filter__row">
+			<div class="filter__found">
+				<h5>
+					<span class="filter__found filter__found--bold">243</span>
+					items found
+				</h5>
+			</div>
+			<div class="filter__select-wrapper">
+				<a href="#" class="filter__country-flag">
+					<img class="js-selected-counry-flag" src="./assets/img/general/ru.png" alt="">
+				</a>
+				<div class="filter__select-globe">
+					<img src="./assets/img/general/globus-ico.png" alt="">
+				</div>
+				<div class="filter__select">
+					{# SELECTOR-1 #} {{select_builder.sel(selects_set.countriesSelect)}}
+				</div>
+				<div class="filter__tooltip js-tooltip" title="This is TOOLTIP!">
+					{{mixins.icon('info')}}
+				</div>
+			</div>
+			<div class="filter__select-wrapper">
+				<div class="filter__select">
+					{# SELECTOR-2 #} {{select_builder.sel(selects_set.sortingTypesSelect)}}
+				</div>
+				<div class="filter__tooltip js-tooltip" title="This is TOOLTIP!">
+					{{mixins.icon('info')}}
+				</div>
+			</div>
+		</div>
+		<div class="filter__row">
+			<div class="filter__range">
+				{{range_input.range(0, 1000, 0, 1000)}}
+			</div>
+		</div>
+	</div>
+	{# TITLE #}
+	<div class="category-title">
+		{{titles.titleBig('March 8 Flowers Gifts')}}
+	</div>
+	{# CARDS #}
+	<div class="category__cards">
+		<div class="cards">
+			{{cards_init.card(cards_set.cardsCategoryPage)}}
+		</div>
+	</div>
+	<div class="category__add-cards">
+		<button class="btn btn-rounded btn-rounded--green btn-load-more">Load More</button>
+	</div>
+</div>
+
+{% include "components/_subscribe.html" %}
+{% include "partials/_footer.html" %} 
+
+{% endblock %}

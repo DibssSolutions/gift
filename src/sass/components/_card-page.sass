@@ -1,0 +1,185 @@
+.card-page
+    font-family: $corp
+    margin-top: 27px
+    &__container
+        +clr
+        font-family: $corp
+    &__left 
+        float: left
+        width: 350px
+        +sm 
+            float: none
+            width: 100%
+    &__right 
+        margin-left: 480px
+        +sm
+            float: none
+            width: 100%
+            margin-left: 0
+    &__go-back
+        margin: 32px auto
+    &__tabs
+        margin-bottom: 24px
+    &__download
+        margin: 14px auto
+    &__purchased-number-title
+        padding: 20px 5px
+        font-size: 24px
+        font-weight: 300
+        font-style: normal
+        font-stretch: normal
+        line-height: normal
+        letter-spacing: -1.2px
+        text-align: center
+        color: #3a5864
+    &__card-list
+        text-align: center
+        img 
+            display: inline-block
+
+.card-page
+    &__main-title
+        margin-bottom: 34px
+    &__id
+        font-size: 24px
+        color: #6f6f6e
+        &--number
+            font-weight: bold
+            color: $dark_blue
+    &__total-price
+        margin: 16px auto 19px
+    &__delivery
+        margin: 13px auto 19px
+        display: flex
+        align-items: stretch
+        &-item 
+            &:first-child
+                margin-right: 8px
+            &:last-child
+                flex-grow: 1
+                height: auto
+
+.go-back
+    display: flex
+    align-items: center
+    justify-content: center
+    &__icon
+        margin-bottom: -0.3em
+        .icon
+            font-size: 1.9em
+    &__text
+        margin-left: 10px
+        font-size: 18px
+        font-weight: bold
+        color: $dark-green
+
+.download-spreadsheet
+    display: block
+    &__icon
+        display: inline-block
+        vertical-align: top
+        margin-right: 20px
+        .icon
+            font-size: 2.5em
+    &__text
+        display: inline-block
+        vertical-align: top
+        padding-top: 2px
+        font-family: CorpidE1sSCd
+        font-size: 18px
+        letter-spacing: -0.5px
+        text-align: left
+        color: #3a9ac1
+    &__title
+        font-weight: 900
+        text-transform: uppercase
+        line-height: 1
+
+.select-with-price
+    &__price
+        display: inline-block
+        vertical-align: bottom
+        margin-right: 10px
+        font-size: 25px
+        line-height: 31px
+        font-weight: 900
+        color: $blue
+    &__select
+        display: inline-block
+        vertical-align: bottom
+        width: 232px
+        .select2-container--default .select2-selection--single .select2-selection__rendered	
+            color: $dark_blue
+            font-family: CorpidE1sSCd
+            font-size: 16px
+
+.location-card
+    padding: 14px 15px 18px 14px
+    background-color: $extra-light-green
+    border-radius: 4px
+    &__title
+        font-size: 16px
+        font-weight: bold
+        font-style: normal
+        font-stretch: normal
+        line-height: 1.38
+        color: #3c3c3b
+        margin-bottom: 1em
+    &__select-wrapper
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 12px
+    &__label
+        margin-right: 5px
+        font-family: $corp
+        font-size: 16px
+        line-height: 31px
+        color: $dark_blue
+    &__select
+        width: 262px
+        .select2-container--default .select2-selection--single
+            border: none
+        &--countries
+            width: 194px
+    &__country-flag
+        max-height: 30px
+        max-width: 40px
+        overflow: hidden
+        margin-right: 8px
+        img
+            max-height: 30px
+            display: inline-block
+            vertical-align: middle
+
+.time-card
+    background-color: $special_bg
+    border-radius: 4px
+    padding: 12px 14px 12px 10px
+    height: 100%
+    &__image
+        float: left
+        margin-right: 7px
+        .icon
+            font-size: 3em
+    &__title
+        font-size: 22px
+        font-weight: bold
+        font-style: normal
+        font-stretch: normal
+        line-height: 1.23
+        letter-spacing: -0.6px
+        text-align: left
+        color: #2e7a99
+        margin-bottom: 14px
+        margin-top: 14px
+    &__text
+        font-family: CorpidE1sSCd
+        font-size: 20px
+        font-weight: 300
+        font-style: normal
+        font-stretch: normal
+        line-height: 1.35
+        letter-spacing: -0.5px
+        text-align: left
+        color: #3a5864
