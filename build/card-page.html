@@ -30,7 +30,7 @@
       <div class="inner">
         <div class="card-page-breadcrumbs">
           <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
+            <ol class="breadcrumb ">
               <li class="breadcrumb-item"> <a href="#">Home</a> </li>
               <li class="breadcrumb-item"> <a href="#">Catalog</a> </li>
               <li class="breadcrumb-item active" aria-current="page">Endless Connection Necklace in Rose</li>
@@ -89,15 +89,15 @@
             <div class="card-page__total-price">
               <div class="select-with-price">
                 <div class="select-with-price__price">$ 614.95</div>
-                <div class="select-with-price__select"> <select name='sel3' id="sel3 " class="js-select select" data-placeholder="sel3e">
+                <div class="select-with-price__select"> <select name='sel1' id="sel1 " class="js-select select" data-placeholder="sel1">
         
-            <option value='1' >€ 526.83 (EUR)</option>
+            <option value='1'>€ 526.83 (EUR)</option>
         
-            <option value='2' >€ 526.83 (EUR)</option>
+            <option value='2'>€ 526.83 (EUR)</option>
         
-            <option value='3' >€ 526.83 (EUR)</option>
+            <option value='3'>€ 526.83 (EUR)</option>
         
-            <option value='4' >€ 526.83 (EUR)</option>
+            <option value='4'>€ 526.83 (EUR)</option>
         
     </select> </div>
               </div>
@@ -109,15 +109,17 @@
                   <h5 class="location-card__title"> Availability and price depend on the delivery location: </h5>
                   <div class="location-card__select-wrapper">
                     <div class="location-card__label"> Change City: </div>
-                    <div class="location-card__select"> <select name='city-select' id="city-select " class="js-select select" data-placeholder="Kyive">
+                    <div class="location-card__select"> <select name='city-select' id="city-select " class="js-select select" data-placeholder="Service Cities">
         
-            <option value='1' >Washington</option>
+            <option ></option>
         
-            <option value='2' >Paris</option>
+            <option value='1'>Washington</option>
         
-            <option value='3' >Prague</option>
+            <option value='2'>Paris</option>
         
-            <option value='4' >Sydney</option>
+            <option value='3'>Prague</option>
+        
+            <option value='4'>Sydney</option>
         
     </select> </div>
                   </div>
@@ -125,27 +127,27 @@
                     <div class="location-card__label"> Change Country: </div> <a href="#" class="location-card__country-flag">
                                 <img class="js-selected-counry-flag" src="./assets/img/general/ru.png" alt="">
                             </a>
-                    <div class="location-card__select location-card__select--countries"> <select name='countries' id="countries" class="js-select-flag select-with-flag select" data-placeholder="sel1e">
+                    <div class="location-card__select location-card__select--countries"> <select name='countries' id="countries" class="js-select-flag select-with-flag select" data-placeholder="sel1">
         
-            <option value='1' data-flag='ru-flag'>Russia</option>
+            <option value='1'data-flag='ru-flag'>Russia</option>
         
-            <option value='2' data-flag='ukr-flag'>Ukraine</option>
+            <option value='2'data-flag='ukr-flag'>Ukraine</option>
         
-            <option value='3' data-flag='ru-flag'>Latvia</option>
+            <option value='3'data-flag='ru-flag'>Latvia</option>
         
-            <option value='4' data-flag='ru-flag'>Lithuania</option>
+            <option value='4'data-flag='ru-flag'>Lithuania</option>
         
-            <option value='5' data-flag='ru-flag'>Estonia</option>
+            <option value='5'data-flag='ru-flag'>Estonia</option>
         
-            <option value='6' data-flag='bel-flag'>Belarus</option>
+            <option value='6'data-flag='bel-flag'>Belarus</option>
         
-            <option value='7' data-flag='ru-flag'>Kazakhstan</option>
+            <option value='7'data-flag='ru-flag'>Kazakhstan</option>
         
-            <option value='8' data-flag='ru-flag'>Moldova</option>
+            <option value='8'data-flag='ru-flag'>Moldova</option>
         
-            <option value='44' data-flag='ru-flag'>USA</option>
+            <option value='44'data-flag='ru-flag'>USA</option>
         
-            <option value='53' data-flag='ru-flag'>Australia</option>
+            <option value='53'data-flag='ru-flag'>Australia</option>
         
     </select> </div>
                   </div>
@@ -160,28 +162,99 @@
               </div>
             </div>
             <div class="divider-grey"></div>
-            <div class="card-page__budget"> </div>
+            <div class="card-page__budget">
+              <form class="budget-form" id="new-item">
+                <div class="budget-form__title">
+                  <h5 class="title-middle">Set Your Budget:</h5>
+                </div>
+                <div class="budget-form__select">
+                  <div class="select-with-tooltip">
+                    <div class="select-with-tooltip__label"> Select number of Box: </div>
+                    <div class="select-with-tooltip__select"> <select name='sel2' id="sel2 " class="js-select select" data-placeholder="sel2">
+        
+            <option value='1'>€ 526.83 (EUR)</option>
+        
+            <option value='2'>€ 526.83 (EUR)</option>
+        
+            <option value='3'>€ 526.83 (EUR)</option>
+        
+            <option value='4'>€ 526.83 (EUR)</option>
+        
+    </select> </div>
+                    <div class="select-with-tooltip__tooltip js-tooltip" title="This is TOOLTIP!"> <svg class="icon icon-info"><use xlink:href="assets/img/general/sprite.svg#icon-info"></use></svg> </div>
+                  </div>
+                </div>
+                <div class="budget-form__select">
+                  <div class="select-with-tooltip">
+                    <div class="select-with-tooltip__label"> Choose a Vase for your bouquet: </div>
+                    <div class="select-with-tooltip__select"> <select name='vase1' id="vase2" class="js-select select" data-placeholder="Select">
+        
+            <option ></option>
+        
+            <option value='2'>EXTRA GREEN VASE</option>
+        
+            <option value='3'>TRANSPARENT</option>
+        
+            <option value='4'>!!!</option>
+        
+    </select> </div>
+                    <div class="select-with-tooltip__tooltip js-tooltip" title="This is TOOLTIP!"> <svg class="icon icon-info"><use xlink:href="assets/img/general/sprite.svg#icon-info"></use></svg> </div>
+                  </div>
+                </div> <button type="submit" class="btn btn-rounded btn-rounded--green btn-rounded--big">Add to cart</button> </form>
+            </div>
+            <div class="divider-grey"></div>
+            <div class="card-page__review">
+              <article class="review">
+                <header class="review__header">
+                  <div class="review__title">
+                    <h5 class="title-middle">Customer Reviews:</h5>
+                  </div>
+                  <div class="stars stars-rating-2"> <span class="star">
+<svg class="icon icon-star"><use xlink:href="assets/img/general/sprite.svg#icon-star"></use></svg>
+</span> <span class="star">
+<svg class="icon icon-star"><use xlink:href="assets/img/general/sprite.svg#icon-star"></use></svg>
+</span> <span class="star">
+<svg class="icon icon-star"><use xlink:href="assets/img/general/sprite.svg#icon-star"></use></svg>
+</span> <span class="star">
+<svg class="icon icon-star"><use xlink:href="assets/img/general/sprite.svg#icon-star"></use></svg>
+</span> <span class="star">
+<svg class="icon icon-star"><use xlink:href="assets/img/general/sprite.svg#icon-star"></use></svg>
+</span> </div>
+                  <div class="review__number">(40 reviews)</div> <button class="btn-underline btn-underline--big btn">Add Your Review</button> </header>
+                <div class="review__single-review">
+                  <div class="review__text"> I have ordered several bouquets from Russian Flora from the USA and they are fantastic! Nancy, Katherine, Natalie, Margaret and all of the team there are so professional and helpful, and make international floral delivery so easy for
+                    me. The flowers have been absolutely gorgeous on every occasion! The personalized attention my orders have received has been beyond compare, and they have gone over and above on every delivery! I will continue to use them and would
+                    highly recommend them to everyone. </div>
+                  <div class="review__details"> • Reviewed by Debora - October 16, 2015 (USA) </div>
+                </div>
+                <div class="review__single-review">
+                  <div class="review__text"> You guys are seriously AMAZING. I order a lot of flowers internationally and you are the absolute BEST! </div>
+                  <div class="review__details"> • Reviewed by Ronda - October 16, 2015 (El Cajon CA, USA) </div>
+                </div>
+              </article>
+            </div>
+            <div class="divider-grey"></div>
+            <div class="card-page__recently-viewed">
+              <h5 class="title-middle">Recently Viewed</h5>
+              <div class="cards-container">
+                <a class="small-card" href="">
+                  <div class="small-card__image" style='background-image: url(./assets/img/general/small-cards/glass1.png)'></div>
+                  <h4 class="small-card__title">Square Glass</h4>
+                  <div class="small-card__id">Product ID: 20018</div>
+                  <div class="small-card__price">$7.99</div>
+                </a>
+                <a class="small-card" href="">
+                  <div class="small-card__image" style='background-image: url(./assets/img/general/small-cards/glass2.png)'></div>
+                  <h4 class="small-card__title">Glass Ginger</h4>
+                  <div class="small-card__id">Product ID: 20018</div>
+                  <div class="small-card__price">$6.99</div>
+                </a>
+              </div>
+              <div class="video"> <iframe width="100%" height="315" src="https://www.youtube.com/embed/n_GA_vQRu9c?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> </div> <button type="submit" class="btn btn-rounded btn-rounded--green btn-rounded--big"
+                form="new-item">Add to cart</button> </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="filter__select-wrapper">
-      <div class="filter__select"> <select name='sorting' id="sorting" class="js-select select" data-placeholder="sel1e">
-        
-            <option value='1' >Sort By: Most Popular</option>
-        
-            <option value='2' >Sort By: Lowest Price</option>
-        
-            <option value='3' >Sort By: The Highest Price</option>
-        
-            <option value='4' >Sort By: The Newest</option>
-        
-    </select> </div>
-      <div class="filter__tooltip js-tooltip" title="This is TOOLTIP!"> <svg class="icon icon-info"><use xlink:href="assets/img/general/sprite.svg#icon-info"></use></svg> </div>
-    </div>
-    <div class="category-title">
-      <h2 class="title-big">March 8 Flowers Gifts</h2>
-    </div>
     </div>
     <div class="subscribe">
       <div class="subcribe__container inner">

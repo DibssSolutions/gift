@@ -1,7 +1,7 @@
 {% macro sel(props) %}
-    <select name='{{props.name}}' id="{{props.id}}" class="{% if props.withFlag %}js-select-flag select-with-flag{% else %}js-select{% endif %} select" data-placeholder="{{props.placeholder}}e">
+    <select name='{{props.name}}' id="{{props.id}}" class="{% if props.withFlag %}js-select-flag select-with-flag{% else %}js-select{% endif %} select" data-placeholder="{{props.placeholder}}">
         {% for option in props.options %}
-            <option value='{{option.value}}' {% if option.image %}data-flag='{{option.image}}'{% endif %}>{{option.title}}</option>
+            <option {% if option.value %}value='{{option.value}}'{% endif %}{% if option.image %}data-flag='{{option.image}}'{% endif %}>{{option.title}}</option>
         {% endfor %}
     </select>
 {% endmacro %}

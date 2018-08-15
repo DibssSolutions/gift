@@ -16,8 +16,28 @@
             transform: translateY(-50%)
             color: $title_dark
         &.active
-            color: #6f6f6e
+            color: $dark-grey
         &:nth-last-of-type(2)
             border-bottom: 1px solid $title_dark
             &::after
-                color: #6f6f6e
+                color: $dark-grey
+    &.no-underline
+        .breadcrumb-item
+            &:nth-last-of-type(2)
+                border: none
+            &:not(:first-child)
+                color: $dark-grey
+                &:after
+                    color: $dark-grey
+    &.colored
+        .breadcrumb-item
+            color: $blue
+            &:nth-last-of-type(2)
+                border-bottom: none
+            &:after
+                font-weight: bold
+        .breadcrumb-item.active
+            color: $light-blue
+            
+            
+ 

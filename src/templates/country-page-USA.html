@@ -1,0 +1,74 @@
+{# --- title: Index page --- #} 
+{# IMPORTING DATA COMPONENTS #} 
+{% import "data/_cards.html" as cards_set %} 
+{% import "data/_selects.html" as selects_set %} 
+{# IMPORTING MIXINS #}
+{% import "partials/_mixins.html" as mixins %}
+{% import "components/_titles.html" as titles %} 
+{% import "components/_cards.html" as cards_init %} 
+{% import "components/_select.html" as select_builder %}
+{% import "components/_breadcrumb.html" as breadcrumb %} 
+{% import "components/_range.html" as range_input %} 
+{# MAIN LAYOUT #}
+{% extends "layouts/_layout.html" %} 
+
+{% block content %}
+
+{% include "components/_carousel.html" %}
+<div class="inner">
+    {# BREADCRUMBS #}
+    <div class="usa__breadcrumbs">
+        {{breadcrumb.make([ {"class": "no-underline"}, {"text": "Home", "link": "ui.html"}, {"text": "USA", "active": true} ]) }}
+    </div>
+
+    <!-- FILTERING AREA -->
+    <div class="filter usa__filter">
+        <div class="filter__col">
+            <div class="filter__breadcrumb">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb colored">
+                        <li class="breadcrumb-item">
+                            <a href="#">Gift Baskets to USA</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Hawaii Hampers</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="filter__col">
+            <div class="filter__select-wrapper">
+                <div class="filter__select-globe">
+                    <img src="./assets/img/general/globus-ico.png" alt="">
+                </div>
+                <div class="filter__select">
+                    {# SELECTOR-1 #} {{select_builder.sel(selects_set.citySelect)}}
+                </div>
+                <div class="filter__tooltip js-tooltip" title="This is TOOLTIP!">
+                    {{mixins.icon('info')}}
+                </div>
+            </div>
+            <div class="filter__select-wrapper">
+                {# SELECT WITH TOOLTIP COMPONENT #}
+                <div class="select-with-tooltip">
+                    <div class="select-with-tooltip__select">
+                        {{select_builder.sel(selects_set.sortingTypesSelect)}}
+                    </div>
+                    <div class="select-with-tooltip__tooltip js-tooltip" title="This is TOOLTIP!">
+                        {{mixins.icon('info')}}
+                    </div>
+                </div>
+            </div>
+            <div class="filter__range">
+                {{range_input.range(0, 1000, 0, 1000)}}
+            </div>
+        </div>
+
+    </div>
+    {# TITLE #}
+    <div class="usa__title">
+        {{titles.titleBiggest('March 8 Flowers Gifts')}}
+    </div>
+
+</div>
+
+{% include "components/_subscribe.html" %} {% include "partials/_footer.html" %} {% endblock %}

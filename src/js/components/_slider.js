@@ -12,20 +12,24 @@ $(document).ready(function() {
       dots: true,
       smartSpeed: 2000,
       nav: true,
-      items: 1
+      items: 1,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: true,
+      animateOut: 'fadeOut'
     });
 
     function sliderVisible() {
       $('.slider').css({ opacity: '1', visibility: 'visible' });
     }
 
-    slider.on('mousewheel', '.owl-stage', function(e) {
-      if (e.originalEvent.deltaY > 0) {
-        slider.trigger('next.owl');
-      } else {
-        slider.trigger('prev.owl');
-      }
-      e.preventDefault();
-    });
+    // slider.on('mousewheel', '.owl-stage', function(e) {
+    //   if (e.originalEvent.deltaY > 0) {
+    //     slider.trigger('next.owl');
+    //   } else {
+    //     slider.trigger('prev.owl');
+    //   }
+    //   e.preventDefault();
+    // });
   }
 });

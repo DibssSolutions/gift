@@ -3,6 +3,7 @@
 	font-family: $corp
 	vertical-align: middle
 	font-size: 17px
+	text-align: center
 
 .btn-square
 	position: relative
@@ -13,7 +14,6 @@
 	font-stretch: normal
 	line-height: normal
 	letter-spacing: -0.4px
-	text-align: center
 	color: #ffffff
 	text-transform: uppercase
 	transition: background-color 0.5s
@@ -42,12 +42,18 @@
 .btn-rounded
 	color: $white
 	border-radius: 4px
-	text-align: center
 	text-transform: uppercase
 	padding: 7px 30px
 	border-radius: 20px
 	&--green 
 		background-color: $main-green
+	&--big
+		padding: 16px 19px
+		text-transform: uppercase
+		line-height: 1
+		font-size: 24px
+		border-radius: 32px
+
 
 .btn-underline
 	font-weight: normal
@@ -55,11 +61,15 @@
 	font-stretch: normal
 	line-height: normal
 	letter-spacing: normal
-	text-align: center
 	color: $main-green
 	border-bottom: 1px solid  $dark-green
 	+hover
 		color: $dark-green
+	&--big 
+		font-size: 24px
+		font-weight: 300
+		letter-spacing: -0.6px
+
 
 .btn-load-more
 	position: relative

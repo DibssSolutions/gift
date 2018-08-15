@@ -1,0 +1,70 @@
+.dropdown-menu-btn
+    font-family: $corp
+    position: relative
+    font-size: 32px
+    font-weight: 900
+    font-style: normal
+    font-stretch: normal
+    line-height: normal
+    letter-spacing: -0.8px
+    text-align: center
+    color: $dark_blue
+    text-transform: uppercase
+    padding: 16px 46px
+    border-radius: 36px
+    background-color: #dfecf7
+    z-index: 100
+    display: inline-flex
+    align-items: center
+    &__icon
+        font-size: 0
+    .icon
+        fill: $dark_blue
+        font-size: 30px
+        transition: transform 0.3s
+
+.is-open 
+    .dropdown-menu-btn__icon .icon
+        +rotate(180)
+        transition: transform 0.3s
+
+
+.dropdown-menu
+    font-family: $corp
+    text-align: center
+    position: relative
+    &__hidden
+        padding: 50px 70px
+        background-color: #dfecf7
+        position: absolute
+        top: 36px
+        z-index: 50
+        visibility: hidden
+        opacity: 0
+        transition: opacity 0.5s, visibility 0.5s
+        .is-open &
+            visibility: visible
+            opacity: 1
+            transition: opacity 0.5s, visibility 0.5s
+    &__list
+        column-count: 4
+        text-align: left
+    &__item
+        display: inline-block
+        width: 100%
+    &__links
+        font-size: 17px
+        font-weight: 300
+        color: $text_black
+        line-height: 1
+    &__link
+        // text-decoration: underline
+        display: inline-block
+        border-bottom: 1px solid $text_black
+        +hover
+            border-bottom: 1px solid $dropdown_text
+            color: $dropdown_text
+    &__letter
+        color: $dropdown_text
+        font-size: 22px
+        font-weight: bold

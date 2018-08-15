@@ -8,10 +8,10 @@ var slider = document.querySelector('.js-range-slider');
 
 if (slider) {
 
-  var minSlider = parseFloat(slider.dataset['rangeMin']);
-  var maxSlider = parseFloat(slider.dataset['rangeMax']);
-  var startSlider = parseFloat(slider.dataset['rangeStart']);
-  var endSlider = parseFloat(slider.dataset['rangeEnd']);
+  var minSlider = parseInt(slider.dataset['rangeMin']);
+  var maxSlider = parseInt(slider.dataset['rangeMax']);
+  var startSlider = parseInt(slider.dataset['rangeStart']);
+  var endSlider = parseInt(slider.dataset['rangeEnd']);
   
   noUiSlider.create(slider, {
     start: [startSlider, maxSlider],

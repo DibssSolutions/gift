@@ -30,7 +30,7 @@
       <div class="inner">
         <div class="category-breadcrumb">
           <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
+            <ol class="breadcrumb ">
               <li class="breadcrumb-item"> <a href="#">Home</a> </li>
               <li class="breadcrumb-item"> <a href="#">Catalog</a> </li>
               <li class="breadcrumb-item active" aria-current="page">March 8 Flowers Gifts</li>
@@ -39,55 +39,57 @@
         </div>
         <!-- FILTERING AREA -->
         <div class="filter">
-          <div class="filter__row">
+          <div class="filter__col">
             <div class="filter__found">
               <h5> <span class="filter__found filter__found--bold">243</span> items found </h5>
             </div>
+          </div>
+          <div class="filter__col">
             <div class="filter__select-wrapper"> <a href="#" class="filter__country-flag">
 					<img class="js-selected-counry-flag" src="./assets/img/general/ru.png" alt="">
 				</a>
               <div class="filter__select-globe"> <img src="./assets/img/general/globus-ico.png" alt=""> </div>
-              <div class="filter__select"> <select name='countries' id="countries" class="js-select-flag select-with-flag select" data-placeholder="sel1e">
+              <div class="filter__select"> <select name='countries' id="countries" class="js-select-flag select-with-flag select" data-placeholder="sel1">
         
-            <option value='1' data-flag='ru-flag'>Russia</option>
+            <option value='1'data-flag='ru-flag'>Russia</option>
         
-            <option value='2' data-flag='ukr-flag'>Ukraine</option>
+            <option value='2'data-flag='ukr-flag'>Ukraine</option>
         
-            <option value='3' data-flag='ru-flag'>Latvia</option>
+            <option value='3'data-flag='ru-flag'>Latvia</option>
         
-            <option value='4' data-flag='ru-flag'>Lithuania</option>
+            <option value='4'data-flag='ru-flag'>Lithuania</option>
         
-            <option value='5' data-flag='ru-flag'>Estonia</option>
+            <option value='5'data-flag='ru-flag'>Estonia</option>
         
-            <option value='6' data-flag='bel-flag'>Belarus</option>
+            <option value='6'data-flag='bel-flag'>Belarus</option>
         
-            <option value='7' data-flag='ru-flag'>Kazakhstan</option>
+            <option value='7'data-flag='ru-flag'>Kazakhstan</option>
         
-            <option value='8' data-flag='ru-flag'>Moldova</option>
+            <option value='8'data-flag='ru-flag'>Moldova</option>
         
-            <option value='44' data-flag='ru-flag'>USA</option>
+            <option value='44'data-flag='ru-flag'>USA</option>
         
-            <option value='53' data-flag='ru-flag'>Australia</option>
+            <option value='53'data-flag='ru-flag'>Australia</option>
         
     </select> </div>
               <div class="filter__tooltip js-tooltip" title="This is TOOLTIP!"> <svg class="icon icon-info"><use xlink:href="assets/img/general/sprite.svg#icon-info"></use></svg> </div>
             </div>
             <div class="filter__select-wrapper">
-              <div class="filter__select"> <select name='sorting' id="sorting" class="js-select select" data-placeholder="sel1e">
+              <div class="select-with-tooltip">
+                <div class="select-with-tooltip__select"> <select name='sorting' id="sorting" class="js-select select" data-placeholder="sel1">
         
-            <option value='1' >Sort By: Most Popular</option>
+            <option value='1'>Sort By: Most Popular</option>
         
-            <option value='2' >Sort By: Lowest Price</option>
+            <option value='2'>Sort By: Lowest Price</option>
         
-            <option value='3' >Sort By: The Highest Price</option>
+            <option value='3'>Sort By: The Highest Price</option>
         
-            <option value='4' >Sort By: The Newest</option>
+            <option value='4'>Sort By: The Newest</option>
         
     </select> </div>
-              <div class="filter__tooltip js-tooltip" title="This is TOOLTIP!"> <svg class="icon icon-info"><use xlink:href="assets/img/general/sprite.svg#icon-info"></use></svg> </div>
+                <div class="select-with-tooltip__tooltip js-tooltip" title="This is TOOLTIP!"> <svg class="icon icon-info"><use xlink:href="assets/img/general/sprite.svg#icon-info"></use></svg> </div>
+              </div>
             </div>
-          </div>
-          <div class="filter__row">
             <div class="filter__range">
               <div class="range ">
                 <div class="range__numbers"> € <span class="js-range-min">0</span> - € <span class="js-range-max">1000</span> </div>
@@ -109,11 +111,11 @@
               <div class="card__divider divider-grey"></div>
               <div class="card__id"> <span class="card__id--id">ID:</span><span class="card__id--number">11019</span> </div>
               <div class="card__price">from $ 333.33 </div>
-              <div class="card__select"> <select name='' id="sel1" class="js-select select" data-placeholder="sel1e">
+              <div class="card__select"> <select name='' id="sel1" class="js-select select" data-placeholder="sel1">
         
-            <option value='1' >€ 526.83 (EUR)</option>
+            <option value='1'>€ 526.83 (EUR)</option>
         
-            <option value='2' >€ 126.83 (EUR)</option>
+            <option value='2'>€ 126.83 (EUR)</option>
         
     </select> </div>
             </div>
@@ -123,11 +125,11 @@
               <div class="card__divider divider-grey"></div>
               <div class="card__id"> <span class="card__id--id">ID:</span><span class="card__id--number">5056</span> </div>
               <div class="card__price">from $ 333.33 </div>
-              <div class="card__select"> <select name='sel2' id="sel2" class="js-select select" data-placeholder="sel1e">
+              <div class="card__select"> <select name='sel2' id="sel2" class="js-select select" data-placeholder="sel1">
         
-            <option value='2' >Occasions</option>
+            <option value='2'>Occasions</option>
         
-            <option value='3' >Any ocassion</option>
+            <option value='3'>Any ocassion</option>
         
     </select> </div>
             </div>
@@ -137,15 +139,15 @@
               <div class="card__divider divider-grey"></div>
               <div class="card__id"> <span class="card__id--id">ID:</span><span class="card__id--number">8056</span> </div>
               <div class="card__price">from $ Price selection </div>
-              <div class="card__select"> <select name='sel3' id="sel3 " class="js-select select" data-placeholder="sel3e">
+              <div class="card__select"> <select name='sel3' id="sel3 " class="js-select select" data-placeholder="sel3">
         
-            <option value='1' >€ 526.83 (EUR)</option>
+            <option value='1'>€ 526.83 (EUR)</option>
         
-            <option value='2' >€ 526.83 (EUR)</option>
+            <option value='2'>€ 526.83 (EUR)</option>
         
-            <option value='3' >€ 526.83 (EUR)</option>
+            <option value='3'>€ 526.83 (EUR)</option>
         
-            <option value='4' >€ 526.83 (EUR)</option>
+            <option value='4'>€ 526.83 (EUR)</option>
         
     </select> </div>
             </div>
@@ -154,15 +156,15 @@
               <h3 class="card__title">Twist of Fate Adjustable Ring</h3>
               <div class="card__id"> <span class="card__id--id">ID:</span><span class="card__id--number">11024</span> </div>
               <div class="card__price">from $ Price selection </div>
-              <div class="card__select"> <select name='sel4' id="sel4" class="js-select select" data-placeholder="sel4e">
+              <div class="card__select"> <select name='sel4' id="sel4" class="js-select select" data-placeholder="sel4">
         
-            <option value='1' >€ 526.83 (EUR)</option>
+            <option value='1'>€ 526.83 (EUR)</option>
         
-            <option value='2' >€ 526.83 (EUR)</option>
+            <option value='2'>€ 526.83 (EUR)</option>
         
-            <option value='3' >€ 526.83 (EUR)</option>
+            <option value='3'>€ 526.83 (EUR)</option>
         
-            <option value='4' >€ 526.83 (EUR)</option>
+            <option value='4'>€ 526.83 (EUR)</option>
         
     </select> </div>
             </div>
@@ -174,11 +176,11 @@
               <div class="card__divider divider-grey"></div>
               <div class="card__id"> <span class="card__id--id">ID:</span><span class="card__id--number">11019</span> </div>
               <div class="card__price">from $ 333.33 </div>
-              <div class="card__select"> <select name='sel5' id="sel5" class="js-select select" data-placeholder="sel5e">
+              <div class="card__select"> <select name='sel5' id="sel5" class="js-select select" data-placeholder="sel5">
         
-            <option value='1' >€ 526.83 (EUR)</option>
+            <option value='1'>€ 526.83 (EUR)</option>
         
-            <option value='2' >€ 126.83 (EUR)</option>
+            <option value='2'>€ 126.83 (EUR)</option>
         
     </select> </div>
             </div>
@@ -188,11 +190,11 @@
               <div class="card__divider divider-grey"></div>
               <div class="card__id"> <span class="card__id--id">ID:</span><span class="card__id--number"> 5056 </span> </div>
               <div class="card__price">from $ 333.33 </div>
-              <div class="card__select"> <select name='sel6' id="sel6" class="js-select select" data-placeholder="sel6e">
+              <div class="card__select"> <select name='sel6' id="sel6" class="js-select select" data-placeholder="sel6">
         
-            <option value='2' >Occasions</option>
+            <option value='2'>Occasions</option>
         
-            <option value='3' >Any ocassion</option>
+            <option value='3'>Any ocassion</option>
         
     </select> </div>
             </div>
@@ -202,15 +204,15 @@
               <div class="card__divider divider-grey"></div>
               <div class="card__id"> <span class="card__id--id">ID:</span><span class="card__id--number">8056</span> </div>
               <div class="card__price">from $ Price selection </div>
-              <div class="card__select"> <select name='sel7' id="sel7" class="js-select select" data-placeholder="sel7e">
+              <div class="card__select"> <select name='sel7' id="sel7" class="js-select select" data-placeholder="sel7">
         
-            <option value='1' >€ 526.83 (EUR)</option>
+            <option value='1'>€ 526.83 (EUR)</option>
         
-            <option value='2' >€ 526.83 (EUR)</option>
+            <option value='2'>€ 526.83 (EUR)</option>
         
-            <option value='3' >€ 526.83 (EUR)</option>
+            <option value='3'>€ 526.83 (EUR)</option>
         
-            <option value='4' >€ 526.83 (EUR)</option>
+            <option value='4'>€ 526.83 (EUR)</option>
         
     </select> </div>
             </div>
@@ -220,15 +222,15 @@
               <div class="card__divider divider-grey"></div>
               <div class="card__id"> <span class="card__id--id">ID:</span><span class="card__id--number"> 11024 </span> </div>
               <div class="card__price">from $ priceselection </div>
-              <div class="card__select"> <select name='sel8' id="sel8" class="js-select select" data-placeholder="sel8e">
+              <div class="card__select"> <select name='sel8' id="sel8" class="js-select select" data-placeholder="sel8">
         
-            <option value='1' >€ 526.83 (EUR)</option>
+            <option value='1'>€ 526.83 (EUR)</option>
         
-            <option value='2' >€ 526.83 (EUR)</option>
+            <option value='2'>€ 526.83 (EUR)</option>
         
-            <option value='3' >€ 526.83 (EUR)</option>
+            <option value='3'>€ 526.83 (EUR)</option>
         
-            <option value='4' >€ 526.83 (EUR)</option>
+            <option value='4'>€ 526.83 (EUR)</option>
         
     </select> </div>
             </div>

@@ -11,7 +11,7 @@
             float: none
             width: 100%
     &__right 
-        margin-left: 480px
+        margin-left: 426px
         +sm
             float: none
             width: 100%
@@ -58,6 +58,19 @@
             &:last-child
                 flex-grow: 1
                 height: auto
+    &__budget
+        margin: 22px 0
+    &__review
+        margin: 12px 0 24px
+    &__recently-viewed
+        margin: 21px 0 54px
+        .cards-container
+            display: flex
+            margin: 22px 0 24px
+            .small-card:first-child
+                margin-right: 24px
+        .video
+            margin-bottom: 24px
 
 .go-back
     display: flex
@@ -94,24 +107,6 @@
         font-weight: 900
         text-transform: uppercase
         line-height: 1
-
-.select-with-price
-    &__price
-        display: inline-block
-        vertical-align: bottom
-        margin-right: 10px
-        font-size: 25px
-        line-height: 31px
-        font-weight: 900
-        color: $blue
-    &__select
-        display: inline-block
-        vertical-align: bottom
-        width: 232px
-        .select2-container--default .select2-selection--single .select2-selection__rendered	
-            color: $dark_blue
-            font-family: CorpidE1sSCd
-            font-size: 16px
 
 .location-card
     padding: 14px 15px 18px 14px
@@ -183,3 +178,72 @@
         letter-spacing: -0.5px
         text-align: left
         color: #3a5864
+
+.budget-form
+    &__title
+        margin-bottom: 14px
+    &__select
+        margin-bottom: 18px
+
+.review
+    font-family: $corp
+    &__header 
+        margin-bottom: 1.2em
+        display: flex
+        align-items: center
+        & > *
+            // display: inline-block
+            // vertical-align: middle
+            padding-right: 10px
+    // &__title
+    //     margin-right: 10px
+    &__number
+        font-size: 24px
+        font-weight: 300
+        line-height: normal
+        letter-spacing: -0.6px
+        text-align: left
+        color: $dark-grey
+    &__single-review
+        margin-bottom: 0.5em
+        font-size: 17px
+        line-height: normal
+        color: $text_black
+    &__text
+        font-weight: 300
+        margin-bottom: 0.5em
+    &__details
+        font-weight: bold
+
+// ===== STAR =====
+
+.stars
+    font-size: 0
+.star .icon
+    font-size: 25px
+
+.stars-rating-1
+    span 
+        +first(1)
+            .icon
+                fill: $blue
+.stars-rating-2
+    span 
+        +first(2)
+            .icon
+                fill: $blue
+.stars-rating-3
+    span 
+        +first(3)
+            .icon
+                fill: $blue
+.stars-rating-4
+    span 
+        +first(4)
+            .icon
+                fill: $blue
+.stars-rating-5
+    span 
+        +first(5)
+            .icon
+                fill: $blue

@@ -25,13 +25,21 @@ $(document).ready(function() {
   // ===== SELECT 2 =====
 
   let select_2 = $('.js-select');
-  select_2.select2({
-    width: '100%',
-    dropdownAutoWidth: true,
-    minimumResultsForSearch: Infinity
+
+  select_2.each(function(index, val) {
+    $(val).select2({
+      width: '100%',
+      dropdownAutoWidth: true,
+      minimumResultsForSearch: Infinity,
+      placeholder: $(val).data('placeholder')
+    });
   });
-  $($('.js-select').data('select2').$container).addClass('select--ordinary');
-  $($('.js-select').data('select2').$dropdown).addClass('select--ordinary');
+
+  $('.js-select').each(function() {
+    $($(this).data('select2').$container).addClass('select--ordinary');
+    $($(this).data('select2').$dropdown).addClass('select--ordinary');
+  });
+
   // ===== SELECT WITH FLAGS =====
   let selectWithFlags = $('.js-select-flag');
   function addFlag(state) {
@@ -54,10 +62,14 @@ $(document).ready(function() {
 
   selectWithFlags.select2({
     templateResult: addFlag,
-    width: '100%'
+    width: '100%',
+    placeholder: $(selectWithFlags).data('placeholder')
   });
-  $($('.js-select-flag').data('select2').$container).addClass('select--flag');
-  $($('.js-select-flag').data('select2').$dropdown).addClass('select--flag');
+
+  $('.js-select-flag').each(function() {
+    $($(this).data('select2').$container).addClass('select--flag');
+    $($(this).data('select2').$dropdown).addClass('select--flag');
+  });
 
   $(selectWithFlags).on('select2:select', function(e) {
     var newCountryFlag = e.params.data.element.dataset.flag;

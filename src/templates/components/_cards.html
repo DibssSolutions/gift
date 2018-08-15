@@ -38,3 +38,12 @@
         </div>
     {% endfor %}
 {% endmacro %}
+
+{% macro smallCard(props) %}
+    <a class="small-card" href="{{prors.link}}">
+        <div class="small-card__image" style='background-image: url(./assets/img/general/small-cards/{{props.image.src}})'></div>
+        <h4 class="small-card__title">{{props.title}}</h4>
+        <div class="small-card__id">Product ID: {{props.id}}</div>
+        <div class="small-card__price">${{props.price}}</div>
+    </a>
+{% endmacro %}

@@ -5,6 +5,7 @@
 {# IMPORTING MIXINS #}
 {% import "partials/_mixins.html" as mixins %}
 {% import "components/_titles.html" as titles %}
+{% import "components/_cards.html" as cards_builder %}
 {% import "components/_select.html" as select_builder %}
 {% import "components/_breadcrumb.html" as breadcrumb %}
 
@@ -80,6 +81,7 @@
                 <span class="card-page__id--number">276</span>
             </div>
             <div class="divider-grey"></div>
+            {# TOTAL PRICE #}
                 <div class="card-page__total-price">
                     <div class="select-with-price">
                         <div class="select-with-price__price">$ 614.95</div>
@@ -89,6 +91,7 @@
                     </div>
                 </div>
             <div class="divider-grey"></div>
+            {# DELIVERY #}
             <div class="card-page__delivery">
                 <div class="card-page__delivery-item">
                     <div class="location-card">
@@ -129,27 +132,95 @@
                     </div>
                 </div>
             <div class="divider-grey"></div>
+            {# BUDGET #}
             <div class="card-page__budget">
-                
+                <form class="budget-form" id="new-item">
+                    <div class="budget-form__title">
+                        {{titles.titleMiddle('Set Your Budget:')}}
+                    </div>
+                    <div class="budget-form__select">
+                        <div class="select-with-tooltip">
+                            <div class="select-with-tooltip__label">
+                                Select number of Box:
+                            </div>
+                            <div class="select-with-tooltip__select">
+                                {{select_builder.sel(selects_set.priceSelect2)}}
+                            </div>
+                            <div class="select-with-tooltip__tooltip js-tooltip" title="This is TOOLTIP!">
+                                {{mixins.icon('info')}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="budget-form__select">
+                        <div class="select-with-tooltip">
+                            <div class="select-with-tooltip__label">
+                                Choose a Vase for your bouquet:
+                            </div>
+                            <div class="select-with-tooltip__select">
+                                {{select_builder.sel(selects_set.vaseSelect)}}
+                            </div>
+                            <div class="select-with-tooltip__tooltip js-tooltip" title="This is TOOLTIP!">
+                                {{mixins.icon('info')}}
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-rounded btn-rounded--green btn-rounded--big">Add to cart</button>
+                </form>
             </div>
+            <div class="divider-grey"></div>
+            {# REVIEW #}
+            <div class="card-page__review">
+                <article class="review">
+                    <header class="review__header">
+                        <div class="review__title">
+                            {{titles.titleMiddle('Customer Reviews:')}}
+                        </div>
+                        <div class="stars stars-rating-2">
+                            <span class="star">{{mixins.icon('star')}}</span>
+                            <span class="star">{{mixins.icon('star')}}</span>
+                            <span class="star">{{mixins.icon('star')}}</span>
+                            <span class="star">{{mixins.icon('star')}}</span>
+                            <span class="star">{{mixins.icon('star')}}</span>
+                        </div>
+                        <div class="review__number">(40 reviews)</div>
+                        <button class="btn-underline btn-underline--big btn">Add Your Review</button>
+                    </header>
+                    <div class="review__single-review">
+                        <div class="review__text">
+                            I have ordered several bouquets from Russian Flora from the USA and they are fantastic! Nancy, Katherine, Natalie, Margaret and all of the team there are so professional and helpful, and make international floral delivery so easy for me. The flowers have been absolutely gorgeous on every occasion! The personalized attention my orders have received has been beyond compare, and they have gone over and above on every delivery! I will continue to use them and would highly recommend them to everyone.
+                        </div>
+                        <div class="review__details">
+                            • Reviewed by Debora - October 16, 2015 (USA) 
+                        </div>
+                    </div>
+                    <div class="review__single-review">
+                        <div class="review__text">
+                            You guys are seriously AMAZING. I order a lot of flowers internationally and you are the absolute BEST!
+                        </div>
+                        <div class="review__details">
+                            • Reviewed by Ronda - October 16, 2015 (El Cajon CA, USA)
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="divider-grey"></div>
+            <div class="card-page__recently-viewed">
+                {{titles.titleMiddle('Recently Viewed')}}
+                <div class="cards-container">
+                    {{cards_builder.smallCard(cards_set.cardSmall_1)}}
+                    {{cards_builder.smallCard(cards_set.cardSmall_2)}}
+                </div>
+                <div class="video">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/n_GA_vQRu9c?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <button type="submit" class="btn btn-rounded btn-rounded--green btn-rounded--big" form="new-item">Add to cart</button>
             </div>
         </div>
     </div>
 </div>
-								<div class="filter__select-wrapper">
-										<div class="filter__select">
-												{# SELECTOR-2 #}
-												{{select_builder.sel(selects_set.sortingTypesSelect)}}
-										</div>
-										<div class="filter__tooltip js-tooltip" title="This is TOOLTIP!">
-												{{mixins.icon('info')}}
-										</div>
-								</div>
-						
-				{# TITLE #}
-				<div class="category-title">
-					{{titles.titleBig('March 8 Flowers Gifts')}}
-				</div>
+								
+				
+				
 				
 </div>
 
