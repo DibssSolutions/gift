@@ -4,5 +4,6 @@ $(document).ready(function() {
     side: ['right', 'left', 'top', 'bottom'],
     trigger: 'click'
   });
-  $('.js-tooltip').tooltipster({ trigger: 'click' });
+  $('.js-tooltip').tooltipster({ trigger: 'click',
+    side: ['top', 'right','left', 'top'], });
 });

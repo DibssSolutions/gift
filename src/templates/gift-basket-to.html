@@ -1,0 +1,82 @@
+{# --- title: Index page --- #} 
+{# IMPORTING DATA COMPONENTS #} 
+{% import "data/_cards.html" as cards_set %} 
+{% import "data/_selects.html" as selects_set %}
+{# IMPORTING MIXINS #}
+{% import "partials/_mixins.html" as mixins %}
+{% import "components/_titles.html" as titles %} 
+{% import "components/_cards.html" as cards_builder %} 
+{% import "components/_select.html" as select_builder %}
+{% import "components/_breadcrumb.html" as breadcrumb %} 
+{% import "components/_range.html" as range_input %} 
+{% import "components/_dropdown-menu.html" as dd_menu %}
+{# MAIN LAYOUT #}
+
+{% extends "layouts/_layout.html" %} 
+
+{% block content %}
+
+
+<div class="inner">
+    {# BREADCRUMBS #}
+    <div class="country-gift__breadcrumbs">
+        {{breadcrumb.make([ 
+            {"class": "no-underline"}, 
+            {"text": "Home", "link": "ui.html"}, 
+            {"text": "Gift baskets to Brazil", "active": true} 
+        ]) }}
+    </div>
+
+    {# TITLE #}
+    <div class="country-gift__main-title">
+        {{titles.titleBig('Gift baskets to Brazil')}}
+    </div>
+
+    {# FILTERING AREA #}
+    <div class="filter country-gift__filter">
+        <div class="filter__select-wrapper">
+            {# SELECT WITH TOOLTIP COMPONENT #}
+            <div class="select-with-tooltip">
+                <div class="select-with-tooltip__select">
+                    {{select_builder.sel(selects_set.coutryServiceLocations)}}
+                </div>
+                <div class="select-with-tooltip__tooltip js-tooltip-right" title="This is TOOLTIP!">
+                    {{mixins.icon('info')}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% include "components/_slider.html" %}
+<div class="gift-backet-to">
+    <div class="gift-backet-to__container inner">
+        <aside class="sidebar">
+            {% include "components/_collapse.html" %}
+        </aside>
+        <main class="gift-backet-to__main">
+            <div class="gift-backet-to__subtitle">
+                <div class="text text--bold">
+                    Learn most important Brazil holidays: 
+                    <a href="#" class="text__link">holiday traditions of gift giving in Brazil</a>
+                </div>
+                
+            </div>
+            <div class="gift-backet-to__delivery">
+                {{titles.titleMiddle('Gift Basket Delivery to Brazil')}}
+                <div class="text">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, dignissimos tenetur accusantium ipsa officia quibusdam voluptatem libero molestiae molestias laboriosam deleniti deserunt inventore qui nihil, fuga rem. Dignissimos voluptate doloremque, deserunt ipsa perspiciatis voluptatem excepturi tempore officiis aliquam aspernatur laboriosam repellendus sed corporis voluptatum. </p>
+                    <p>Nostrum dolorem deserunt ipsa dolorum possimus modi? Voluptas tenetur recusandae qui animi, sint libero temporibus eius necessitatibus porro quis quod praesentium tempora adipisci nesciunt, nam dicta vitae consequatur! Facere, ipsa. Quaerat, suscipit. View our <a class="text__link" href="#">Gourmet Items</a>, <a class="text__link" href="#">Chocolat Baskets</a>, <a class="text__link" href="#">Flowers</a> and business gifts delivered to Brazil</p>
+                </div>
+            </div>
+            <div class="gift-backet-to__service">
+                {{titles.titleMiddle('Brazil Gift Basket Service')}}
+            </div>
+        </main>
+    </div>
+</div>
+{% include "components/_subscribe.html" %} 
+{% include "partials/_footer.html" %}
+
+{% endblock %}

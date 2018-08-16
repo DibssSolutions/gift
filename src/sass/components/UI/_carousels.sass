@@ -1,36 +1,40 @@
 .slider-wrapper
     max-width: 1000px
     margin: 0 auto
-    border-top: 1px solid #0f0
-    border-left: 1px solid #0f0
+    border-left: 1px solid $card-border-color
+    border-bottom: 1px solid $card-border-color
     margin-bottom: 40px
     .card
-        width: auto
-        max-width: 250px
+    //     width: auto
+    //     max-width: 250px
         &__title
             font-size: 16px
+.slider
+    .owl-prev,
+    .owl-next 
+        height: 48px
+        width: 48px
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        .icon
+            font-size: 40px
+        .icon-next-slide-button
+            fill: $main-green
+    .owl-prev 
+        left: -76px
+    .owl-next 
+        right: -76px
 
-.owl-prev,
-.owl-next 
-  height: 48px
-  width: 48px
-  position: absolute
-  top: 50%
-  transform: translateY(-50%)
 
-.owl-prev 
-  left: -76px
-
-
-.owl-next 
-  right: -76px
 
 .slide-full-width
     +cover
     height: 200px
     text-align: center
+    border-bottom: 2px solid $blue
 
-.slider-full-width-btn
+.carousel-full-width-btn
     background-color: $extra-light-green
     text-transform: uppercase
     color: $dark-green
@@ -38,7 +42,7 @@
     padding: 10px 20px
     border-radius: 10px
 
-.slider-full-width-title
+.carousel-full-width-title
     font-family: CorpidE1sSCd
     font-size: 48px
     font-weight: 800
@@ -48,22 +52,19 @@
     line-height: normal
     letter-spacing: -0.4px
 
-
-.slider-full-width-dots
+.carousel-full-width-dots
     position: relative
-
-.owl-dots
-    position: absolute
-    bottom: 20px
-    left: 50%
-    transform: translateX(-50%)
-.owl-dot
-    border-radius: 50%
-    width: 12px
-    height: 12px
-    background-color: $dark_blue
-    // opacity: 0.5
-    margin: 0 6px
-    &.active
-        background-color: $main-green
+    .owl-dots
+        position: absolute
+        bottom: 32px
+        left: 50%
+        transform: translateX(-50%)
+    .owl-dot
+        border-radius: 50%
+        width: 12px
+        height: 12px
+        background-color: $dark_blue
+        margin: 0 6px
+        &.active
+            background-color: $main-green
 

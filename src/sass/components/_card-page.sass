@@ -77,14 +77,24 @@
     align-items: center
     justify-content: center
     &__icon
-        margin-bottom: -0.3em
+        font-size: 0
         .icon
-            font-size: 1.9em
+            font-size: 49px
+            fill: $main-green
+            +colorTrans
     &__text
         margin-left: 10px
         font-size: 18px
         font-weight: bold
-        color: $dark-green
+        color: $main-green
+        +colorTrans
+    +hover
+        .go-back__icon .icon
+            fill: $dark-green
+            +colorTrans
+        .go-back__text
+            color: $dark-green
+            +colorTrans
 
 .download-spreadsheet
     display: block

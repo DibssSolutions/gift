@@ -5,10 +5,11 @@
 {# IMPORTING MIXINS #}
 {% import "partials/_mixins.html" as mixins %}
 {% import "components/_titles.html" as titles %} 
-{% import "components/_cards.html" as cards_init %} 
+{% import "components/_cards.html" as cards_builder %} 
 {% import "components/_select.html" as select_builder %}
 {% import "components/_breadcrumb.html" as breadcrumb %} 
 {% import "components/_range.html" as range_input %} 
+{% import "components/_dropdown-menu.html" as dd_menu %}
 {# MAIN LAYOUT #}
 {% extends "layouts/_layout.html" %} 
 
@@ -37,14 +38,16 @@
         </div>
         <div class="filter__col">
             <div class="filter__select-wrapper">
-                <div class="filter__select-globe">
-                    <img src="./assets/img/general/globus-ico.png" alt="">
-                </div>
-                <div class="filter__select">
-                    {# SELECTOR-1 #} {{select_builder.sel(selects_set.citySelect)}}
-                </div>
-                <div class="filter__tooltip js-tooltip" title="This is TOOLTIP!">
-                    {{mixins.icon('info')}}
+                <div class="select-with-tooltip">
+                    <div class="filter__select-globe">
+                        <img src="./assets/img/general/globus-ico.png" alt="">
+                    </div>
+                    <div class="filter__select">
+                        {# SELECTOR-1 #} {{select_builder.sel(selects_set.citySelect)}}
+                    </div>
+                    <div class="filter__tooltip js-tooltip" title="This is TOOLTIP!">
+                        {{mixins.icon('info')}}
+                    </div>
                 </div>
             </div>
             <div class="filter__select-wrapper">
@@ -65,9 +68,30 @@
 
     </div>
     {# TITLE #}
-    <div class="usa__title">
-        {{titles.titleBiggest('March 8 Flowers Gifts')}}
-    </div>
+    <main class="usa">
+        <div class="usa__main-title">
+            {{titles.titleBig('Gift baskets to Hawaii (USA)')}}
+        </div>
+        <div class="usa__secondary-title">
+            {{titles.titleMiddle('Why send gifts to Middle East with us?')}}
+        </div>
+        <div class="usa__descr text">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis distinctio alias placeat repellendus eos expedita omnis eum pariatur eveniet magnam quo eaque, perferendis veritatis doloremque quibusdam natus ut libero corporis iure nulla ipsum tenetur atque obcaecati doloribus? Totam, quibusdam minus. View our <a class="text__link" href="#">Gourmet Items</a>, <a class="text__link" href="#">Sweet Baskets</a>, <a class="text__link" href="#">Flowers</a> and business gifts delivered to Hawaii</p>
+            <p>See <a class="text__link" href="#">list of serviced cities</a> on Hawaii</p>
+            <p>Please review a list of biggest <a class="text__link" href="#">Hawaii holidays</a> to learn holiday traditins of gift giving in Hawaii</p>
+        </div>
+        <div class="usa__cards">
+            <div class="cards">
+                {{cards_builder.card(cards_set.usaCards)}}
+            </div>
+        </div>
+        {# DD MENU #}
+        <div class="usa__cities-menu">
+            {{dd_menu.menu_1()}}
+        </div>
+    </main>
+    
+
 
 </div>
 

@@ -11,11 +11,11 @@ collapseTrigger.click(function(event) {
     // dropdowns.removeClass(OPEN);
     parent.addClass(OPEN);
     var list = $(parent).find('.js-collapse-list');
-    $(list).slideDown(350);
+    $(list).slideDown(750);
   } else {
     parent.removeClass(OPEN);
     var list = $(parent).find('.js-collapse-list');
-    $(list).slideUp(350);
+    $(list).slideUp(750);
   }
   event.stopPropagation();
 });

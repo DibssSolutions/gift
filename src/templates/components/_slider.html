@@ -1,5 +1,6 @@
-{% import "components/_cards.html" as cards_init %}
-
+{% import "components/_cards.html" as cards_builder %}
+{% import "data/_cards.html" as cards_set %}
+{# 
 {% set card_template = [
     [
         {
@@ -9,7 +10,7 @@
             },
             "free_mark": true,
             "title": "Endless Connection Necklace in Rose ",
-            "link": {
+            "button_link": {
                 "link_link": "#",
                 "link_text": "Details"
             }
@@ -24,7 +25,7 @@
             },
             "free_mark": true,
             "title": "Endless Connection Necklace in Rose ",
-            "link": {
+            "button_link": {
                 "link_link": "#",
                 "link_text": "Details"
             }
@@ -39,7 +40,7 @@
             },
             "free_mark": true,
             "title": "Endless Connection Necklace in Rose ",
-            "link": {
+            "button_link": {
                 "link_link": "#",
                 "link_text": "Details"
             }
@@ -54,7 +55,7 @@
             },
             "free_mark": true,
             "title": "Endless Connection Necklace in Rose ",
-            "link": {
+            "button_link": {
                 "link_link": "#",
                 "link_text": "Details"
             }
@@ -69,7 +70,7 @@
             },
             "free_mark": true,
             "title": "Endless Connection Necklace in Rose ",
-            "link": {
+            "button_link": {
                 "link_link": "#",
                 "link_text": "Details"
             }
@@ -84,21 +85,21 @@
             },
             "free_mark": true,
             "title": "Endless Connection Necklace in Rose ",
-            "link": {
+            "button_link": {
                 "link_link": "#",
                 "link_text": "Details"
             }
 
         }
     ]
-] %}
+] %} #}
 
-<div class="slider-container">
-    <div class="slider-wrapper container-inner">
-        <div class="slider owl-carousel" id="slider">
-            {% for item in card_template %}
+<div class="slider-container inner">
+    <div class="slider-wrapper">
+        <div class="slider owl-carousel js-slider" id="slider">
+            {% for item in cards_set.brazilCards %}
                 <div class="slide">
-                    {{cards_init.card(item)}}
+                    {{cards_builder.card(item)}}
                 </div>
             {% endfor %}
         </div>

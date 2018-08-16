@@ -13,7 +13,7 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <nav>
+      <nav class="temp__container">
         <ul>
           <li class="temp"> <a href="ui.html">UI</a> </li>
           <li class="temp"> <a href="category-page.html">CATEGORY</a> </li>
@@ -23,26 +23,26 @@
         </ul>
       </nav>
       <div class="slide-full-width-container">
-        <div class="slider-full-width-wrapper container-inner">
-          <div class="slider-full-width-dots js-slider-dots owl-carousel">
-            <div class="slide-full-width" style="background-image: url(./assets/img/general/slider/flower1.jpeg)">
-              <h4 class="slider-full-width-title">Happy Passover!</h4>
-              <p>Get $7 USD off any order with coupon code: 1WSR54</p> <button class='btn slider-full-width-btn'>Shop now</button>
+        <div class="carousel-full-width-wrapper container-inner">
+          <div class="carousel-full-width-dots js-carousel-dots owl-carousel">
+            <div class="slide-full-width" style="background-image: url(./assets/img/general/carousel/flower1.jpeg)">
+              <h4 class="carousel-full-width-title">Happy Passover!</h4>
+              <p>Get $7 USD off any order with coupon code: 1WSR54</p> <button class='btn carousel-full-width-btn'>Shop now</button>
               <p>The coupon is valid until March, 20</p>
             </div>
-            <div class="slide-full-width" style="background-image: url(./assets/img/general/slider/flower2.jpeg)">
-              <h4 class="slider-full-width-title">Happy Passover!</h4>
-              <p>Get $7 USD off any order with coupon code: 1WSR54</p> <button class='btn slider-full-width-btn'>Shop now</button>
+            <div class="slide-full-width" style="background-image: url(./assets/img/general/carousel/flower2.jpeg)">
+              <h4 class="carousel-full-width-title">Happy Passover!</h4>
+              <p>Get $7 USD off any order with coupon code: 1WSR54</p> <button class='btn carousel-full-width-btn'>Shop now</button>
               <p>The coupon is valid until March, 20</p>
             </div>
-            <div class="slide-full-width" style="background-image: url(./assets/img/general/slider/flower3.jpeg)">
-              <h4 class="slider-full-width-title">Happy Passover!</h4>
-              <p>Get $7 USD off any order with coupon code: 1WSR54</p> <button class='btn slider-full-width-btn'>Shop now</button>
+            <div class="slide-full-width" style="background-image: url(./assets/img/general/carousel/flower3.jpeg)">
+              <h4 class="carousel-full-width-title">Happy Passover!</h4>
+              <p>Get $7 USD off any order with coupon code: 1WSR54</p> <button class='btn carousel-full-width-btn'>Shop now</button>
               <p>The coupon is valid until March, 20</p>
             </div>
-            <div class="slide-full-width" style="background-image: url(./assets/img/general/slider/flower4.jpeg)">
-              <h4 class="slider-full-width-title">Happy Passover!</h4>
-              <p>Get $7 USD off any order with coupon code: 1WSR54</p> <button class='btn slider-full-width-btn'>Shop now</button>
+            <div class="slide-full-width" style="background-image: url(./assets/img/general/carousel/flower4.jpeg)">
+              <h4 class="carousel-full-width-title">Happy Passover!</h4>
+              <p>Get $7 USD off any order with coupon code: 1WSR54</p> <button class='btn carousel-full-width-btn'>Shop now</button>
               <p>The coupon is valid until March, 20</p>
             </div>
           </div>
@@ -71,8 +71,9 @@
           </div>
           <div class="filter__col">
             <div class="filter__select-wrapper">
-              <div class="filter__select-globe"> <img src="./assets/img/general/globus-ico.png" alt=""> </div>
-              <div class="filter__select"> <select name='city-select' id="city-select " class="js-select select" data-placeholder="Service Cities">
+              <div class="select-with-tooltip">
+                <div class="filter__select-globe"> <img src="./assets/img/general/globus-ico.png" alt=""> </div>
+                <div class="filter__select"> <select name='city-select' id="city-select " class="js-select select" data-placeholder="Service Cities">
         
             <option ></option>
         
@@ -85,7 +86,8 @@
             <option value='4'>Sydney</option>
         
     </select> </div>
-              <div class="filter__tooltip js-tooltip" title="This is TOOLTIP!"> <svg class="icon icon-info"><use xlink:href="assets/img/general/sprite.svg#icon-info"></use></svg> </div>
+                <div class="filter__tooltip js-tooltip" title="This is TOOLTIP!"> <svg class="icon icon-info"><use xlink:href="assets/img/general/sprite.svg#icon-info"></use></svg> </div>
+              </div>
             </div>
             <div class="filter__select-wrapper">
               <div class="select-with-tooltip">
@@ -111,9 +113,130 @@
             </div>
           </div>
         </div>
-        <div class="usa__title">
-          <h2 class="title-biggest">March 8 Flowers Gifts</h2>
-        </div>
+        <main class="usa">
+          <div class="usa__main-title">
+            <h2 class="title-big">Gift baskets to Hawaii (USA)</h2>
+          </div>
+          <div class="usa__secondary-title">
+            <h5 class="title-middle">Why send gifts to Middle East with us?</h5>
+          </div>
+          <div class="usa__descr text">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis distinctio alias placeat repellendus eos expedita omnis eum pariatur eveniet magnam quo eaque, perferendis veritatis doloremque quibusdam natus ut libero corporis iure nulla
+              ipsum tenetur atque obcaecati doloribus? Totam, quibusdam minus. View our <a class="text__link" href="#">Gourmet Items</a>, <a class="text__link" href="#">Sweet Baskets</a>, <a class="text__link" href="#">Flowers</a> and business gifts delivered
+              to Hawaii</p>
+            <p>See <a class="text__link" href="#">list of serviced cities</a> on Hawaii</p>
+            <p>Please review a list of biggest <a class="text__link" href="#">Hawaii holidays</a> to learn holiday traditins of gift giving in Hawaii</p>
+          </div>
+          <div class="usa__cards">
+            <div class="cards">
+              <div class="card card__big">
+                <div class="card__image" style='background-image: url(./assets/img/general/gifts-1/gift_img_11.png)'> </div>
+                <h3 class="card__title">Love Burst Bouquet for your friends in Hawaii</h3>
+                <div class="card__divider divider-grey"></div> <a class="card__button-link" href="#">
+                    Details
+                </a>
+                <div class="card__divider divider-grey"></div> <a class="card__link" href="#">
+                    More Flowers
+                </a> </div>
+              <div class="card card__big">
+                <div class="card__image" style='background-image: url(./assets/img/general/gifts-1/gift_img_12.png)'> </div>
+                <h3 class="card__title">Christmas Coffee Break Gift Basket Shipped to</h3>
+                <div class="card__divider divider-grey"></div> <a class="card__button-link" href="#">
+                    Details
+                </a>
+                <div class="card__divider divider-grey"></div> <a class="card__link" href="#">
+                    More Tea-Coffee-Gifts
+                </a> </div>
+              <div class="card card__big">
+                <div class="card__image" style='background-image: url(./assets/img/general/gifts-1/gift_img_13.png)'> </div>
+                <h3 class="card__title">Sunset memoris with delivery to hawaii</h3>
+                <div class="card__divider divider-grey"></div> <a class="card__button-link" href="#">
+                    Details
+                </a>
+                <div class="card__divider divider-grey"></div> <a class="card__link" href="#">
+                    More sympathy-flowers
+                </a> </div>
+              <div class="card card__big">
+                <div class="card__image" style='background-image: url(./assets/img/general/gifts-1/gift_img_14.png)'> </div>
+                <h3 class="card__title">Gift of the day</h3>
+                <div class="card__divider divider-grey"></div> <a class="card__button-link" href="#">
+                    Details
+                </a> </div>
+              <div class="card card__big">
+                <div class="card__image" style='background-image: url(./assets/img/general/gifts-1/gift_img_15.png)'> </div>
+                <h3 class="card__title">Corporate bulk and orders</h3>
+                <div class="card__divider divider-grey"></div>
+              </div>
+              <div class="card card__big">
+                <div class="card__image" style='background-image: url(./assets/img/general/gifts-1/gift_img_16.png)'> </div>
+                <h3 class="card__title">Build your own gift basket [?]</h3>
+                <div class="card__divider divider-grey"></div>
+              </div>
+            </div>
+          </div>
+          <div class="usa__cities-menu">
+            <div class="js-dropdown-container dropdown-menu"> <button class="js-dropdown-btn dropdown-menu-btn">
+        <span class="dropdown-menu-btn__text">Serviced cities & towns in Hawaii</span>
+        <span class="dropdown-menu-btn__icon">
+<svg class="icon icon-chevron-down"><use xlink:href="assets/img/general/sprite.svg#icon-chevron-down"></use></svg>
+</span>
+    </button>
+              <div class="dropdown-menu__hidden">
+                <ul class="dropdown-menu__list">
+                  <li class="dropdown-menu__item">
+                    <div class="dropdown-menu__letter">A</div>
+                    <div class="dropdown-menu__links"> <a href="#" class="dropdown-menu__link">Ahuimanu Aiea</a> </div>
+                  </li>
+                  <li class="dropdown-menu__item">
+                    <div class="dropdown-menu__letter">E</div>
+                    <div class="dropdown-menu__links"> <a href="#" class="dropdown-menu__link">Ewa</a>, <a href="#" class="dropdown-menu__link">Ewa beach</a> </div>
+                  </li>
+                  <li class="dropdown-menu__item">
+                    <div class="dropdown-menu__letter">H</div>
+                    <div class="dropdown-menu__links"> <a href="#" class="dropdown-menu__link">Halawa</a>, <a href="#" class="dropdown-menu__link">Hawaiian</a>, <a href="#" class="dropdown-menu__link">Paradise Park</a>, <a href="#" class="dropdown-menu__link">Hilo</a>, <a href="#" class="dropdown-menu__link">Holualoa</a>,
+                      <a href="#" class="dropdown-menu__link">Honolulun</a> </div>
+                  </li>
+                  <li class="dropdown-menu__item">
+                    <div class="dropdown-menu__letter">K</div>
+                    <div class="dropdown-menu__links"> <a href="#" class="dropdown-menu__link">Kahului</a>, <a href="#" class="dropdown-menu__link">Kailua</a>, <a href="#" class="dropdown-menu__link">Kalaoa</a>, <a href="#" class="dropdown-menu__link">Keneohe</a>, <a href="#" class="dropdown-menu__link">Kaneohe Station</a>,
+                      <a href="#" class="dropdown-menu__link">Kapaa</a>, <a href="#" class="dropdown-menu__link">Kihei</a>, <a href="#" class="dropdown-menu__link">Koolauloa</a>, <a href="#" class="dropdown-menu__link">Koolaupoko</a>, <a href="#" class="dropdown-menu__link">Kula</a>                      </div>
+                  </li>
+                  <li class="dropdown-menu__item">
+                    <div class="dropdown-menu__letter">L</div>
+                    <div class="dropdown-menu__links"> <a href="#" class="dropdown-menu__link">Lahaina</a> </div>
+                  </li>
+                  <li class="dropdown-menu__item">
+                    <div class="dropdown-menu__letter">M</div>
+                    <div class="dropdown-menu__links"> <a href="#" class="dropdown-menu__link">Makaha</a>, <a href="#" class="dropdown-menu__link">Makakilo City</a>, <a href="#" class="dropdown-menu__link">Makawao</a>, <a href="#" class="dropdown-menu__link">Mililani Town</a> </div>
+                  </li>
+                  <li class="dropdown-menu__item">
+                    <div class="dropdown-menu__letter">N</div>
+                    <div class="dropdown-menu__links"> <a href="#" class="dropdown-menu__link">Nanakuli</a>, <a href="#" class="dropdown-menu__link">Napili-Honokowi</a>, <a href="#" class="dropdown-menu__link">North Kohala</a>, <a href="#" class="dropdown-menu__link">North Kona</a> </div>
+                  </li>
+                  <li class="dropdown-menu__item">
+                    <div class="dropdown-menu__letter">P</div>
+                    <div class="dropdown-menu__links"> <a href="#" class="dropdown-menu__link">Pohoa-Kalapana</a>, <a href="#" class="dropdown-menu__link">Pearl City</a>, <a href="#" class="dropdown-menu__link">Pukalani</a> </div>
+                  </li>
+                  <li class="dropdown-menu__item">
+                    <div class="dropdown-menu__letter">S</div>
+                    <div class="dropdown-menu__links"> <a href="#" class="dropdown-menu__link">Schofield Barracks</a>, <a href="#" class="dropdown-menu__link">South Kohala</a>, <a href="#" class="dropdown-menu__link">South Kona</a> </div>
+                  </li>
+                  <li class="dropdown-menu__item">
+                    <div class="dropdown-menu__letter">V</div>
+                    <div class="dropdown-menu__links"> <a href="#" class="dropdown-menu__link">Village Park</a> </div>
+                  </li>
+                  <li class="dropdown-menu__item">
+                    <div class="dropdown-menu__letter">W</div>
+                    <div class="dropdown-menu__links"> <a href="#" class="dropdown-menu__link">Wahaiawa</a>, <a href="#" class="dropdown-menu__link">Waianae</a>, <a href="#" class="dropdown-menu__link">Waihee-Waiehu</a>, <a href="#" class="dropdown-menu__link">Wailuku</a>, <a href="#"
+                        class="dropdown-menu__link">Waimalu</a>, <a href="#" class="dropdown-menu__link">Waimea</a>, <a href="#" class="dropdown-menu__link">Waipahu</a>, <a href="#" class="dropdown-menu__link">Waipio</a>, and many other locations in Hawaii.
+                      If yuur location of interest is not listed - please <a href="#" class="dropdown-menu__link">contact our customer service team</a> </div>
+                  </li>
+                </ul>
+                <div class="dropdown-menu__text"> Please visit our <a href="#" class="dropdown-menu__link dropdown-menu__link--active">International gift service</a> page to send gifts to other countries </div>
+              </div>
+            </div>
+          </div>
+        </main>
       </div>
       <div class="subscribe">
         <div class="subcribe__container inner">
@@ -123,7 +246,7 @@
       <footer class="footer">
         <div class="footer__container inner">
           <div class="footer__container-inner">
-            <div class="footer__menus">
+            <div class="footer__menus d-md-none">
               <div class="footer__column">
                 <div class="footer-menu">
                   <h4 class="footer-menu__title"> Worldwide Service </h4>
@@ -248,10 +371,10 @@
               </div>
             </div>
           </div>
-          <div class="footer__divider divider-grey"></div>
+          <div class="footer__divider divider-grey d-md-none"></div>
           <div class="footer__partners"> <img src="./assets/img/general/partners.png" alt=""> </div>
           <div class="footer__divider divider-blue"></div>
-          <div class="footer__container-inner payments">
+          <div class="footer__container-inner payments d-md-none">
             <div class="payments__title"> WE ACCEPT </div>
             <a href="#" class="payments__brands">
               <div class="payments__brand"> <svg class="icon icon-visa"><use xlink:href="assets/img/general/sprite.svg#icon-visa"></use></svg> </div>
@@ -275,7 +398,7 @@
               <div class="payments__brand"> <svg class="icon icon-mol-pay"><use xlink:href="assets/img/general/sprite.svg#icon-mol-pay"></use></svg> </div>
             </a>
           </div>
-          <div class="footer__divider divider-blue"></div>
+          <div class="footer__divider divider-blue d-md-none"></div>
           <div class="footer__social"> <a href="#" class="footer__social-icon youtube">
 <svg class="icon icon-youtube"><use xlink:href="assets/img/general/sprite.svg#icon-youtube"></use></svg>
 </a> <a href="#" class="footer__social-icon facebook">

@@ -16,12 +16,21 @@
     z-index: 100
     display: inline-flex
     align-items: center
+    +md
+        font-size: 28px
+    +sm 
+        font-size: 16px
     &__icon
         font-size: 0
+        margin-left: 16px
     .icon
         fill: $dark_blue
         font-size: 30px
         transition: transform 0.3s
+        +md 
+            font-size: 24px
+        +sm 
+            font-size: 16px
 
 .is-open 
     .dropdown-menu-btn__icon .icon
@@ -49,22 +58,32 @@
     &__list
         column-count: 4
         text-align: left
+        margin-bottom: 24px
+        +md 
+            column-count: 2
+        +sm 
+            column-count: 1
     &__item
         display: inline-block
         width: 100%
+        margin-bottom: 4px
     &__links
         font-size: 17px
         font-weight: 300
         color: $text_black
         line-height: 1
     &__link
-        // text-decoration: underline
         display: inline-block
         border-bottom: 1px solid $text_black
         +hover
             border-bottom: 1px solid $dropdown_text
             color: $dropdown_text
+        &--active
+           color: $dropdown_text
+           border-bottom: 1px solid $dropdown_text
     &__letter
         color: $dropdown_text
         font-size: 22px
         font-weight: bold
+    &__text
+        @extend .dropdown-menu__links

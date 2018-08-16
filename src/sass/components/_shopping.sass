@@ -77,6 +77,12 @@
 		display: flex
 		justify-content: space-between
 		position: relative
+		+sm 
+			flex-flow: column
+			align-items: flex-start
+			& > *
+				margin-bottom: 12px
+			
 	&__descr	
 		margin-bottom: 40px
 		font-size: 15px
@@ -89,11 +95,9 @@
 	font-family: $corp
 	border-collapse: collapse
 	margin-top: 30px
-	// border-bottom: 3px dotted #f00
 	th
 		padding: 16px 0 20px
 	td 
-		// border-bottom: 3px dotted #f00
 		padding: 24px 0 30px
 	td,
 	th
@@ -105,7 +109,6 @@
 			width: 100%
 			height: 3px
 			content: ''
-			// background: radial-gradient(3px 3px, $dark-green 0%, $dark-green 50%, transparent 50%)
 			background-image: url(../assets/img/general/divider-green.svg)
 			background-repeat: repeat-x
 			background-size: contain
@@ -119,7 +122,6 @@
 			height: 3px
 			content: ''
 			background-image: url(../assets/img/general/divider-green.svg)
-			// background: radial-gradient(3px 3px, $dark-green 0%, $dark-green 50%, transparent 50%)
 			background-repeat: repeat-x
 			background-size: contain
 			background-size: 7px 3px
@@ -129,18 +131,21 @@
 		color: $table_title
 		text-align: left
 		&:nth-child(1)
-			width: 720px
+			// width: 720px
+			width: 60%
 		&:nth-child(2)
-			width: 170px
+			// width: 170px
+			width: 14%
 		&:nth-child(3)
-			width: 130px
+			// width: 130px
+			width: 14%
 		
 	&__descr
-		
+		// display: flex
 	&__photo
 		display: inline-block
 		vertical-align: top
-		width: 200px
+		max-width: 200px
 		text-align: center
 	&__img
 		display: inline-block
@@ -148,6 +153,7 @@
 	&__text
 		display: inline-block
 		vertical-align: top
+		max-width: 1000px
 	&__name
 		font-size: 21px
 		font-weight: 900
@@ -157,6 +163,7 @@
 		letter-spacing: normal
 		text-align: left
 		color: $table_title
+		
 	&__id
 		font-size: 21px
 		font-weight: normal

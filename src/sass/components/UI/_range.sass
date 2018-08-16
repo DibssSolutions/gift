@@ -8,10 +8,15 @@
 .noUi-horizontal
     height: 17px
 .range
-    // display: flex
+    display: flex
+    align-items: center
+    +sm 
+        flex-flow: column
     &__slider
         width: 230px
-        display: inline-block
+        +sm
+            order: -1
+            width: 100%
     &__numbers
         font-family: $corp
         font-size: 16px
@@ -19,4 +24,4 @@
         text-align: left
         color: #3a5864
         margin-right: 10px
-        display: inline-block
+        

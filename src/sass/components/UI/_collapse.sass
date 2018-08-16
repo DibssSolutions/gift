@@ -1,9 +1,43 @@
-.collapse
-	&__trigger
+.sidebar
+	// width: 292px
+	float: left
+.sidebar-menu
+	padding: 16px
+	background-color: $special_bg
+	border-radius: 4px
+	width: 292px
+	margin-bottom: 14px
+	.icon
+		fill: $extra-dark-green
+	&__header
 		cursor: pointer
+		font-size: 20px
+		font-weight: 800
+		color: $blue
+		display: flex
+		align-items: center
+		justify-content: space-between
+		.icon
+			fill: $blue
+			float: right
+			transition: 0.4s transform cubic-bezier(0.68, -0.55, 0.265, 1.55)
 	&__list
 		display: none
+		transition: all 0.75s
+	&__icon
+		float: left
+		display: block
+	&__link
+		margin-left: 40px
+		display: block
 	&.is-open 
-		.collapse__list
+		.sidebar-menu__list
 			display: block
+			// opacity: 0
+			// visibility: hidden
+			// transition: all 0.75s
+		.sidebar-menu__header .icon
+			+rotate(180)
+			transition: 0.4s transform cubic-bezier(0.68, -0.55, 0.265, 1.55)
+
 	
