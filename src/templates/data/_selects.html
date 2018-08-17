@@ -49,6 +49,67 @@
 		]
 } %}
 
+	
+
+{% set destinationCountries = {
+		"name": "destination",
+		"id": "destination-countries",
+		"placeholder": "Select Destination Country",
+		"options": [
+				{
+						"value": "",
+						"title": ""
+				},
+				{
+						"value": "1",
+						"title": "Russia"
+
+				}, {
+						"value": "2",
+						"title": "Ukraine"
+
+				}, {
+						"value": "3",
+						"title": "Latvia"
+
+				}, {
+						"value": "4",
+						"title": "Lithuania"
+				},
+								{
+						"value": "5",
+						"title": "Estonia"
+
+				}, {
+						"value": "6",
+						"title": "Belarus"
+
+				}, {
+						"value": "7",
+						"title": "Kazakhstan"
+
+				}, {
+						"value": "8",
+						"title": "Moldova"
+				},				{
+						"value": "9",
+						"title": "Uzbekistan"
+
+				}, {
+						"value": "10",
+						"title": "Azerbaijan"
+
+				}, {
+						"value": "11",
+						"title": "Kyrgyzstan"
+
+				}, {
+						"value": "12",
+						"title": "Armenia"
+				}
+		]
+} %}
+
 {% set sortingTypesSelect = {
 		"name": "sorting",
 		"id": "sorting",
@@ -213,3 +274,77 @@
 			}
 	]
 } %}
+
+{% set occasionSet =  {
+	"name": "main-filter",
+	"id": "main-filter",
+	"placeholder": "Select Gift or Occasion",
+	"options": [
+			{
+					"value": "",
+					"title": ""
+			}, {
+					"value": "1",
+					"title": "Thank You"
+			}, {
+					"value": "2",
+					"title": "Christmas"
+			}, {
+					"value": "3",
+					"title": "Birthday"
+			},{
+					"value": "4",
+					"title": "Get Well"
+			}, {
+					"value": "5",
+					"title": "Graduation"
+			}, {
+					"value": "6",
+					"title": "Congratulations"
+			}, {
+					"value": "7",
+					"title": "Housewarming"
+			}
+	]
+}	%}
+
+{% set datesSet =  {
+	"name": "dates-filter",
+	"id": "dates-filter",
+	"placeholder": "Select Delivery date",
+	"options": [
+			{
+					"value": "",
+					"title": ""
+			}, {
+					"value": "1",
+					"title": "Any date available"
+			}, {
+					"value": "2",
+					"title": "Tue - Aug 21, 2018"
+			}, {
+					"value": "3",
+					"title": "Wed - Aug 22, 2018"
+			},{
+					"value": "4",
+					"title": "Thu - Aug 23, 2018"
+			}, {
+					"value": "5",
+					"title": "Fri - Aug 24, 2018"
+			}, {
+					"value": "6",
+					"title": "Sat - Aug 25, 2018"
+			}, {
+					"value": "7",
+					"title": "Mon - Aug 27, 2018"
+			}
+	]
+}	%}
+
+{% set tooltip = "Our payment processing is always completed in US Dollars (USD). The price in other currency is estimated based on the today's bank rate. 
+
+If your account currency is not USD - the actual amount charged in your currency may be slightly different based on your bank's current rate on the date of transaction. 
+
+Current exchange rate is estimated: 
+
+Please see Google Finance website for more details." %}

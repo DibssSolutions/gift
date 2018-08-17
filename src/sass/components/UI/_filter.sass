@@ -1,8 +1,14 @@
-
 .filter
     display: flex
     align-items: flex-start
     justify-content: space-between
+    font-family: $corp
+    &--center 
+        justify-content: center
+        flex-wrap: wrap
+        .filter__select-wrapper
+            flex: 0 0 27%
+
     +sm
         flex-flow: column
     &__col
@@ -17,7 +23,6 @@
             margin-right: auto
             +sm 
                 min-width: inherit
-
     &__found
         font-family: $corp
         font-size: 24px
@@ -34,6 +39,7 @@
     &__select-wrapper
         padding: 0 20px
         font-size: 0
+        text-align: center
         +sm 
             max-width: 100%
             padding: 0 0 12px 0
@@ -55,6 +61,13 @@
             display: none
     &__select
         width: 232px
+    &__select-label
+        font-size: 16px
+        font-weight: 700
+        text-transform: uppercase
+        color: $text_black
+        width: 100%
+        margin-bottom: 8px
     &__tooltip
         margin-left: 6px
         cursor: pointer
@@ -63,7 +76,11 @@
     &__range
         display: inline-block
         width: 400px
-        // margin-top: 26px
+        margin-top: 26px
 
     &__breadcrumb
         margin-right: auto
+    
+    &__btn
+        flex: 0 0 100%
+        text-align: center

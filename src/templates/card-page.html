@@ -120,14 +120,14 @@
                     </div>
                 </div>
                 <div class="card-page__delivery-item">
-                    <div class="time-card">
-                        <div class="time-card__image">
+                    <div class="time-card card-with-icons">
+                        <div class="time-card__image card-with-icons-image">
                             {{mixins.icon('clock-blue')}}
                         </div>
-                        <h5 class="time-card__title">
+                        <h5 class="time-card__title card-with-icons-title">
                             Want it Monday, March 5?
                         </h5>
-                        <div class="card__text">Order within 12 hrs, 19 mins</div>
+                        <div class="card__text card-with-icons-text">Order within 12 hrs, 19 mins</div>
                         </div>
                     </div>
                 </div>
@@ -146,7 +146,7 @@
                             <div class="select-with-tooltip__select">
                                 {{select_builder.sel(selects_set.priceSelect2)}}
                             </div>
-                            <div class="select-with-tooltip__tooltip js-tooltip" title="This is TOOLTIP!">
+                            <div class="select-with-tooltip__tooltip js-tooltip" title="{{selects_set.tooltip}}">
                                 {{mixins.icon('info')}}
                             </div>
                         </div>
@@ -159,7 +159,7 @@
                             <div class="select-with-tooltip__select">
                                 {{select_builder.sel(selects_set.vaseSelect)}}
                             </div>
-                            <div class="select-with-tooltip__tooltip js-tooltip" title="This is TOOLTIP!">
+                            <div class="select-with-tooltip__tooltip js-tooltip" title="{{selects_set.tooltip}}">
                                 {{mixins.icon('info')}}
                             </div>
                         </div>

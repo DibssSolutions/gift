@@ -38,7 +38,7 @@
           </nav>
         </div>
         <!-- FILTERING AREA -->
-        <div class="filter">
+        <form action="/" class="filter">
           <div class="filter__col">
             <div class="filter__found">
               <h5> <span class="filter__found filter__found--bold">243</span> items found </h5>
@@ -49,7 +49,7 @@
 					<img class="js-selected-counry-flag" src="./assets/img/general/ru.png" alt="">
 				</a>
               <div class="filter__select-globe"> <img src="./assets/img/general/globus-ico.png" alt=""> </div>
-              <div class="filter__select"> <select name='countries' id="countries" class="js-select-flag select-with-flag select" data-placeholder="sel1">
+              <div class="filter__select"> <select name='countries' id="countries" class="js-select-flag select-with-flag" data-placeholder="sel1">
         
             <option value='1'data-flag='ru-flag'>Russia</option>
         
@@ -72,11 +72,17 @@
             <option value='53'data-flag='ru-flag'>Australia</option>
         
     </select> </div>
-              <div class="filter__tooltip js-tooltip" title="This is TOOLTIP!"> <svg class="icon icon-info"><use xlink:href="assets/img/general/sprite.svg#icon-info"></use></svg> </div>
+              <div class="filter__tooltip js-tooltip" title="Our payment processing is always completed in US Dollars (USD). The price in other currency is estimated based on the today&#39;s bank rate. 
+
+If your account currency is not USD - the actual amount charged in your currency may be slightly different based on your bank&#39;s current rate on the date of transaction. 
+
+Current exchange rate is estimated: 
+
+Please see Google Finance website for more details."> <svg class="icon icon-info"><use xlink:href="assets/img/general/sprite.svg#icon-info"></use></svg> </div>
             </div>
             <div class="filter__select-wrapper">
               <div class="select-with-tooltip">
-                <div class="select-with-tooltip__select"> <select name='sorting' id="sorting" class="js-select select" data-placeholder="sel1">
+                <div class="select-with-tooltip__select"> <select name='sorting' id="sorting" class="js-select" data-placeholder="sel1">
         
             <option value='1'>Sort By: Most Popular</option>
         
@@ -87,7 +93,13 @@
             <option value='4'>Sort By: The Newest</option>
         
     </select> </div>
-                <div class="select-with-tooltip__tooltip js-tooltip" title="This is TOOLTIP!"> <svg class="icon icon-info"><use xlink:href="assets/img/general/sprite.svg#icon-info"></use></svg> </div>
+                <div class="select-with-tooltip__tooltip js-tooltip" title="Our payment processing is always completed in US Dollars (USD). The price in other currency is estimated based on the today&#39;s bank rate. 
+
+If your account currency is not USD - the actual amount charged in your currency may be slightly different based on your bank&#39;s current rate on the date of transaction. 
+
+Current exchange rate is estimated: 
+
+Please see Google Finance website for more details."> <svg class="icon icon-info"><use xlink:href="assets/img/general/sprite.svg#icon-info"></use></svg> </div>
               </div>
             </div>
             <div class="filter__range">
@@ -97,21 +109,21 @@
               </div>
             </div>
           </div>
-        </div>
+        </form>
         <div class="category-title">
           <h2 class="title-big">March 8 Flowers Gifts</h2>
         </div>
         <div class="category__cards">
           <div class="cards">
-            <div class="card card__big">
-              <div class="card__image" style='background-image: url(./assets/img/general/gifts-1/gift_img_1.jpg)'>
+            <div class="card card__big col-4">
+              <a class="card__image" href="#" style='background-image: url(./assets/img/general/gifts-1/gift_img_1.jpg)'>
                 <div class="card__freemark"> <img src="./assets/img/general/chocolate-free.png" alt=""> </div>
-              </div>
+              </a>
               <h3 class="card__title">Endless Connection Necklace in Rose </h3>
               <div class="card__divider divider-grey"></div>
               <div class="card__id"> <span class="card__id--id">ID:</span><span class="card__id--number">11019</span> </div>
               <div class="card__price">from $ 333.33 </div>
-              <div class="card__select"> <select name='' id="sel1" class="js-select select" data-placeholder="sel1">
+              <div class="card__select"> <select name='' id="sel1" class="js-select" data-placeholder="sel1">
         
             <option value='1'>€ 526.83 (EUR)</option>
         
@@ -119,13 +131,14 @@
         
     </select> </div>
             </div>
-            <div class="card card__big">
-              <div class="card__image" style='background-image: url(./assets/img/general/gifts-1/gift_img_1.jpg)'> </div>
+            <div class="card card__big col-4"> <a class="card__image" href="#" style='background-image: url(./assets/img/general/gifts-1/gift_img_1.jpg)'>
+                
+            </a>
               <h3 class="card__title">Morning Delights Coffee Cake</h3>
               <div class="card__divider divider-grey"></div>
               <div class="card__id"> <span class="card__id--id">ID:</span><span class="card__id--number">5056</span> </div>
               <div class="card__price">from $ 333.33 </div>
-              <div class="card__select"> <select name='sel2' id="sel2" class="js-select select" data-placeholder="sel1">
+              <div class="card__select"> <select name='sel2' id="sel2" class="js-select" data-placeholder="sel1">
         
             <option value='2'>Occasions</option>
         
@@ -133,13 +146,14 @@
         
     </select> </div>
             </div>
-            <div class="card card__big">
-              <div class="card__image" style='background-image: url(./assets/img/general/gifts-1/gift_img_2.jpg)'> </div>
+            <div class="card card__big col-4"> <a class="card__image" href="#" style='background-image: url(./assets/img/general/gifts-1/gift_img_2.jpg)'>
+                
+            </a>
               <h3 class="card__title">Mixed Tulips Selection</h3>
               <div class="card__divider divider-grey"></div>
               <div class="card__id"> <span class="card__id--id">ID:</span><span class="card__id--number">8056</span> </div>
               <div class="card__price">from $ Price selection </div>
-              <div class="card__select"> <select name='sel3' id="sel3 " class="js-select select" data-placeholder="sel3">
+              <div class="card__select"> <select name='sel3' id="sel3 " class="js-select" data-placeholder="sel3">
         
             <option value='1'>€ 526.83 (EUR)</option>
         
@@ -151,12 +165,14 @@
         
     </select> </div>
             </div>
-            <div class="card card__big">
-              <div class="card__image" style='background-image: url(./assets/img/general/gifts-1/gift_img_4.jpg)'> </div>
+            <div class="card card__big col-4"> <a class="card__image" href="#" style='background-image: url(./assets/img/general/gifts-1/gift_img_4.jpg)'>
+                
+            </a>
               <h3 class="card__title">Twist of Fate Adjustable Ring</h3>
+              <div class="card__divider divider-grey"></div>
               <div class="card__id"> <span class="card__id--id">ID:</span><span class="card__id--number">11024</span> </div>
               <div class="card__price">from $ Price selection </div>
-              <div class="card__select"> <select name='sel4' id="sel4" class="js-select select" data-placeholder="sel4">
+              <div class="card__select"> <select name='sel4' id="sel4" class="js-select" data-placeholder="sel4">
         
             <option value='1'>€ 526.83 (EUR)</option>
         
@@ -168,15 +184,15 @@
         
     </select> </div>
             </div>
-            <div class="card card__big">
-              <div class="card__image" style='background-image: url(./assets/img/general/gifts-1/gift_img_1.jpg)'>
+            <div class="card card__big col-4">
+              <a class="card__image" href="#" style='background-image: url(./assets/img/general/gifts-1/gift_img_1.jpg)'>
                 <div class="card__freemark"> <img src="./assets/img/general/chocolate-free.png" alt=""> </div>
-              </div>
+              </a>
               <h3 class="card__title">Endless Connection Necklace in Rose</h3>
               <div class="card__divider divider-grey"></div>
               <div class="card__id"> <span class="card__id--id">ID:</span><span class="card__id--number">11019</span> </div>
               <div class="card__price">from $ 333.33 </div>
-              <div class="card__select"> <select name='sel5' id="sel5" class="js-select select" data-placeholder="sel5">
+              <div class="card__select"> <select name='sel5' id="sel5" class="js-select" data-placeholder="sel5">
         
             <option value='1'>€ 526.83 (EUR)</option>
         
@@ -184,13 +200,14 @@
         
     </select> </div>
             </div>
-            <div class="card card__big">
-              <div class="card__image" style='background-image: url(./assets/img/general/gifts-1/gift_img_1.jpg)'> </div>
+            <div class="card card__big col-4"> <a class="card__image" href="#" style='background-image: url(./assets/img/general/gifts-1/gift_img_1.jpg)'>
+                
+            </a>
               <h3 class="card__title">Morning Delights Coffee Cake </h3>
               <div class="card__divider divider-grey"></div>
               <div class="card__id"> <span class="card__id--id">ID:</span><span class="card__id--number"> 5056 </span> </div>
               <div class="card__price">from $ 333.33 </div>
-              <div class="card__select"> <select name='sel6' id="sel6" class="js-select select" data-placeholder="sel6">
+              <div class="card__select"> <select name='sel6' id="sel6" class="js-select" data-placeholder="sel6">
         
             <option value='2'>Occasions</option>
         
@@ -198,13 +215,14 @@
         
     </select> </div>
             </div>
-            <div class="card card__big">
-              <div class="card__image" style='background-image: url(./assets/img/general/gifts-1/gift_img_2.jpg)'> </div>
+            <div class="card card__big col-4"> <a class="card__image" href="#" style='background-image: url(./assets/img/general/gifts-1/gift_img_2.jpg)'>
+                
+            </a>
               <h3 class="card__title">Mixed Tulips Selection</h3>
               <div class="card__divider divider-grey"></div>
               <div class="card__id"> <span class="card__id--id">ID:</span><span class="card__id--number">8056</span> </div>
               <div class="card__price">from $ Price selection </div>
-              <div class="card__select"> <select name='sel7' id="sel7" class="js-select select" data-placeholder="sel7">
+              <div class="card__select"> <select name='sel7' id="sel7" class="js-select" data-placeholder="sel7">
         
             <option value='1'>€ 526.83 (EUR)</option>
         
@@ -216,13 +234,14 @@
         
     </select> </div>
             </div>
-            <div class="card card__big">
-              <div class="card__image" style='background-image: url(./assets/img/general/gifts-1/gift_img_4.jpg)'> </div>
+            <div class="card card__big col-4"> <a class="card__image" href="#" style='background-image: url(./assets/img/general/gifts-1/gift_img_4.jpg)'>
+                
+            </a>
               <h3 class="card__title">Twist of Fate Adjustable Ring</h3>
               <div class="card__divider divider-grey"></div>
               <div class="card__id"> <span class="card__id--id">ID:</span><span class="card__id--number"> 11024 </span> </div>
               <div class="card__price">from $ priceselection </div>
-              <div class="card__select"> <select name='sel8' id="sel8" class="js-select select" data-placeholder="sel8">
+              <div class="card__select"> <select name='sel8' id="sel8" class="js-select" data-placeholder="sel8">
         
             <option value='1'>€ 526.83 (EUR)</option>
         

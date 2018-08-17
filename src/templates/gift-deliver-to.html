@@ -1,0 +1,162 @@
+{# --- title: Index page --- #} 
+{# IMPORTING DATA COMPONENTS #} 
+{% import "data/_cards.html" as cards_set %} 
+{% import "data/_selects.html" as selects_set %}
+{# IMPORTING MIXINS #}
+{% import "partials/_mixins.html" as mixins %}
+{% import "components/_titles.html" as titles %} 
+{% import "components/_cards.html" as cards_builder %} 
+{% import "components/_select.html" as select_builder %}
+{% import "components/_breadcrumb.html" as breadcrumb %} 
+{% import "components/_range.html" as range_input %} 
+{% import "components/_dropdown-menu.html" as dd_menu %}
+{# MAIN LAYOUT #}
+{% extends "layouts/_layout.html" %} {% block content %}
+
+
+<div class="inner">
+    {# BREADCRUMBS #}
+    <div class="country-gift__breadcrumbs">
+        {{breadcrumb.make([ {"class": "no-underline"}, {"text": "Home", "link": "ui.html"}, {"text": "Gift baskets to Brazil", "active":
+        true} ]) }}
+    </div>
+</div>
+
+{% include "components/_slider.html" %} {# TITLE #}
+
+<div class="gift-deliver-to__header-text">
+    <div class="gift-deliver-to__main-title">
+        {{titles.titleBig('Personal & corporate gift delivery to Brazil')}}
+    </div>
+    <p>
+        GiftBasketsOverseas.com. Our Gift Hampers & VIP Gifts delivered to Brazil include only the highest quality View our
+        <a
+            class="text__link" href="#">Gourmet Items</a>,
+        <a class="text__link" href="#">Chocolat Baskets</a>,
+        <a class="text__link" href="#">Flowers and business gifts delivered to Brazil</a>
+    </p>
+</div>
+<div class="special">
+    <div class="inner">
+        {# FILTERING AREA #}
+        <form action="" class="filter filter--center gift-deliver-to__filter ">
+            <div class="filter__select-wrapper">
+                {# SELECT WITH TOOLTIP COMPONENT #}
+                <label class="filter__select-label">
+                    What city are you sending gift to?
+                </label>
+                <div class="filter__select">
+                    {{select_builder.sel(selects_set.destinationCountries)}}
+                </div>
+            </div>
+            <div class="filter__select-wrapper">
+                {# SELECT WITH TOOLTIP COMPONENT #}
+                <label class="filter__select-label">
+                    What city are you sending gift to?
+                </label>
+                <div class="filter__select">
+                    {{select_builder.sel(selects_set.occasionSet)}}
+                </div>
+            </div>
+            <div class="filter__select-wrapper">
+                {# SELECT WITH TOOLTIP COMPONENT #}
+                <label class="filter__select-label">
+                    What city are you sending gift to?
+                </label>
+                <div class="filter__select">
+                    {{select_builder.sel(selects_set.datesSet)}}
+                </div>
+            </div>
+            <div class="filter__btn ">
+                <button class="btn btn-rounded btn-rounded--green">
+                    Find Gifts
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<main class="gift-deliver-to">
+    <div class="gift-deliver-to__container inner">
+        <section class="gift-deliver-to__descr">
+            <div class="gift-deliver-to__descr-text">
+                <h3 class="gift-deliver-to__title">Consider our service to send corporate gift baskets Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Non ratione reprehenderit pariatur fugit quaerat laboriosam ipsam dicta excepturi minima et deserunt
+                    nisi laudantium sapiente facere id dolorem, aperiam aut quae.</h3>
+                <div class="text-big">
+                    <p>Send Gift Baskets and Food Hampers to Brazil for your loved ones, friends and business associates. With
+                        us you can avoid hassle of dealing with Customs when shipping a gift to Brazil yourself.</p>
+                    <p>Our Gift Hampers & VIP Gifts delivered to Brazil include only the highest quality ingredients including
+                        upscale champagne, imported wines, delicious cheeses, freshest fruits and various Gifts for serious
+                        gift aristocrats. View our
+                        <a class="text__link" href="#">Gourmet Items</a>,
+                        <a class="text__link" href="#">Chocolat Baskets</a>,
+                        <a class="text__link" href="#">Flowers and business gifts delivered to Brazil</a>
+                    </p>
+                </div>
+            </div>
+            <div class="gift-basket-to__service">
+                <h3 class="gift-basket-to__title">Brazil Gift Basket Service</h3>
+                <div class="delivery-card card-with-icons">
+                    <div class="delivery-card__img card-with-icons-image">
+                        {{mixins.icon('cargo-track')}}
+                    </div>
+                    <div class="delivery-card__text">
+                        <div class="delivery-card__title card-with-icons-title">
+                            Delivery Time In brazil
+                        </div>
+                        <div class="delivery-card__text card-with-icons-text">
+                            in 1-2 biz days
+                        </div>
+                    </div>
+                </div>
+                <div class="delivery-card delivery-card--dark-green card-with-icons">
+                    <div class="delivery-card__img card-with-icons-image">
+                        {{mixins.icon('free')}}
+                    </div>
+                    <div class="delivery-card__text">
+                        <div class="delivery-card__title card-with-icons-title">
+                            Delivery Fee
+                        </div>
+                        <div class="delivery-card__text card-with-icons-text">
+                            $25 USD
+                        </div>
+                    </div>
+                </div>
+                <div class="delivery-card delivery-card--blue card-with-icons">
+                    <div class="delivery-card__img card-with-icons-image">
+                        {{mixins.icon('clock-blue')}}
+                    </div>
+                    <div class="delivery-card__text">
+                        <div class="delivery-card__title card-with-icons-title">
+                            Current Time In brazil
+                        </div>
+                        <div class="delivery-card__text card-with-icons-text">
+                            04:03 AM (Apr 21)
+                        </div>
+                    </div>
+                </div>
+                <div class="gift-basket-to__motto text-big--italic">We deliver to any address in Brazil</div>
+            </div>
+        </section>
+        <div class="gift-deliver-to__cards">
+            <div class="cards">
+                {{cards_builder.card(cards_set.cardsDeliverTo)}}
+            </div>
+        </div>
+        <div class="gift-deliver-to__motto-bottom">
+            <h5 class="subtitle">
+                We deliver gift baskets to most of the
+                <a href="#" class="text__link">locations in Brazil</a>
+            </h5>
+        </div>
+        <div class="gift-basket-to__video">
+            <div class="video">
+                <iframe width="720" height="315" src="https://www.youtube.com/embed/n_GA_vQRu9c?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+</main>
+</div>
+</main>
+{% include "components/_subscribe.html" %} {% include "partials/_footer.html" %} {% endblock %}

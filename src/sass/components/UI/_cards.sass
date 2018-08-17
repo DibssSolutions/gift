@@ -14,14 +14,31 @@
 	padding: 22px 18px
 	text-align: center
 	font-family: $corp
-	flex: 0 0 25%
 	margin-bottom: -1px
-	+md 
-		flex: 0 0 33.33%
-	+sm 
-		flex: 0 0 50%
-	+xs
+	&.col-1
 		flex: 0 0 100%
+	&.col-2
+		flex: 0 0 50%
+	&.col-3
+		flex: 0 0 33.33%
+		+sm
+			flex: 0 0 50%
+		+xs
+			flex: 0 0 100%
+	&.col-4
+		flex: 0 0 25%
+		+md
+			flex: 0 0 33.33%
+		+sm
+			flex: 0 0 50%
+		+xs
+			flex: 0 0 100%
+	&.col-5
+		flex: 0 0 20%
+		+sm
+			flex: 0 0 50%
+		+xs
+			flex: 0 0 100%
 	+hover
 		.card__title
 			color: $main-green
@@ -33,6 +50,7 @@
 	&__image
 		// padding-bottom: 275px
 		// +cover
+		display: block
 		background-size: contain
 		background-position: center
 		background-repeat: no-repeat
@@ -58,6 +76,7 @@
 		text-transform: uppercase
 		+colorTrans
 		min-height: 56px
+		letter-spacing: -0.6px
 	&__price
 		margin-bottom: 0.5em
 		font-size: 21px
@@ -92,13 +111,19 @@
 		border-radius: 4px
 		text-align: center
 		text-transform: uppercase
-		padding: 7px 30px
+		padding: 7px 40px
 		border-radius: 20px
 		background-color: $main-green
 		+colorTrans
 		+hover
 			background-color: $dark-green
 			+colorTrans
+
+// .card.col-3
+// 	+sm
+// 		flex: 0 0 50%
+// 	+xs
+// 		flex: 0 0 100%
 
 .small-card
 	font-family: $corp
@@ -134,3 +159,74 @@
 .card__slider-small
 	.card__image
 		padding-bottom: 200px
+
+.card__middle
+	.card__image
+		padding-bottom: 300px
+	.card__title
+		min-height: 68px
+		padding: 0 12px
+	
+
+// ===== ICON-CARDS =====
+
+.card-with-icons
+	border-radius: 5px
+	&-title
+		font-size: 22px
+		font-weight: bold
+		font-style: normal
+		font-stretch: normal
+		line-height: 1.23
+		letter-spacing: -0.6px
+		text-align: left
+		color: $blue
+	&-text
+		font-family: CorpidE1sSCd
+		font-size: 20px
+		font-weight: 300
+		font-style: normal	
+		font-stretch: normal
+		line-height: 1.35
+		letter-spacing: -0.5px
+		text-align: left
+		color: $dark_blue
+
+.time-card 
+	background-color: $special_bg
+	height: 100%
+	padding: 12px 14px 12px 10px
+	&__image
+		float: left	
+		margin-right: 7px
+		font-size: 0
+		.icon
+			font-size: 40px
+	&__title
+		margin-bottom: 14px
+		margin-top: 14px
+
+
+.delivery-card
+	display: flex
+	align-items: center
+	background-color: rgba($main-green, 0.3)
+	border-radius: 5px
+	padding: 10px 14px 14px 20px
+	&--blue 
+		background-color: $special_bg
+		.delivery-card__img .icon
+			font-size: 60px
+	&--dark-green
+		background-color: $main-green
+	&__img
+		font-size: 0
+		flex: 0 0 80px
+		.icon
+			fill: $blue
+			font-size: 70px
+			display: inline-block
+			vertical-align: middle
+	&__text
+		font-size: 24px
+	

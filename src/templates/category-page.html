@@ -31,7 +31,7 @@
 		Flowers Gifts", "link": "#", "active": true} ]) }}
 	</div>
 	<!-- FILTERING AREA -->
-	<div class="filter">
+	<form action="/" class="filter">
 		<div class="filter__col">
 			<div class="filter__found">
 				<h5>
@@ -51,7 +51,7 @@
 				<div class="filter__select">
 					{# SELECTOR-1 #} {{select_builder.sel(selects_set.countriesSelect)}}
 				</div>
-				<div class="filter__tooltip js-tooltip" title="This is TOOLTIP!">
+				<div class="filter__tooltip js-tooltip" title="{{selects_set.tooltip}}">
 					{{mixins.icon('info')}}
 				</div>
 			</div>
@@ -61,7 +61,7 @@
 					<div class="select-with-tooltip__select">
 						 {{select_builder.sel(selects_set.sortingTypesSelect)}}
 					</div>
-					<div class="select-with-tooltip__tooltip js-tooltip" title="This is TOOLTIP!">
+					<div class="select-with-tooltip__tooltip js-tooltip" title="{{selects_set.tooltip}}">
 						{{mixins.icon('info')}}
 					</div>
 				</div>
@@ -70,7 +70,7 @@
 				{{range_input.range(0, 1000, 0, 1000)}}
 			</div>
 		</div>
-	</div>
+	</form>
 	{# TITLE #}
 	<div class="category-title">
 		{{titles.titleBig('March 8 Flowers Gifts')}}

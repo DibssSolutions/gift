@@ -23,7 +23,7 @@
     </div>
 
     <!-- FILTERING AREA -->
-    <div class="filter usa__filter">
+    <form action="/" class="filter usa__filter">
         <div class="filter__col">
             <div class="filter__breadcrumb">
                 <nav aria-label="breadcrumb">
@@ -45,7 +45,7 @@
                     <div class="filter__select">
                         {# SELECTOR-1 #} {{select_builder.sel(selects_set.citySelect)}}
                     </div>
-                    <div class="filter__tooltip js-tooltip" title="This is TOOLTIP!">
+                    <div class="filter__tooltip js-tooltip" title="{{selects_set.tooltip}}">
                         {{mixins.icon('info')}}
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                     <div class="select-with-tooltip__select">
                         {{select_builder.sel(selects_set.sortingTypesSelect)}}
                     </div>
-                    <div class="select-with-tooltip__tooltip js-tooltip" title="This is TOOLTIP!">
+                    <div class="select-with-tooltip__tooltip js-tooltip" title="{{selects_set.tooltip}}">
                         {{mixins.icon('info')}}
                     </div>
                 </div>
@@ -66,7 +66,7 @@
             </div>
         </div>
 
-    </div>
+    </form>
     {# TITLE #}
     <main class="usa">
         <div class="usa__main-title">

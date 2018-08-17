@@ -5,13 +5,13 @@
     {% for prop in props %}
         <div class="card card__{{prop.size}}">
 
-            <div class="card__image" style='background-image: url(./assets/img/general/gifts-1/{{prop.image.src}})'>
+            <a class="card__image" href="{{prop.image.link}}" style='background-image: url(./assets/img/general/gifts-1/{{prop.image.src}})'>
                 {% if prop.free_mark %}
                     <div class="card__freemark">
                         <img src="./assets/img/general/chocolate-free.png" alt="">
                     </div> 
                 {% endif %}
-            </div>
+            </a>
 
             <h3 class="card__title">{{prop.title}}</h3>
 

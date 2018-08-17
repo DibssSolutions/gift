@@ -89,7 +89,7 @@
             <div class="card-page__total-price">
               <div class="select-with-price">
                 <div class="select-with-price__price">$ 614.95</div>
-                <div class="select-with-price__select"> <select name='sel1' id="sel1 " class="js-select select" data-placeholder="sel1">
+                <div class="select-with-price__select"> <select name='sel1' id="sel1 " class="js-select" data-placeholder="sel1">
         
             <option value='1'>€ 526.83 (EUR)</option>
         
@@ -109,7 +109,7 @@
                   <h5 class="location-card__title"> Availability and price depend on the delivery location: </h5>
                   <div class="location-card__select-wrapper">
                     <div class="location-card__label"> Change City: </div>
-                    <div class="location-card__select"> <select name='city-select' id="city-select " class="js-select select" data-placeholder="Service Cities">
+                    <div class="location-card__select"> <select name='city-select' id="city-select " class="js-select" data-placeholder="Service Cities">
         
             <option ></option>
         
@@ -127,7 +127,7 @@
                     <div class="location-card__label"> Change Country: </div> <a href="#" class="location-card__country-flag">
                                 <img class="js-selected-counry-flag" src="./assets/img/general/ru.png" alt="">
                             </a>
-                    <div class="location-card__select location-card__select--countries"> <select name='countries' id="countries" class="js-select-flag select-with-flag select" data-placeholder="sel1">
+                    <div class="location-card__select location-card__select--countries"> <select name='countries' id="countries" class="js-select-flag select-with-flag" data-placeholder="sel1">
         
             <option value='1'data-flag='ru-flag'>Russia</option>
         
@@ -154,10 +154,10 @@
                 </div>
               </div>
               <div class="card-page__delivery-item">
-                <div class="time-card">
-                  <div class="time-card__image"> <svg class="icon icon-clock-blue"><use xlink:href="assets/img/general/sprite.svg#icon-clock-blue"></use></svg> </div>
-                  <h5 class="time-card__title"> Want it Monday, March 5? </h5>
-                  <div class="card__text">Order within 12 hrs, 19 mins</div>
+                <div class="time-card card-with-icons">
+                  <div class="time-card__image card-with-icons-image"> <svg class="icon icon-clock-blue"><use xlink:href="assets/img/general/sprite.svg#icon-clock-blue"></use></svg> </div>
+                  <h5 class="time-card__title card-with-icons-title"> Want it Monday, March 5? </h5>
+                  <div class="card__text card-with-icons-text">Order within 12 hrs, 19 mins</div>
                 </div>
               </div>
             </div>
@@ -170,7 +170,7 @@
                 <div class="budget-form__select">
                   <div class="select-with-tooltip">
                     <div class="select-with-tooltip__label"> Select number of Box: </div>
-                    <div class="select-with-tooltip__select"> <select name='sel2' id="sel2 " class="js-select select" data-placeholder="sel2">
+                    <div class="select-with-tooltip__select"> <select name='sel2' id="sel2 " class="js-select" data-placeholder="sel2">
         
             <option value='1'>€ 526.83 (EUR)</option>
         
@@ -181,13 +181,19 @@
             <option value='4'>€ 526.83 (EUR)</option>
         
     </select> </div>
-                    <div class="select-with-tooltip__tooltip js-tooltip" title="This is TOOLTIP!"> <svg class="icon icon-info"><use xlink:href="assets/img/general/sprite.svg#icon-info"></use></svg> </div>
+                    <div class="select-with-tooltip__tooltip js-tooltip" title="Our payment processing is always completed in US Dollars (USD). The price in other currency is estimated based on the today&#39;s bank rate. 
+
+If your account currency is not USD - the actual amount charged in your currency may be slightly different based on your bank&#39;s current rate on the date of transaction. 
+
+Current exchange rate is estimated: 
+
+Please see Google Finance website for more details."> <svg class="icon icon-info"><use xlink:href="assets/img/general/sprite.svg#icon-info"></use></svg> </div>
                   </div>
                 </div>
                 <div class="budget-form__select">
                   <div class="select-with-tooltip">
                     <div class="select-with-tooltip__label"> Choose a Vase for your bouquet: </div>
-                    <div class="select-with-tooltip__select"> <select name='vase1' id="vase2" class="js-select select" data-placeholder="Select">
+                    <div class="select-with-tooltip__select"> <select name='vase1' id="vase2" class="js-select" data-placeholder="Select">
         
             <option ></option>
         
@@ -198,7 +204,13 @@
             <option value='4'>!!!</option>
         
     </select> </div>
-                    <div class="select-with-tooltip__tooltip js-tooltip" title="This is TOOLTIP!"> <svg class="icon icon-info"><use xlink:href="assets/img/general/sprite.svg#icon-info"></use></svg> </div>
+                    <div class="select-with-tooltip__tooltip js-tooltip" title="Our payment processing is always completed in US Dollars (USD). The price in other currency is estimated based on the today&#39;s bank rate. 
+
+If your account currency is not USD - the actual amount charged in your currency may be slightly different based on your bank&#39;s current rate on the date of transaction. 
+
+Current exchange rate is estimated: 
+
+Please see Google Finance website for more details."> <svg class="icon icon-info"><use xlink:href="assets/img/general/sprite.svg#icon-info"></use></svg> </div>
                   </div>
                 </div> <button type="submit" class="btn btn-rounded btn-rounded--green btn-rounded--big">Add to cart</button> </form>
             </div>

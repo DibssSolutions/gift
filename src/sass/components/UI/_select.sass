@@ -1,8 +1,14 @@
-.select
+.select--ordinary
     display: inline-block
-    width: 100%
-    
-.select2-container--default .select2-selection--single .select2-selection__arrow b
+    // width: 100%
+
+.select2-container.select--ordinary .select2-selection--single,
+.select2-container.select--flag .select2-selection--single,
+    height: 30px
+
+.select2-container--default.select--ordinary .select2-selection--single .select2-selection__arrow b,
+.select2-container--default.select--flag .select2-selection--single .select2-selection__arrow b
+
     background: url(../assets/img/general/arr_green.png)
     background-size: cover
     width: 14px
@@ -12,29 +18,37 @@
     left: -5px
     top: 40%
     transition: transform 0.3s
-.select2-container--classic.select2-container--open .select2-selection--single .select2-selection__arrow b, .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b
+.select2-container--classic.select2-container--open.select--ordinary .select2-selection--single .select2-selection__arrow b, .select2-container--default.select2-container--open.select--ordinary .select2-selection--single .select2-selection__arrow b,
+.select2-container--classic.select2-container--open.select--flag .select2-selection--single .select2-selection__arrow b, .select2-container--default.select2-container--open.select--flag .select2-selection--single .select2-selection__arrow b
     transform: rotate(180deg)
     transition: transform 0.3s
 
-.select2-container--default .select2-selection--single .select2-selection__rendered,
+.select2-container--default.select--ordinary .select2-selection--single .select2-selection__rendered,
+.select2-container--default.select--flag .select2-selection--single .select2-selection__rendered,
 .select2-results__option
     font-family: $corp
     font-size: 16px !important
-    line-height: 31px
+    line-height: 26px
     text-align: left
     color: #3a5864
-    // padding-bottom: 4px
+        // padding-bottom: 4px
     padding-left: 8px
-.select2-container .select2-selection--single,
-.select2-container--default .select2-selection--single .select2-selection__placeholder
+
+.select2-container.select--ordinary .select2-selection--single,
+.select2-container.select--flag .select2-selection--single,
+.select2-container--default.select--ordinary .select2-selection--single,
+.select2-container--default.select--flag .select2-selection--single,
+.select2-container--default.select--ordinary .select2-selection--single .select2-selection__placeholder,
+.select2-container--default.select--flag .select2-selection--single .select2-selection__placeholder
     font-family: $corp
     font-size: 16px
-    line-height: 1.38
     text-align: left
     color: #3a5864
-    height: 31px
+    height: 30px
+    line-height: 26px
 
-.select2-container--default
+.select2-container--default.select--ordinary,
+.select2-container--default.select--flag
     font-family: $corp
     .select2-results__option
         padding-top: 3px
@@ -43,6 +57,7 @@
         background-color: $blue
     .select2-results__option[aria-selected=true]
         background: $dark_blue
+        color: $white
 
 // .select-with-flag
 
@@ -68,16 +83,17 @@
         vertical-align: bottom
         margin-right: 10px
         font-size: 25px
-        line-height: 31px
+        line-height: 25px
         font-weight: 900
         color: $blue
     &__select
         display: inline-block
         vertical-align: bottom
         width: 232px
-        .select2-container--default .select2-selection--single .select2-selection__rendered	
+        .select2-container--default.select--ordinary .select2-selection--single .select2-selection__rendered	
             color: $dark_blue
             font-size: 16px
+            line-height: 25px
 
 .select-with-tooltip
     & > * 
