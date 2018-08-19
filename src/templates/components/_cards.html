@@ -13,7 +13,9 @@
                 {% endif %}
             </a>
 
-            <h3 class="card__title">{{prop.title}}</h3>
+            <a href="{{prop.title.link}}" class="card__title">
+                <h3>{{prop.title.text}}</h3>
+            </a>
 
             {% if prop.title_divider %}
                 <div class="card__divider divider-grey"></div>

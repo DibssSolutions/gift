@@ -1,0 +1,91 @@
+{% import "data/_selects.html" as selects_set %} {% import "partials/_mixins.html" as mixins %} {% import "components/_select.html"
+as select_builder %} {% macro sel_location_tooltip() %}
+
+<form action="/" class="filter filter--single">
+    <div class="filter__select-wrapper">
+        <div class="filter__select-image">
+            {{mixins.icon('map-marker')}}
+        </div>
+        <div class="filter__select">
+            {# SELECTOR-1 #} {{select_builder.sel(selects_set.coutryServiceLocations)}}
+        </div>
+        <div class="filter__tooltip js-tooltip" title="{{selects_set.tooltip}}">
+            {{mixins.icon('info')}}
+        </div>
+    </div>
+</form>
+{% endmacro %}
+
+{% macro filter_3_selects_with_label() %}
+<form action="" class="filter filter--center">
+    <div class="filter__select-wrapper">
+        {# SELECT WITH TOOLTIP COMPONENT #}
+        <label class="filter__select-label">
+            What city are you sending gift to?
+        </label>
+        <div class="filter__select">
+            {{select_builder.sel(selects_set.destinationCountries)}}
+        </div>
+    </div>
+    <div class="filter__select-wrapper">
+        {# SELECT WITH TOOLTIP COMPONENT #}
+        <label class="filter__select-label">
+            What city are you sending gift to?
+        </label>
+        <div class="filter__select">
+            {{select_builder.sel(selects_set.occasionSet)}}
+        </div>
+    </div>
+    <div class="filter__select-wrapper">
+        {# SELECT WITH TOOLTIP COMPONENT #}
+        <label class="filter__select-label">
+            What city are you sending gift to?
+        </label>
+        <div class="filter__select">
+            {{select_builder.sel(selects_set.datesSet)}}
+        </div>
+    </div>
+    <div class="filter__btn ">
+        <button class="btn btn-rounded btn-rounded--green">
+            Find Gifts
+        </button>
+    </div>
+</form>
+{% endmacro %}
+
+{% macro filter_3_selects_with_label_and_OR() %}
+<form action="" class="filter filter--center">
+    <div class="filter__select-wrapper">
+        {# SELECT WITH TOOLTIP COMPONENT #}
+        <label class="filter__select-label">
+            What city are you sending gift to?
+        </label>
+        <div class="filter__select">
+            {{select_builder.sel(selects_set.destinationCountries)}}
+        </div>
+    </div>
+    <div class="filter__select-wrapper">
+        {# SELECT WITH TOOLTIP COMPONENT #}
+        <label class="filter__select-label">
+            What city are you sending gift to?
+        </label>
+        <div class="filter__select">
+            {{select_builder.sel(selects_set.occasionSet)}}
+        </div>
+    </div>
+    <div class="filter__select-wrapper">
+        {# SELECT WITH TOOLTIP COMPONENT #}
+        <label class="filter__select-label">
+            What city are you sending gift to?
+        </label>
+        <div class="filter__select">
+            {{select_builder.sel(selects_set.datesSet)}}
+        </div>
+    </div>
+    <div class="filter__btn ">
+        <button class="btn btn-rounded btn-rounded--green">
+            Find Gifts
+        </button>
+    </div>
+</form>
+{% endmacro %}

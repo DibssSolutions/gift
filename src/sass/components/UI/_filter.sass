@@ -8,7 +8,10 @@
         flex-wrap: wrap
         .filter__select-wrapper
             flex: 0 0 27%
-
+            +sm 
+                width: 100%
+    &--single
+        justify-content: center
     +sm
         flex-flow: column
     &__col
@@ -17,13 +20,20 @@
         justify-content: flex-start
         +sm
             flex-flow: column
+            width: 100%
+            align-items: flex-start
+            justify-content: center
+            padding: 0 30px
         &:first-child
             flex-grow: 1
-            min-width: 440px
-            margin-right: auto
+            // min-width: 440px
+            flex-wrap: nowrap
             +sm 
                 min-width: inherit
-    &__found
+        &:last-child
+            flex-grow: 0
+            margin-left: auto
+    &__text
         font-family: $corp
         font-size: 24px
         font-weight: 300
@@ -41,8 +51,9 @@
         font-size: 0
         text-align: center
         +sm 
-            max-width: 100%
-            padding: 0 0 12px 0
+            padding: 0 0 20px 0
+            text-align: center
+            flex: 0 0 100%
         // margin-bottom: 26px
         & > *
             display: inline-block
@@ -55,8 +66,10 @@
             max-height: 30px
             display: inline-block
             vertical-align: middle
-    &__select-globe
-        margin: 0 15px 
+    &__select-image
+        margin: 0 6px 
+        .icon
+            font-size: 28px
         +sm 
             display: none
     &__select
@@ -74,13 +87,16 @@
         .icon
             font-size: 28px
     &__range
-        display: inline-block
-        width: 400px
+        // display: inline-block
+        flex: 0 0 400px
+        // width: 400px
         margin-top: 26px
-
+        +sm 
+            margin-top: 0
     &__breadcrumb
         margin-right: auto
     
     &__btn
         flex: 0 0 100%
         text-align: center
+        width: 100%

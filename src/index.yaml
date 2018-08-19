@@ -15,3 +15,5 @@ PageList:
   ready: 50
 - file: gift-deliver-to.html
   ready: 50
+- file: gifts-online-catalog.html
+  ready: 50

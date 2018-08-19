@@ -10,6 +10,7 @@
 {% import "components/_breadcrumb.html" as breadcrumb %} 
 {% import "components/_range.html" as range_input %} 
 {% import "components/_dropdown-menu.html" as dd_menu %}
+{% import "components/_filter.html" as filter %}
 {# MAIN LAYOUT #}
 {% extends "layouts/_layout.html" %} {% block content %}
 
@@ -39,40 +40,9 @@
 <div class="special">
     <div class="inner">
         {# FILTERING AREA #}
-        <form action="" class="filter filter--center gift-deliver-to__filter ">
-            <div class="filter__select-wrapper">
-                {# SELECT WITH TOOLTIP COMPONENT #}
-                <label class="filter__select-label">
-                    What city are you sending gift to?
-                </label>
-                <div class="filter__select">
-                    {{select_builder.sel(selects_set.destinationCountries)}}
-                </div>
-            </div>
-            <div class="filter__select-wrapper">
-                {# SELECT WITH TOOLTIP COMPONENT #}
-                <label class="filter__select-label">
-                    What city are you sending gift to?
-                </label>
-                <div class="filter__select">
-                    {{select_builder.sel(selects_set.occasionSet)}}
-                </div>
-            </div>
-            <div class="filter__select-wrapper">
-                {# SELECT WITH TOOLTIP COMPONENT #}
-                <label class="filter__select-label">
-                    What city are you sending gift to?
-                </label>
-                <div class="filter__select">
-                    {{select_builder.sel(selects_set.datesSet)}}
-                </div>
-            </div>
-            <div class="filter__btn ">
-                <button class="btn btn-rounded btn-rounded--green">
-                    Find Gifts
-                </button>
-            </div>
-        </form>
+        <div class="gift-deliver-to__filter">
+            {{filter.filter_3_selects_with_label()}}
+        </div>
     </div>
 </div>
 
@@ -95,8 +65,8 @@
                     </p>
                 </div>
             </div>
-            <div class="gift-basket-to__service">
-                <h3 class="gift-basket-to__title">Brazil Gift Basket Service</h3>
+            <div class="gift-deliver-to__service">
+                <h3 class="gift-deliver-to__title">Brazil Gift Basket Service</h3>
                 <div class="delivery-card card-with-icons">
                     <div class="delivery-card__img card-with-icons-image">
                         {{mixins.icon('cargo-track')}}
@@ -136,24 +106,47 @@
                         </div>
                     </div>
                 </div>
-                <div class="gift-basket-to__motto text-big--italic">We deliver to any address in Brazil</div>
+                <div class="gift-deliver-to__motto text-big--italic">We deliver to any address in Brazil</div>
             </div>
         </section>
-        <div class="gift-deliver-to__cards">
+        <div class="gift-deliver-to__cards-top">
             <div class="cards">
                 {{cards_builder.card(cards_set.cardsDeliverTo)}}
             </div>
         </div>
         <div class="gift-deliver-to__motto-bottom">
             <h5 class="subtitle">
-                We deliver gift baskets to most of the
-                <a href="#" class="text__link">locations in Brazil</a>
+                You can review a 
+                <a href="#" class="text__link">list of holidays in Brazil</a>
+                to get information on
+                <a href="#" class="text__link">Brazil holiday traditions</a>
             </h5>
+            <h3 class="gift-deliver-to__title">
+                Send corporate gift hampers in Brazil to the following locations (and their vicinities)
+            </h3>
         </div>
-        <div class="gift-basket-to__video">
-            <div class="video">
-                <iframe width="720" height="315" src="https://www.youtube.com/embed/n_GA_vQRu9c?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media"
-                    allowfullscreen></iframe>
+        <div class="gift-deliver-to__cities-menu">
+            {{dd_menu.menu_2()}}
+        </div>
+        <div class="gift-deliver-to__cards-bottom">
+            <div class="cards">
+                {{cards_builder.card(cards_set.cardsDeliverToBottom)}}
+            </div>
+        </div>
+        <div class="gift-deliver-to__filter-bottom">
+            <h5 class="subtitle gift-deliver-to__filter-title">
+                Interested to have gift delivered to Brazil from your country?
+            </h5>
+            <div class="filter__select-wrapper">
+                <a href="#" class="filter__country-flag">
+                    <img class="js-selected-counry-flag" src="./assets/img/general/ru.png" alt="">
+                </a>
+                <div class="filter__select-image">
+                    <img src="./assets/img/general/globus-ico.png" alt="">
+                </div>
+                <div class="filter__select">
+                    {# SELECTOR-1 #} {{select_builder.sel(selects_set.countriesSelect)}}
+                </div>
             </div>
         </div>
 </main>
