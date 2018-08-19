@@ -56,16 +56,15 @@ as select_builder %} {% macro sel_location_tooltip() %}
 {% macro filter_3_selects_with_label_and_OR() %}
 <form action="" class="filter filter--center">
     <div class="filter__select-wrapper">
-        {# SELECT WITH TOOLTIP COMPONENT #}
         <label class="filter__select-label">
             What city are you sending gift to?
         </label>
         <div class="filter__select">
-            {{select_builder.sel(selects_set.destinationCountries)}}
+            {{select_builder.sel(selects_set.giftsSet)}}
         </div>
     </div>
+    <div class="filter__or">OR</div>
     <div class="filter__select-wrapper">
-        {# SELECT WITH TOOLTIP COMPONENT #}
         <label class="filter__select-label">
             What city are you sending gift to?
         </label>
@@ -73,13 +72,13 @@ as select_builder %} {% macro sel_location_tooltip() %}
             {{select_builder.sel(selects_set.occasionSet)}}
         </div>
     </div>
+    <div class="filter__or">OR</div>
     <div class="filter__select-wrapper">
-        {# SELECT WITH TOOLTIP COMPONENT #}
         <label class="filter__select-label">
             What city are you sending gift to?
         </label>
         <div class="filter__select">
-            {{select_builder.sel(selects_set.datesSet)}}
+            {{select_builder.sel(selects_set.recipientsSet)}}
         </div>
     </div>
     <div class="filter__btn ">

@@ -8,3 +8,4 @@ import './_collapse';
 import './_dropdown';
 import './_increment';
 import './_tabs';
+import './_sm-toggle';

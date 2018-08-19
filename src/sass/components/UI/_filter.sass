@@ -3,6 +3,15 @@
     align-items: flex-start
     justify-content: space-between
     font-family: $corp
+    +sm 
+        visibility: hidden
+        opacity: 0
+        transition: opacity 1.5s, visibility 1.5s
+        &.is-open
+            display: block
+            visibility: visible
+            opacity: 1
+            transition: opacity 1.5s, visibility 1.5s
     &--center 
         justify-content: center
         flex-wrap: wrap
@@ -10,30 +19,29 @@
             flex: 0 0 27%
             +sm 
                 width: 100%
+                
     &--single
         justify-content: center
     +sm
         flex-flow: column
-    &__col
+    &__filter
         display: flex
         flex-wrap: wrap
         justify-content: flex-start
+        margin-left: auto
         +sm
             flex-flow: column
             width: 100%
             align-items: flex-start
             justify-content: center
             padding: 0 30px
-        &:first-child
-            flex-grow: 1
-            // min-width: 440px
-            flex-wrap: nowrap
-            +sm 
-                min-width: inherit
-        &:last-child
-            flex-grow: 0
-            margin-left: auto
     &__text
+        min-width: 440px
+        +sm 
+            min-width: inherit
+
+            
+    &__found
         font-family: $corp
         font-size: 24px
         font-weight: 300
@@ -100,3 +108,13 @@
         flex: 0 0 100%
         text-align: center
         width: 100%
+        margin-top: 20px
+    &__or
+        display: inline-block
+        height: 100%
+        vertical-align: bottom
+        align-self: flex-end
+        line-height: 30px
+        +sm 
+            align-self: center
+            margin-top: -20px
