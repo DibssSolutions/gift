@@ -3,27 +3,19 @@
     align-items: flex-start
     justify-content: space-between
     font-family: $corp
-    +sm 
-        visibility: hidden
-        opacity: 0
-        transition: opacity 1.5s, visibility 1.5s
-        &.is-open
-            display: block
-            visibility: visible
-            opacity: 1
-            transition: opacity 1.5s, visibility 1.5s
+    +sm
+        display: none
+        flex-flow: column
+        margin-bottom: 12px
     &--center 
         justify-content: center
         flex-wrap: wrap
         .filter__select-wrapper
-            flex: 0 0 27%
+            flex: 0 0 25%
             +sm 
                 width: 100%
-                
     &--single
         justify-content: center
-    +sm
-        flex-flow: column
     &__filter
         display: flex
         flex-wrap: wrap
@@ -34,13 +26,10 @@
             width: 100%
             align-items: flex-start
             justify-content: center
-            padding: 0 30px
     &__text
         min-width: 440px
         +sm 
             min-width: inherit
-
-            
     &__found
         font-family: $corp
         font-size: 24px
@@ -59,10 +48,9 @@
         font-size: 0
         text-align: center
         +sm 
-            padding: 0 0 20px 0
+            padding: 0 0 14px 0
             text-align: center
             flex: 0 0 100%
-        // margin-bottom: 26px
         & > *
             display: inline-block
             vertical-align: middle
@@ -82,6 +70,8 @@
             display: none
     &__select
         width: 232px
+        +sm 
+            width: 200px
     &__select-label
         font-size: 16px
         font-weight: 700
@@ -89,32 +79,36 @@
         color: $text_black
         width: 100%
         margin-bottom: 8px
+        +sm 
+            font-size: 14px
+            margin-bottom: 4px
     &__tooltip
         margin-left: 6px
         cursor: pointer
         .icon
             font-size: 28px
     &__range
-        // display: inline-block
         flex: 0 0 400px
-        // width: 400px
         margin-top: 26px
         +sm 
+            flex: 0 0 auto
             margin-top: 0
+            width: 100%
     &__breadcrumb
         margin-right: auto
-    
     &__btn
         flex: 0 0 100%
         text-align: center
         width: 100%
         margin-top: 20px
+        +sm 
+            margin-top: 0
     &__or
-        display: inline-block
+        text-align: center
         height: 100%
-        vertical-align: bottom
         align-self: flex-end
         line-height: 30px
         +sm 
-            align-self: center
-            margin-top: -20px
+            height: auto
+            line-height: 1
+            margin-bottom: 14px

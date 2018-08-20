@@ -31,7 +31,8 @@
 		Flowers Gifts", "link": "#", "active": true} ]) }}
 	</div>
 	<!-- FILTERING AREA -->
-	<form action="/" class="filter">
+	{% include "components/_sm-toggle-buttons.html" %}
+	<form action="/" class="filter js-filter">
 		<div class="filter__text">
 			<div class="filter__found">
 				<span class="filter__found--bold">243</span>
@@ -75,7 +76,7 @@
 	</div>
 	{# CARDS #}
 	<div class="category__cards">
-		<div class="cards">
+		<div class="cards sm-one-column js-cards-container">
 			{{cards_init.card(cards_set.cardsCategoryPage)}}
 		</div>
 	</div>

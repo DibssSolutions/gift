@@ -29,7 +29,7 @@
     <div class="gift-deliver-to__main-title">
         {{titles.titleBig('Personal & corporate gift delivery to Brazil')}}
     </div>
-    <p>
+    <p class="d-sm-none">
         GiftBasketsOverseas.com. Our Gift Hampers & VIP Gifts delivered to Brazil include only the highest quality View our
         <a
             class="text__link" href="#">Gourmet Items</a>,
@@ -41,6 +41,7 @@
     <div class="inner">
         {# FILTERING AREA #}
         <div class="gift-deliver-to__filter">
+            {% include "components/_sm-toggle-buttons.html" %}
             {{filter.filter_3_selects_with_label()}}
         </div>
     </div>
@@ -48,7 +49,7 @@
 
 <main class="gift-deliver-to">
     <div class="gift-deliver-to__container inner">
-        <section class="gift-deliver-to__descr">
+        <section class="gift-deliver-to__descr d-sm-none">
             <div class="gift-deliver-to__descr-text">
                 <h3 class="gift-deliver-to__title">Consider our service to send corporate gift baskets Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Non ratione reprehenderit pariatur fugit quaerat laboriosam ipsam dicta excepturi minima et deserunt
@@ -110,11 +111,11 @@
             </div>
         </section>
         <div class="gift-deliver-to__cards-top">
-            <div class="cards">
+            <div class="cards sm-one-column js-cards-container">
                 {{cards_builder.card(cards_set.cardsDeliverTo)}}
             </div>
         </div>
-        <div class="gift-deliver-to__motto-bottom">
+        <div class="gift-deliver-to__motto-bottom d-sm-none">
             <h5 class="subtitle">
                 You can review a 
                 <a href="#" class="text__link">list of holidays in Brazil</a>
@@ -129,7 +130,7 @@
             {{dd_menu.menu_2()}}
         </div>
         <div class="gift-deliver-to__cards-bottom">
-            <div class="cards">
+            <div class="cards sm-one-column js-cards-container">
                 {{cards_builder.card(cards_set.cardsDeliverToBottom)}}
             </div>
         </div>

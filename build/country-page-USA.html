@@ -49,8 +49,13 @@
           </nav>
         </div>
         <!-- FILTERING AREA -->
-        <form action="/" class="filter usa__filter">
-          <div class="filter__text">
+        <div class="card-sm-buttons">
+          <div class="js-cards-1-column card-sm-button is-active"> <svg class="icon icon-square-inside-a-circle"><use xlink:href="assets/img/general/sprite.svg#icon-square-inside-a-circle"></use></svg> </div>
+          <div class="js-cards-2-columns card-sm-button"> <svg class="icon icon-four-squares-button"><use xlink:href="assets/img/general/sprite.svg#icon-four-squares-button"></use></svg> </div>
+          <div class="sm-filter-btn-wrapper"> <button class="btn btn-rounded btn-rounded--green btn-load-more sm-filter-btn js-sm-filter-btn">Filter</button> </div>
+        </div>
+        <form action="/" class="filter usa__filter js-filter">
+          <div class="filter__text d-sm-none">
             <div class="filter__breadcrumb">
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb colored">
@@ -63,7 +68,7 @@
           <div class="filter__filter">
             <div class="filter__select-wrapper">
               <div class="select-with-tooltip">
-                <div class="filter__select-globe"> <img src="./assets/img/general/globus-ico.png" alt=""> </div>
+                <div class="filter__select-image"> <img src="./assets/img/general/globus-ico.png" alt=""> </div>
                 <div class="filter__select"> <select name='city-select' id="city-select " class="js-select" data-placeholder="Service Cities">
         
             <option ></option>
@@ -120,10 +125,10 @@ Please see Google Finance website for more details."> <svg class="icon icon-info
           <div class="usa__main-title">
             <h2 class="title-big">Gift baskets to Hawaii (USA)</h2>
           </div>
-          <div class="usa__secondary-title">
+          <div class="usa__secondary-title d-sm-none">
             <h5 class="title-middle">Why send gifts to Middle East with us?</h5>
           </div>
-          <div class="usa__descr text">
+          <div class="usa__descr text d-sm-none">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis distinctio alias placeat repellendus eos expedita omnis eum pariatur eveniet magnam quo eaque, perferendis veritatis doloremque quibusdam natus ut libero corporis iure nulla
               ipsum tenetur atque obcaecati doloribus? Totam, quibusdam minus. View our <a class="text__link" href="#">Gourmet Items</a>, <a class="text__link" href="#">Sweet Baskets</a>, <a class="text__link" href="#">Flowers</a> and business gifts delivered
               to Hawaii</p>
@@ -131,103 +136,79 @@ Please see Google Finance website for more details."> <svg class="icon icon-info
             <p>Please review a list of biggest <a class="text__link" href="#">Hawaii holidays</a> to learn holiday traditins of gift giving in Hawaii</p>
           </div>
           <div class="usa__cards">
-            <div class="cards">
+            <div class="cards sm-one-column js-cards-container">
               <div class="card card__big col-4"> <a class="card__image" href="#" style='background-image: url(./assets/img/general/gifts-1/gift_img_11.png)'>
                 
             </a>
-                <a href="function () {
-      for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 &lt; _len2; _key2++) {
-        args[_key2] = arguments[_key2];
-      }
-
-      return obj[val].apply(obj, args);
-    }" class="card__title">
-                  <h3></h3>
-                </a>
-                <div class="card__divider divider-grey"></div> <a class="card__button-link" href="#">
-                    Details
-                </a>
-                <div class="card__divider divider-grey"></div> <a class="card__link" href="#">
-                    More Flowers
-                </a> </div>
+                <div class="card__text">
+                  <a href="#" class="card__title">
+                    <h3>Love Burst Bouquet for your friends in Hawaii</h3>
+                  </a>
+                  <div class="card__divider divider-grey"></div> <a class="card__button-link" href="#">
+                        Details
+                    </a>
+                  <div class="card__divider divider-grey"></div> <a class="card__link" href="#">
+                        More Flowers
+                    </a> </div>
+              </div>
               <div class="card card__big col-4"> <a class="card__image" href="#" style='background-image: url(./assets/img/general/gifts-1/gift_img_12.png)'>
                 
             </a>
-                <a href="function () {
-      for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 &lt; _len2; _key2++) {
-        args[_key2] = arguments[_key2];
-      }
-
-      return obj[val].apply(obj, args);
-    }" class="card__title">
-                  <h3></h3>
-                </a>
-                <div class="card__divider divider-grey"></div> <a class="card__button-link" href="#">
-                    Details
-                </a>
-                <div class="card__divider divider-grey"></div> <a class="card__link" href="#">
-                    More Tea-Coffee-Gifts
-                </a> </div>
+                <div class="card__text">
+                  <a href="#" class="card__title">
+                    <h3>Christmas Coffee Break Gift Basket Shipped to</h3>
+                  </a>
+                  <div class="card__divider divider-grey"></div> <a class="card__button-link" href="#">
+                        Details
+                    </a>
+                  <div class="card__divider divider-grey"></div> <a class="card__link" href="#">
+                        More Tea-Coffee-Gifts
+                    </a> </div>
+              </div>
               <div class="card card__big col-4"> <a class="card__image" href="#" style='background-image: url(./assets/img/general/gifts-1/gift_img_13.png)'>
                 
             </a>
-                <a href="function () {
-      for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 &lt; _len2; _key2++) {
-        args[_key2] = arguments[_key2];
-      }
-
-      return obj[val].apply(obj, args);
-    }" class="card__title">
-                  <h3></h3>
-                </a>
-                <div class="card__divider divider-grey"></div> <a class="card__button-link" href="#">
-                    Details
-                </a>
-                <div class="card__divider divider-grey"></div> <a class="card__link" href="#">
-                    More sympathy-flowers
-                </a> </div>
+                <div class="card__text">
+                  <a href="#" class="card__title">
+                    <h3>Sunset memoris with delivery to hawaii</h3>
+                  </a>
+                  <div class="card__divider divider-grey"></div> <a class="card__button-link" href="#">
+                        Details
+                    </a>
+                  <div class="card__divider divider-grey"></div> <a class="card__link" href="#">
+                        More sympathy-flowers
+                    </a> </div>
+              </div>
               <div class="card card__big col-4"> <a class="card__image" href="#" style='background-image: url(./assets/img/general/gifts-1/gift_img_14.png)'>
                 
             </a>
-                <a href="function () {
-      for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 &lt; _len2; _key2++) {
-        args[_key2] = arguments[_key2];
-      }
-
-      return obj[val].apply(obj, args);
-    }" class="card__title">
-                  <h3></h3>
-                </a>
-                <div class="card__divider divider-grey"></div> <a class="card__button-link" href="#">
-                    Details
-                </a> </div>
+                <div class="card__text">
+                  <a href="#" class="card__title">
+                    <h3>Gift of the day</h3>
+                  </a>
+                  <div class="card__divider divider-grey"></div> <a class="card__button-link" href="#">
+                        Details
+                    </a> </div>
+              </div>
               <div class="card card__big col-4"> <a class="card__image" href="#" style='background-image: url(./assets/img/general/gifts-1/gift_img_15.png)'>
                 
             </a>
-                <a href="function () {
-      for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 &lt; _len2; _key2++) {
-        args[_key2] = arguments[_key2];
-      }
-
-      return obj[val].apply(obj, args);
-    }" class="card__title">
-                  <h3></h3>
-                </a>
-                <div class="card__divider divider-grey"></div>
+                <div class="card__text">
+                  <a href="#" class="card__title">
+                    <h3>Corporate bulk and orders</h3>
+                  </a>
+                  <div class="card__divider divider-grey"></div>
+                </div>
               </div>
               <div class="card card__big col-4"> <a class="card__image" href="" style='background-image: url(./assets/img/general/gifts-1/gift_img_16.png)'>
                 
             </a>
-                <a href="function () {
-      for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 &lt; _len2; _key2++) {
-        args[_key2] = arguments[_key2];
-      }
-
-      return obj[val].apply(obj, args);
-    }" class="card__title">
-                  <h3></h3>
-                </a>
-                <div class="card__divider divider-grey"></div>
+                <div class="card__text">
+                  <a href="#" class="card__title">
+                    <h3>Build your own gift basket [?]</h3>
+                  </a>
+                  <div class="card__divider divider-grey"></div>
+                </div>
               </div>
             </div>
           </div>

@@ -2,16 +2,25 @@
     width: 19px
     height: 19px
     top: -2px
+    +sm 
+        width: 14px
+        height: 14px
     &:before,
     &:after
         display: none
+.noUi-connect
+    background: #eaeef0
+    height: 12px
 .noUi-horizontal
     height: 17px
+    +sm
+        height: 12px
 .range
     display: flex
     align-items: center
     +sm 
         flex-flow: column
+        width: 189px
     &__slider
         width: 230px
         +sm
@@ -25,6 +34,6 @@
         color: #3a5864
         margin-right: 10px
         min-width: 135px
-.noUi-connect
-    background: #eaeef0
-    height: 12px
+    .noUi-horizontal .noUi-handle
+        +sm 
+            right: -13px !important

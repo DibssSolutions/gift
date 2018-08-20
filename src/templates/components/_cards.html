@@ -12,49 +12,49 @@
                     </div> 
                 {% endif %}
             </a>
-
-            <a href="{{prop.title.link}}" class="card__title">
-                <h3>{{prop.title.text}}</h3>
-            </a>
-
-            {% if prop.title_divider %}
-                <div class="card__divider divider-grey"></div>
-            {% endif %}
-
-            {% if prop.id %}
-                <div class="card__id">
-                    <span class="card__id--id">ID:</span><span class="card__id--number">{{prop.id}}</span>
-                </div>
-            {% endif %}
-
-            {% if prop.button_link %}
-                <a class="card__button-link" href="{{prop.button_link.link_link}}">
-                    {{prop.button_link.link_text}}
+            <div class="card__text">
+                <a href="{{prop.title.link}}" class="card__title">
+                    <h3>{{prop.title.text}}</h3>
                 </a>
-            {% endif %}
-            
-            {% if prop.button_link_divider %}
-                <div class="card__divider divider-grey"></div>
-            {% endif %}
 
-            {% if prop.link %}
-                <a class="card__link" href="{{prop.link.link_link}}">
-                    {{prop.link.link_text}}
-                </a>
-            {% endif %}
+                {% if prop.title_divider %}
+                    <div class="card__divider divider-grey"></div>
+                {% endif %}
 
-            {% if prop.price %}
-                <div class="card__price">from $
-                    {{prop.price}}
+                {% if prop.id %}
+                    <div class="card__id">
+                        <span class="card__id--id">ID:</span><span class="card__id--number">{{prop.id}}</span>
+                    </div>
+                {% endif %}
+
+                {% if prop.button_link %}
+                    <a class="card__button-link" href="{{prop.button_link.link_link}}">
+                        {{prop.button_link.link_text}}
+                    </a>
+                {% endif %}
+                
+                {% if prop.button_link_divider %}
+                    <div class="card__divider divider-grey"></div>
+                {% endif %}
+
+                {% if prop.link %}
+                    <a class="card__link" href="{{prop.link.link_link}}">
+                        {{prop.link.link_text}}
+                    </a>
+                {% endif %}
+
+                {% if prop.price %}
+                    <div class="card__price">from $
+                        {{prop.price}}
+                    </div>
+                {% endif %}
+
+                {% if prop.select %}
+                <div class="card__select">
+                    {{select_builder.sel(prop.select)}}
                 </div>
-            {% endif %}
-
-            {% if prop.select %}
-            <div class="card__select">
-                {{select_builder.sel(prop.select)}}
+                {% endif %}
             </div>
-            {% endif %}
-
         </div>
     {% endfor %}
 {% endmacro %}

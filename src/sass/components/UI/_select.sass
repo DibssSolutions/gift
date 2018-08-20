@@ -5,10 +5,11 @@
 .select2-container.select--ordinary .select2-selection--single,
 .select2-container.select--flag .select2-selection--single,
     height: 30px
+    +sm 
+        height: 26px
 
 .select2-container--default.select--ordinary .select2-selection--single .select2-selection__arrow b,
 .select2-container--default.select--flag .select2-selection--single .select2-selection__arrow b
-
     background: url(../assets/img/general/arr_green.png)
     background-size: cover
     width: 14px
@@ -18,6 +19,10 @@
     left: -5px
     top: 40%
     transition: transform 0.3s
+    +sm 
+        width: 12px
+        height: 6px
+        top: 34%
 .select2-container--classic.select2-container--open.select--ordinary .select2-selection--single .select2-selection__arrow b, .select2-container--default.select2-container--open.select--ordinary .select2-selection--single .select2-selection__arrow b,
 .select2-container--classic.select2-container--open.select--flag .select2-selection--single .select2-selection__arrow b, .select2-container--default.select2-container--open.select--flag .select2-selection--single .select2-selection__arrow b
     transform: rotate(180deg)
@@ -33,6 +38,8 @@
     color: #3a5864
         // padding-bottom: 4px
     padding-left: 8px
+    +sm 
+        line-height: 22px
 
 .select2-container.select--ordinary .select2-selection--single,
 .select2-container.select--flag .select2-selection--single,
@@ -46,6 +53,9 @@
     color: #3a5864
     height: 30px
     line-height: 26px
+    +sm 
+        height: 26px
+        line-height: 22px
 
 .select2-container--default.select--ordinary,
 .select2-container--default.select--flag
@@ -59,7 +69,8 @@
         background: $dark_blue
         color: $white
 
-// .select-with-flag
+
+
 
 // [id*='-countries-']
 .select--flag
@@ -107,6 +118,8 @@
         color: $dark-grey
     &__select
         width: 232px
+        +sm 
+            width: 200px
     &__tooltip
         margin-left: 6px
         cursor: pointer

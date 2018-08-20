@@ -1,11 +1,12 @@
 .sidebar
     width: 292px
     float: left
+    +sm 
+        float: none
+        width: 100%
 .sidebar-menu
-    // padding-bottom: 16px 
     background-color: $special_bg
     border-radius: 4px
-    width: 292px
     margin-bottom: 14px
     font-family: $corp
     .icon
@@ -26,7 +27,7 @@
             transition: 0.4s transform cubic-bezier(0.68, -0.55, 0.265, 1.55)
     &__list
         padding: 0 16px 23px
-        // margin-top: -14px
+        // .is-open &
     &__icon
         float: left
         display: block

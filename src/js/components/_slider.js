@@ -24,6 +24,11 @@ $(document).ready(function() {
           margin: 0,
           nav: false
         },
+        500: {
+          items: 2,
+          margin: 0,
+          nav: false
+        },
         678: {
           items: 3,
           nav: false

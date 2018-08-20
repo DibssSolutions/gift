@@ -4,8 +4,6 @@
 	flex-wrap: wrap
 	justify-content: flex-start
 	align-items: stretch
-	// +sm
-	// 	justify-content: center
 
 .card
 	border-right: 1px solid $card-border-color
@@ -21,24 +19,14 @@
 		flex: 0 0 50%
 	&.col-3
 		flex: 0 0 33.33%
-		+sm
-			flex: 0 0 50%
-		+xs
-			flex: 0 0 100%
 	&.col-4
 		flex: 0 0 25%
 		+md
 			flex: 0 0 33.33%
-		+sm
-			flex: 0 0 50%
-		+xs
-			flex: 0 0 100%
 	&.col-5
 		flex: 0 0 20%
-		+sm
-			flex: 0 0 50%
-		+xs
-			flex: 0 0 100%
+		+md
+			flex: 0 0 33.33%
 	+hover
 		.card__title
 			color: $main-green
@@ -49,8 +37,6 @@
 			min-height: 44px
 		.card__image
 			padding-bottom: 275px	
-	&__middle
-		padding: 22px 10px
 	&__image
 		display: block
 		background-size: contain
@@ -62,11 +48,9 @@
 		position: absolute
 		bottom: 0
 		right: 0
-		.icon
-			font-size: 3em
-			svg
-				height: 30px
-				width: 30px
+		+sm 
+			img
+				width: calc(40px + 10vw)
 	&__title
 		display: block
 		font-size: 22px
@@ -122,11 +106,6 @@
 			background-color: $dark-green
 			+colorTrans
 
-// .card.col-3
-// 	+sm
-// 		flex: 0 0 50%
-// 	+xs
-// 		flex: 0 0 100%
 
 .small-card
 	font-family: $corp
@@ -167,10 +146,42 @@
 .card__middle
 	.card__image
 		padding-bottom: 300px
+	.card__text
+		padding: 0 12px
 	.card__title
 		min-height: 68px
-		padding: 0 12px
+		
 	
+.cards
+	&.sm-one-column
+		+sm 
+			.col-1,
+			.col-2,
+			.col-3,
+			.col-4,
+			.col-5
+				flex: 0 0 100%
+			
+
+	&.sm-two-columns
+		+sm 
+			.col-1,
+			.col-2,
+			.col-3,
+			.col-4,
+			.col-5
+				flex: 0 0 50%	
+			.card
+				padding: 10px 6px
+			.card__title
+				font-size: 16px
+			.card__image
+				padding-bottom: 150px
+			.card__button-link
+				font-size: 12px
+				padding: 4px 20px
+			
+
 
 // ===== ICON-CARDS =====
 
@@ -233,15 +244,26 @@
 			vertical-align: middle
 	&__text
 		font-size: 24px
-	
+
 .card-sm-buttons
 	display: none
 	position: relative
 	height: 60px
+	.icon
+		fill: $blue
+		font-size: 20px
 	& > *
 		display: inline-block
 	+sm 
-		display: block
+		display: flex
+		align-items: center
+		margin-bottom: 10px
+
+.card-sm-button
+	margin-right: 10px
+	&.is-active
+		.icon
+			fill: $main-green
 
 .sm-filter-btn
 	+vcenter
