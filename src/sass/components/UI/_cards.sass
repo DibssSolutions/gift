@@ -50,7 +50,7 @@
 		right: 0
 		+sm 
 			img
-				width: calc(40px + 10vw)
+				width: 70px
 	&__title
 		display: block
 		font-size: 22px
@@ -101,6 +101,7 @@
 		padding: 7px 40px
 		border-radius: 20px
 		background-color: $main-green
+		margin-bottom: 16px
 		+colorTrans
 		+hover
 			background-color: $dark-green
@@ -155,12 +156,32 @@
 .cards
 	&.sm-one-column
 		+sm 
+			// width: calc(100% - 40vw)
+			max-width: 300px
+			margin: 0 auto
 			.col-1,
 			.col-2,
 			.col-3,
 			.col-4,
 			.col-5
 				flex: 0 0 100%
+			.card__price
+				font-size: 18px
+			.card__id
+				font-size: 18px
+			.card__text
+				padding: 10px 6px
+			.card__title
+				min-height: inherit
+			.card__select
+				max-width: 300px
+				margin: 0 auto
+			.card__button-link
+				font-size: 14px
+				padding: 6px 20px
+				margin-bottom: 6px
+			.card__image
+				padding-bottom: 150px
 			
 
 	&.sm-two-columns
@@ -172,7 +193,7 @@
 			.col-5
 				flex: 0 0 50%	
 			.card
-				padding: 10px 6px
+				padding: 6px 6px 16px
 			.card__title
 				font-size: 16px
 			.card__image
@@ -180,7 +201,14 @@
 			.card__button-link
 				font-size: 12px
 				padding: 4px 20px
-			
+				margin-bottom: 10px
+			.card__price
+				font-size: 16px
+			.card__id
+				font-size: 16px
+			.card__select
+				max-width: 200px
+				margin: 0 auto
 
 
 // ===== ICON-CARDS =====

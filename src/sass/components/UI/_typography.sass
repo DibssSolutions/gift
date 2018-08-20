@@ -63,12 +63,27 @@
     font-size: 20px
     font-weight: 700
     color: $text_black
+    +md 
+        font-size: 18px
+    +sm 
+        font-size: 16px
 
 .text-big
     font-size: 20px
     font-family: $corp
     line-height: 1.22
     p 
-        margin-bottom: 22px
+        margin-bottom: 16px
     &--italic
         font-style: italic
+
+.testimonial
+    margin-bottom: 42px
+    text-align: center
+    font-family: $corp
+    &__text
+        font-style: italic
+        font-weight: 400
+        margin-bottom: 16px
+    &__details
+        font-weight: 700
