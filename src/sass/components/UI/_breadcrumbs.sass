@@ -21,7 +21,8 @@
             border-bottom: 1px solid $title_dark
             &::after
                 color: $dark-grey
-    &.no-underline
+
+    &--no-underline
         .breadcrumb-item
             &:nth-last-of-type(2)
                 border: none
@@ -29,17 +30,22 @@
                 color: $dark-grey
                 &:after
                     color: $dark-grey
-    &.colored
+
+    &--colored
+        .breadcrumb-item
+            color: $blue
+        .breadcrumb-item.active
+            color: $light-blue
+    
+    &--big
         .breadcrumb-item
             font-size: 20px
             line-height: 30px
-            color: $blue
             &:nth-last-of-type(2)
                 border-bottom: none
             &:after
                 font-weight: bold
-        .breadcrumb-item.active
-            color: $light-blue
+
             
             
  

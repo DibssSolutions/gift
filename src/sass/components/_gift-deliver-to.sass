@@ -17,6 +17,8 @@
                 width: 200px
     &__filter-bottom
         margin-bottom: 60px
+        +sm 
+            margin-bottom: 20px
     &__filter-title
         margin-bottom: 20px
         text-align: center
@@ -38,13 +40,7 @@
             float: none
             width: 100%
     &__title
-        font-family: $corp
-        font-size: 30px
-        font-weight: 700
-        color: $text_black
-        letter-spacing: -0.7px
-        margin-bottom: 14px
-        line-height: 1.15
+        @extend .gift-basket-to__title
     .delivery-card
         margin-bottom: 7px
     &__motto-bottom
@@ -52,7 +48,12 @@
         margin: 30px auto 70px
         .subtitle
             margin-bottom: 32px
+    &__cards-top
+        margin-bottom: 24px
     &__cards-bottom
         margin-top: 70px
         margin-bottom: 50px
+        +sm 
+            margin-top: 24px
+            margin-bottom: 24px
         

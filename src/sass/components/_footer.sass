@@ -2,6 +2,8 @@
 	font-family: $corp
 	background-color: $footer_bg
 	padding-top: 27px
+	+md 
+		padding-top: 0
 	&__container-inner
 		max-width: 880px
 		margin: 0 auto
@@ -13,17 +15,23 @@
 		vertical-align: top
 		font-size: 17px
 	&__partners
-		margin: 32px auto 14px
+		margin: 32px auto 7px
 		text-align: center
-		img 
-			display: inline-block
+		+md 
+			margin: 0
+	&__partner
+		display: inline-block
+		vertical-align: middle
+		padding: 0 14px
+		// img 
+		// 	display: inline-block
 	&__social
 		margin: 20px auto
 		text-align: center
 	&__social-icon
 		height: 30px
 		width: 30px
-		margin: 0 6px
+		margin: 0 4px
 		border-radius: 50%
 		border: 2px solid $social_text
 		display: inline-block
@@ -38,7 +46,7 @@
 			fill: $social_text
 			+vcenter
 	&-menu 
-		margin-bottom: 32px
+		margin-bottom: 24px
 		&__title
 			margin-bottom: 10px
 			color: $light-blue
@@ -46,6 +54,7 @@
 		&__link
 			font-family: CorpidE1sSCd
 			font-size: 17px
+			line-height: 1.15
 			font-weight: 300
 			color: #c8d9e8
 			+hover
@@ -57,8 +66,11 @@
 		font-weight: 300
 		text-align: center
 		color: $footer_text
+		+sm 
+			padding: 12px
 		a
 			color: $main-green
+		
 
 .youtube
 	background-color: $youtube
@@ -81,7 +93,7 @@
 
 .payments
 	text-align: center
-	margin: 18px auto 24px
+	margin: 11px auto 12px
 	&__title
 		font-family: CorpidE1sSCd
 		font-size: 30px

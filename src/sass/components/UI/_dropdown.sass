@@ -5,7 +5,7 @@
     font-style: normal
     font-stretch: normal
     line-height: normal
-    letter-spacing: -0.8px
+    letter-spacing: -0.02em
     text-align: center
     color: $dark_blue
     text-transform: uppercase
@@ -24,6 +24,8 @@
                 font-weight: 900
                 display: inline-block
                 vertical-align: middle
+            +sm 
+                font-size: 14px
     +md
         font-size: 28px
     +sm 
@@ -34,7 +36,7 @@
     .icon
         fill: $dark_blue
         font-size: 30px
-        transition: transform 0.3s
+        transition: transform 0.3s linear
         +md 
             font-size: 24px
         +sm 
@@ -46,30 +48,28 @@
         transition: transform 0.3s
 
 
-.dropdown-menu
+.dropdown-container
     font-family: $corp
     text-align: center
     position: relative
-    &__hidden
-        padding: 50px 70px
-        box-shadow: 0 3px 3px 0 rgba(0,0,0,.5)
-        background-color: #dfecf7
-        position: absolute
-        top: 36px
-        z-index: 50
-        visibility: hidden
-        opacity: 0
-        transition: opacity 0.5s, visibility 0.5s
-        +sm 
-            padding: 20px 30px
-        .is-open &
-            visibility: visible
-            opacity: 1
-            transition: opacity 0.5s, visibility 0.5s
+
+.dropdown-menu
+    padding: 50px 52px 30px
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,.5)
+    background-color: #dfecf7
+    position: absolute
+    z-index: 50
+    top: 36px
+    +md
+        top: -33px
+        position: relative
+    +sm
+        padding: 20px
+        
     &__list
         column-count: 4
         text-align: left
-        margin-bottom: 24px
+        margin-bottom: 20px
         +md 
             column-count: 2
         +sm 
@@ -92,9 +92,11 @@
         &--active
            color: $dropdown_text
            border-bottom: 1px solid $dropdown_text
+           font-weight: 700
     &__letter
         color: $dropdown_text
         font-size: 22px
-        font-weight: bold
+        font-weight: 800
+        margin-bottom: 6px
     &__text
         @extend .dropdown-menu__links

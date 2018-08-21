@@ -1,31 +1,37 @@
 .noUi-horizontal .noUi-handle
-    width: 19px
-    height: 19px
-    top: -2px
+    width: 17px
+    height: 17px
+    top: -3px
+    right: -9px !important
     +sm 
         width: 14px
-        height: 14px
+        height: 
+        right: -13px !important
     &:before,
     &:after
         display: none
 .noUi-connect
     background: #eaeef0
-    height: 17px
+    height: 13px
 .noUi-horizontal
-    height: 17px
+    height: 13px
     +sm
         height: 12px
+
 .range
     display: flex
-    align-items: center
-    +sm 
+    justify-content: flex-start
+    +md
         flex-flow: column
-        width: 189px
+        justify-content: center
+        align-items: flex-start
+    +sm 
+        align-items: center
     &__slider
         width: 230px
-        +sm
+        +md
             order: -1
-            width: 100%
+            // width: 266px
     &__numbers
         font-family: $corp
         font-size: 16px
@@ -33,7 +39,10 @@
         text-align: left
         color: #3a5864
         margin-right: 10px
-        min-width: 135px
-    .noUi-horizontal .noUi-handle
-        +sm 
-            right: -13px !important
+        min-width: 95px
+        +md 
+            text-align: center
+            width: 232px
+            margin-top: 6px
+
+            

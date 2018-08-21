@@ -1,15 +1,15 @@
 {% import "partials/_mixins.html" as mixins %}
 {% macro menu_1() %}
-<div class="js-dropdown-container dropdown-menu">
+<div class="js-accordion js-accordion-closed dropdown-container">
 
     {# DD BUTTON #}
-    <button class="js-dropdown-btn dropdown-menu-btn">
+    <button class="js-accordion-header dropdown-menu-btn">
         <span class="dropdown-menu-btn__text">Serviced cities & towns in Hawaii</span>
         <span class="dropdown-menu-btn__icon">{{mixins.icon('chevron-down')}}</span>
     </button>
 
     {# DD MENU #}
-    <div class="dropdown-menu__hidden">
+    <div class="js-accordion-list dropdown-menu">
 
         {# DD LIST #}
         <ul class="dropdown-menu__list">
@@ -124,11 +124,11 @@
 {% endmacro %}
 
 {% macro menu_2() %}
-<div class="js-dropdown-container dropdown-menu">
+<div class="js-accordion js-accordion-closed dropdown-container">
 
     {# DD BUTTON #}
-    <button class="js-dropdown-btn dropdown-menu-btn">
-        <span class="dropdown-menu-btn__text dropdown-menu-btn__text--with-dividers"> 
+    <button class="js-accordion-header dropdown-menu-btn">
+        <span class="dropdown-menu-btn__text dropdown-menu-btn__text--with-dividers d-sm-none"> 
             <a href="#">A</a>
             |
             <a href="#">B</a>
@@ -167,11 +167,12 @@
             |
             <a href="#">V</a>
         </span>
+        <span class="dropdown-menu-btn__text d-sm-block">Some Text</span>
         <span class="dropdown-menu-btn__icon">{{mixins.icon('chevron-down')}}</span>
     </button>
 
     {# DD MENU #}
-    <div class="dropdown-menu__hidden">
+    <div class="js-accordion-list dropdown-menu">
 
         {# DD LIST #}
         <ul class="dropdown-menu__list">

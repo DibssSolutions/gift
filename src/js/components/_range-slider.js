@@ -1,10 +1,8 @@
 // import 'nouislider';
 var noUiSlider = require('nouislider');
+var wNumb = require('wnumb');
 
 var slider = document.querySelector('.js-range-slider');
-// var startSlider = slider.dataset.start;
-
-// console.log(startSlider, minSlider, maxSlider);
 
 if (slider) {
 
@@ -20,7 +18,8 @@ if (slider) {
     range: {
       min: minSlider,
       max: maxSlider
-    }
+    }, 
+    format: wNumb({ decimals: 0 })
   });
 
   slider.noUiSlider.on('update.one', function(e) {

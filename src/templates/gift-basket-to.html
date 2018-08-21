@@ -11,63 +11,64 @@
 {% import "components/_range.html" as range_input %} 
 {% import "components/_dropdown-menu.html" as dd_menu %}
 {# MAIN LAYOUT #}
+ {% extends "layouts/_layout.html" %} 
+ {% block content %}
 
-{% extends "layouts/_layout.html" %} 
+<div class="gift-basket-to">
+    <div class="gift-basket-to__container inner">
+        {# BREADCRUMBS #}
+        <div class="gift-basket-to__breadcrumbs">
+            {{breadcrumb.make([ {"class": "no-underline"}, {"text": "Home", "link": "ui.html"}, {"text": "Gift baskets to Brazil", "active":
+            true} ]) }}
+        </div>
 
-{% block content %}
+        {# TITLE #}
+        <div class="gift-basket-to__main-title">
+            {{titles.titleBig('Gift baskets to Brazil')}}
+        </div>
 
-
-<div class="inner">
-    {# BREADCRUMBS #}
-    <div class="country-gift__breadcrumbs">
-        {{breadcrumb.make([ 
-            {"class": "no-underline"}, 
-            {"text": "Home", "link": "ui.html"}, 
-            {"text": "Gift baskets to Brazil", "active": true} 
-        ]) }}
-    </div>
-
-    {# TITLE #}
-    <div class="country-gift__main-title">
-        {{titles.titleBig('Gift baskets to Brazil')}}
-    </div>
-
-    {# FILTERING AREA #}
-    <div class="filter country-gift__filter">
-        <div class="filter__select-wrapper">
-            {# SELECT WITH TOOLTIP COMPONENT #}
-            <div class="select-with-tooltip">
-                <div class="select-with-tooltip__select">
-                    {{select_builder.sel(selects_set.coutryServiceLocations)}}
-                </div>
-                <div class="select-with-tooltip__tooltip js-tooltip-right" title="{{selects_set.tooltip}}">
-                    {{mixins.icon('info')}}
+        {# FILTERING AREA #}
+        <div class="filter gift-basket-to__filter">
+            <div class="filter__select-wrapper">
+                {# SELECT WITH TOOLTIP COMPONENT #}
+                <div class="select-with-tooltip">
+                    <div class="select-with-tooltip__select">
+                        {{select_builder.sel(selects_set.coutryServiceLocations)}}
+                    </div>
+                    <div class="select-with-tooltip__tooltip js-tooltip-right" title="{{selects_set.tooltip}}">
+                        {{mixins.icon('info')}}
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
 
-</div>
-
-{% include "components/_slider.html" %}
-<div class="gift-basket-to">
+    {% include "components/_slider.html" %}
     <div class="gift-basket-to__container inner">
-        <aside class="sidebar">
+        <aside class="gift-basket-to__sidebar sidebar">
             {% include "components/_collapse.html" %}
         </aside>
         <main class="gift-basket-to__main">
             <section class="gift-basket-to__descr d-sm-none">
                 <div class="gift-basket-to__subtitle">
                     <h5 class="subtitle">
-                        Learn most important Brazil holidays: 
+                        Learn most important Brazil holidays:
                         <a href="#" class="text__link">holiday traditions of gift giving in Brazil</a>
                     </h5>
                 </div>
                 <div class="gift-basket-to__delivery">
                     <h3 class="gift-basket-to__title">Gift Basket Delivery to Brazil</h3>
                     <div class="text-big">
-                        <p>Send Gift Baskets and Food Hampers to Brazil for your loved ones, friends and business associates. With us you can avoid hassle of dealing with Customs when shipping a gift to Brazil yourself.</p>
-                        <p>Our Gift Hampers & VIP Gifts delivered to Brazil include only the highest quality ingredients including upscale champagne, imported wines, delicious cheeses, freshest fruits and various Gifts for serious gift aristocrats. View our<a class="text__link" href="#">Gourmet Items</a>, <a class="text__link" href="#">Chocolat Baskets</a>, <a class="text__link" href="#">Flowers and business gifts delivered to Brazil</a></p>
+                        <p>Send Gift Baskets and Food Hampers to Brazil for your loved ones, friends and business associates.
+                            With us you can avoid hassle of dealing with Customs when shipping a gift to Brazil yourself.</p>
+                        <p>Our Gift Hampers & VIP Gifts delivered to Brazil include only the highest quality ingredients including
+                            upscale champagne, imported wines, delicious cheeses, freshest fruits and various Gifts for serious
+                            gift aristocrats. View our
+                            <a class="text__link" href="#">Gourmet Items</a>,
+                            <a class="text__link" href="#">Chocolat Baskets</a>,
+                            <a class="text__link" href="#">Flowers and business gifts delivered to Brazil</a>
+                        </p>
                     </div>
                 </div>
                 <div class="gift-basket-to__service">
@@ -119,19 +120,18 @@
             </div>
             <div class="gift-basket-to__motto-bottom">
                 <h5 class="subtitle">
-                    We deliver gift baskets to most of the 
+                    We deliver gift baskets to most of the
                     <a href="#" class="text__link">locations in Brazil</a>
                 </h5>
             </div>
             <div class="gift-basket-to__video">
-                <div class="video">
-                    <iframe height="315" src="https://www.youtube.com/embed/n_GA_vQRu9c?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <div class="video video-middle">
+                    <iframe src="https://www.youtube.com/embed/n_GA_vQRu9c?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media"
+                        allowfullscreen></iframe>
                 </div>
             </div>
         </main>
+
     </div>
 </div>
-{% include "components/_subscribe.html" %} 
-{% include "partials/_footer.html" %}
-
-{% endblock %}
+{% include "components/_subscribe.html" %} {% include "partials/_footer.html" %} {% endblock %}

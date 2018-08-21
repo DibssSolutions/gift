@@ -13,6 +13,9 @@
 	text-align: center
 	font-family: $corp
 	margin-bottom: -1px
+	display: flex
+	flex-flow: column
+	justify-content: space-between
 	&.col-1
 		flex: 0 0 100%
 	&.col-2
@@ -21,22 +24,15 @@
 		flex: 0 0 33.33%
 	&.col-4
 		flex: 0 0 25%
-		+md
-			flex: 0 0 33.33%
 	&.col-5
 		flex: 0 0 20%
-		+md
-			flex: 0 0 33.33%
+	&.col-md-50
+		+md 
+			flex: 0 0 50%
 	+hover
 		.card__title
 			color: $main-green
 			+colorTrans
-	&__big
-		padding: 22px 18px
-		.card__title
-			min-height: 44px
-		.card__image
-			padding-bottom: 275px	
 	&__image
 		display: block
 		background-size: contain
@@ -62,12 +58,14 @@
 		color: $card-title-color
 		text-transform: uppercase
 		+colorTrans
-		min-height: 56px
-		letter-spacing: -0.6px
+		letter-spacing: -0.02em
+		word-spacing: 0.01em
+		flex-grow: 1
 		h3 
 			font-size: inherit
 	&__price
 		margin-bottom: 0.5em
+		margin-top: 0.5em
 		font-size: 21px
 		font-weight: bold
 		font-style: normal
@@ -98,15 +96,50 @@
 		border-radius: 4px
 		text-align: center
 		text-transform: uppercase
-		padding: 7px 40px
+		padding: 7px 48px
 		border-radius: 20px
 		background-color: $main-green
-		margin-bottom: 16px
+		// margin-bottom: 16px
 		+colorTrans
 		+hover
 			background-color: $dark-green
 			+colorTrans
+	&__link
+		display: block
+		font-size: 22px
+		font-weight: bold
+		color: $blue
+		line-height: 1.09
+		text-align: center
+		text-transform: uppercase
+		+colorTrans
+		letter-spacing: -0.02em
+		text-decoration: underline
 
+.card__big
+	padding: 42px 0
+	+sm 
+		padding: 12px 0
+	.card__bottom
+		padding: 0 10px
+	.card__title
+		padding: 0 10px
+	.card__image
+		padding-bottom: 275px
+		margin-bottom: 34px
+	.card__link
+		margin-top: 10px
+	.card__button-link
+		margin: 0
+
+.card__middle
+	.card__image
+		padding-bottom: 300px
+	.card__bottom
+		padding: 0 12px
+	.card__title
+		padding: 0 12px
+		
 
 .small-card
 	font-family: $corp
@@ -134,8 +167,6 @@
 		line-height: normal
 		color: $blue
 
-
-
 .card__slider-small
 	.card__image
 		padding-bottom: 200px
@@ -143,22 +174,14 @@
 		font-size: 20px
 		letter-spacing: -1px
 		padding: 18px
-
-.card__middle
-	.card__image
-		padding-bottom: 300px
-	.card__text
-		padding: 0 12px
-	.card__title
-		min-height: 68px
-		
 	
 .cards
 	&.sm-one-column
 		+sm 
-			// width: calc(100% - 40vw)
 			max-width: 300px
 			margin: 0 auto
+			.card
+				padding: 16px 0
 			.col-1,
 			.col-2,
 			.col-3,
@@ -169,17 +192,16 @@
 				font-size: 18px
 			.card__id
 				font-size: 18px
-			.card__text
-				padding: 10px 6px
+			.card__bottom
+				padding: 0 6px
 			.card__title
-				min-height: inherit
+				padding: 0 6px
 			.card__select
 				max-width: 300px
 				margin: 0 auto
 			.card__button-link
 				font-size: 14px
 				padding: 6px 20px
-				margin-bottom: 6px
 			.card__image
 				padding-bottom: 150px
 			
@@ -193,15 +215,15 @@
 			.col-5
 				flex: 0 0 50%	
 			.card
-				padding: 6px 6px 16px
+				padding: 6px 0 16px
 			.card__title
 				font-size: 16px
 			.card__image
 				padding-bottom: 150px
+				margin-bottom: 12px
 			.card__button-link
 				font-size: 12px
 				padding: 4px 20px
-				margin-bottom: 10px
 			.card__price
 				font-size: 16px
 			.card__id
@@ -209,6 +231,8 @@
 			.card__select
 				max-width: 200px
 				margin: 0 auto
+			.card__link
+				font-size: 16px
 
 
 // ===== ICON-CARDS =====
@@ -221,9 +245,11 @@
 		font-style: normal
 		font-stretch: normal
 		line-height: 1.23
-		letter-spacing: -0.6px
+		// letter-spacing: -0.6px
 		text-align: left
 		color: $blue
+		+lg 
+			font-size: 20px
 	&-text
 		font-family: CorpidE1sSCd
 		font-size: 20px
@@ -231,7 +257,7 @@
 		font-style: normal	
 		font-stretch: normal
 		line-height: 1.35
-		letter-spacing: -0.5px
+		// letter-spacing: -0.5px
 		text-align: left
 		color: $dark_blue
 
@@ -256,6 +282,9 @@
 	background-color: rgba($main-green, 0.3)
 	border-radius: 5px
 	padding: 10px 14px 14px 20px
+	max-width: 360px
+	+md 
+		padding: 10px 6px 10px 6px
 	&--blue 
 		background-color: $special_bg
 		.delivery-card__img .icon
@@ -272,6 +301,8 @@
 			vertical-align: middle
 	&__text
 		font-size: 24px
+		+lg 
+			font-size: 20px
 
 .card-sm-buttons
 	display: none

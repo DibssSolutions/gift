@@ -67,6 +67,7 @@
     "through2": "^2.0.1",
     "tooltipster": "^4.2.6",
     "webpack": "^2.2.1",
-    "webpack-bundle-analyzer": "^1.5.3"
+    "webpack-bundle-analyzer": "^1.5.3",
+    "wnumb": "^1.1.0"
   }
 }

@@ -1,4 +1,4 @@
-.country-gift
+.gift-basket-to
     &__breadcrumbs
         margin: 16px 0
     &__main-title
@@ -25,16 +25,24 @@
             padding-left: 0
     &__descr
         +clr
+        margin-bottom: 24px
     &__subtitle
         font-size: 20px
         margin-bottom: 22px
     &__delivery
         float: left
-        width: 530px
+        width: 60%
         padding-right: 30px
+        +md 
+            float: none
+            width: 100%
     &__service
-        margin-left: 566px
+        float: left
+        width: 40%
         +clr
+        +md 
+            float: none
+            width: 100%
     .delivery-card
         margin-bottom: 7px
     &__title
@@ -42,9 +50,12 @@
         font-size: 30px
         font-weight: 700
         color: $text_black
-        letter-spacing: -0.7px
+        // letter-spacing: -0.7px
         margin-bottom: 14px
         line-height: 1.15
+        +md 
+            font-size: 24px
+
     &__main-title
         // margin-top: 50px
     &__cards
@@ -56,10 +67,7 @@
         margin-bottom: 32px
         margin-top: 22px
         max-width: 100%
-        iframe 
-            width: 720px
-            +sm 
-                width: 100%
+        
                 
 
 

@@ -26,27 +26,38 @@
         .icon
             fill: $blue
             float: right
-            transition: 0.4s transform cubic-bezier(0.68, -0.55, 0.265, 1.55)
+            transition: 0.4s transform 
     &__list
         padding: 0 16px 23px
         a 
             display: block
+    &__item
+        +clr
     &__icon
         float: left
-        display: block
         .icon
             font-size: 25px
+            width: 30px
+            +sm 
+                font-size: 16px
+                width: 24px
     &__link
+        float: left
         font-size: 20px
-        letter-spacing: -0.6px
+        // letter-spacing: -0.6px
         line-height: 1.6
         margin-left: 40px
-        display: block
+        +sm
+            font-size: 16px
+            margin-left: 30px
         &--special
             color: $extra-dark-green
+            margin-left: 10px
+            +sm 
+                margin-left: 6px
         &--builder
             font-weight: 700
     &.is-open 
         .sidebar-menu__header .icon
             +rotate(180)
-            transition: 0.4s transform cubic-bezier(0.68, -0.55, 0.265, 1.55)
+            transition: 0.4s transform 

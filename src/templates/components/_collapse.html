@@ -275,12 +275,12 @@
 ] %}
 
 {% for item in c %}
-	<div class="js-collapse sidebar-menu">
-		<h4 class="js-collapse-header sidebar-menu__header">
+	<div class="js-accordion-open js-accordion sidebar-menu">
+		<h4 class="js-accordion-header sidebar-menu__header">
 			{{item.title}}
 			{{mixins.icon('chevron-down')}}
 		</h4>
-		<ul class="js-collapse-list sidebar-menu__list">
+		<ul class="js-accordion-list sidebar-menu__list">
 			{% for list in item.list %}
 				<li class="sidebar-menu__item">
 					{% if list.icon %}

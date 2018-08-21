@@ -4,56 +4,56 @@
 {% macro card(props) %}
     {% for prop in props %}
         <div class="card card__{{prop.size}}">
-
-            <a class="card__image" href="{{prop.image.link}}" style='background-image: url(./assets/img/general/gifts-1/{{prop.image.src}})'>
-                {% if prop.free_mark %}
-                    <div class="card__freemark">
-                        <img src="./assets/img/general/chocolate-free.png" alt="">
-                    </div> 
-                {% endif %}
-            </a>
-            <div class="card__text">
+            <div class="card__top">
+                <a class="card__image" href="{{prop.image.link}}" style='background-image: url(./assets/img/general/gifts-1/{{prop.image.src}})'>
+                    {% if prop.free_mark %}
+                        <div class="card__freemark">
+                            <img src="./assets/img/general/chocolate-free.png" alt="">
+                        </div> 
+                    {% endif %}
+                </a>
                 <a href="{{prop.title.link}}" class="card__title">
                     <h3>{{prop.title.text}}</h3>
                 </a>
+            </div>
+            <div class="card__bottom">
+                    {% if prop.title_divider %}
+                        <div class="card__divider divider-grey"></div>
+                    {% endif %}
 
-                {% if prop.title_divider %}
-                    <div class="card__divider divider-grey"></div>
-                {% endif %}
+                    {% if prop.id %}
+                        <div class="card__id">
+                            <span class="card__id--id">ID:</span><span class="card__id--number">{{prop.id}}</span>
+                        </div>
+                    {% endif %}
 
-                {% if prop.id %}
-                    <div class="card__id">
-                        <span class="card__id--id">ID:</span><span class="card__id--number">{{prop.id}}</span>
+                    {% if prop.button_link %}
+                        <a class="card__button-link" href="{{prop.button_link.link_link}}">
+                            {{prop.button_link.link_text}}
+                        </a>
+                    {% endif %}
+                    
+                    {% if prop.button_link_divider %}
+                        <div class="card__divider divider-grey"></div>
+                    {% endif %}
+
+                    {% if prop.link %}
+                        <a class="card__link" href="{{prop.link.link_link}}">
+                            {{prop.link.link_text}}
+                        </a>
+                    {% endif %}
+
+                    {% if prop.price %}
+                        <div class="card__price">from $
+                            {{prop.price}}
+                        </div>
+                    {% endif %}
+
+                    {% if prop.select %}
+                    <div class="card__select">
+                        {{select_builder.sel(prop.select)}}
                     </div>
-                {% endif %}
-
-                {% if prop.button_link %}
-                    <a class="card__button-link" href="{{prop.button_link.link_link}}">
-                        {{prop.button_link.link_text}}
-                    </a>
-                {% endif %}
-                
-                {% if prop.button_link_divider %}
-                    <div class="card__divider divider-grey"></div>
-                {% endif %}
-
-                {% if prop.link %}
-                    <a class="card__link" href="{{prop.link.link_link}}">
-                        {{prop.link.link_text}}
-                    </a>
-                {% endif %}
-
-                {% if prop.price %}
-                    <div class="card__price">from $
-                        {{prop.price}}
-                    </div>
-                {% endif %}
-
-                {% if prop.select %}
-                <div class="card__select">
-                    {{select_builder.sel(prop.select)}}
-                </div>
-                {% endif %}
+                    {% endif %}
             </div>
         </div>
     {% endfor %}

@@ -1,32 +1,37 @@
 import { OPEN, BODY, WIN, widthMD } from '../_constants';
 
 $(document).ready(function() {
-  var collapseTrigger = $('.js-collapse-header');
-  var collapses = $('.js-collapse');
+  var accordionTrigger = $('.js-accordion-header');
+  var accordions = $('.js-accordion-open');
 
   if (WIN.width() > widthMD) {
-    $(collapses).each(function(index, el) {
+    $(accordions).each(function(index, el) {
       $(el).addClass(OPEN);
-      var list = $(el).find('.js-collapse-list');
-      $(list).slideDown(50);
+      var list = $(el).find('.js-accordion-list');
+      $(list).slideDown();
     });
   } else {
-    var list = $('.js-collapse-list');
+    var list = $('.js-accordion-open .js-accordion-list');
     $(list).slideUp();
   }
+  accordionTrigger.click(accordionHeandler);
 
-  collapseTrigger.click(function(event) {
-    var parent = $(this).parents('.js-collapse');
-
-    if (!parent.hasClass(OPEN)) {
-      parent.addClass(OPEN);
-      var list = $(parent).find('.js-collapse-list');
-      $(list).slideDown(750);
-    } else {
-      parent.removeClass(OPEN);
-      var list = $(parent).find('.js-collapse-list');
-      $(list).slideUp(750);
-    }
-    event.stopPropagation();
-  });
+  $('.js-accordion-closed .js-accordion-list').slideUp();
 });
+
+function accordionHeandler(event) {
+  var parent;
+  
+  parent = $(this).parents('.js-accordion'); 
+ 
+  if (!parent.hasClass(OPEN)) {
+    parent.addClass(OPEN);
+    var list = $(parent).find('.js-accordion-list');
+    $(list).slideDown(750);
+  } else {
+    parent.removeClass(OPEN);
+    var list = $(parent).find('.js-accordion-list');
+    $(list).slideUp(750);
+  }
+  event.stopPropagation();
+}

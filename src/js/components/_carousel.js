@@ -13,12 +13,20 @@ $(document).ready(function() {
       dots: true,
       smartSpeed: 2000,
       nav: true,
-      navText: [buildIcon('chevron-down'), buildIcon('chevron-down')],
+      navText: [buildIcon('chevron-left'), buildIcon('chevron-right')],
       items: 1,
       autoplay: true,
-      autoplayTimeout: 4000,
+      autoplayTimeout: 2000,
       autoplayHoverPause: true,
-      animateOut: 'fadeOut'
+      animateOut: 'fadeOut',
+      responsive: {
+        0: {
+          nav: false
+        },
+        767: {
+          nav: true
+        }
+      }
     });
 
     function sliderVisible() {

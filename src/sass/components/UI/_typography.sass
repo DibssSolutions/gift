@@ -1,5 +1,5 @@
 .title-biggest
-    font-family: CorpidE1sSCd
+    font-family: $corp
     font-size: 48px
     font-weight: 800
     color: $title_dark
@@ -11,27 +11,42 @@
         font-size: 32px
 
 .title-big
-    font-family: CorpidE1sSCd
+    font-family: $corp
     font-size: 32px
-    font-weight: 900
-    letter-spacing: -0.8px
+    font-weight: 800
+    letter-spacing: -0.02em
     color: $title_dark
     text-transform: uppercase
+    word-spacing: 0.1em
+    +md 
+        font-size: 28px
     +sm 
         font-size: 26px
 
 .title-middle
-    font-family: CorpidE1sSCd
+    font-family: $corp
+    font-size: 29px
+    font-weight: 700
+    letter-spacing: -0.05em
+    color: $title_dark
+    word-spacing: 0.19em
+    +md 
+        font-size: 26px
+    +sm 
+        font-size: 24px
+
+.title-small
+    font-family: $corp
     line-height: 1
     font-size: 24px
     font-weight: 700
-    letter-spacing: -0.6px
+    letter-spacing: -0.05em
     text-align: left
     color: $text_black
 
 .text
     font-family: $corp
-    font-size: 17px
+    font-size: 18px
     font-weight: 300
     font-style: normal
     font-stretch: normal
@@ -76,14 +91,26 @@
         margin-bottom: 16px
     &--italic
         font-style: italic
+    +md 
+        font-size: 18px
+    +sm 
+        font-size: 16px
 
 .testimonial
     margin-bottom: 42px
     text-align: center
     font-family: $corp
+    +sm 
+        margin-bottom: 24px
+        text-align: left
     &__text
         font-style: italic
         font-weight: 400
         margin-bottom: 16px
+        +sm 
+            font-size: 14px
+            margin-bottom: 6px
     &__details
         font-weight: 700
+        +sm 
+            font-size: 14px
