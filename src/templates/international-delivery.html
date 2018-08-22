@@ -1,0 +1,170 @@
+{# --- title: Index page --- #}
+{# IMPORTING DATA COMPONENTS #}
+{% import "data/_cards.html" as cards_set %}
+{% import "data/_selects.html" as selects_set %}
+{# IMPORTING MIXINS #}
+{% import "partials/_mixins.html" as mixins %}
+{% import "components/_titles.html" as titles %}
+{% import "components/_cards.html" as cards_builder %}
+{% import "components/_select.html" as select_builder %}
+{% import "components/_filter.html" as filter %}
+{% import "components/_range.html" as range_input %}
+{% import "components/_dropdown-menu.html" as dd_menu %}
+{% import "components/_breadcrumb.html" as breadcrumb %}
+{# MAIN LAYOUT #}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+    {% include "components/_carousel.html" %}
+    <div class="international">
+        <div class="international__container inner">
+            {# BREADCRUMBS #}
+            <div class="international__breadcrumbs">
+                {{breadcrumb.make([ 
+                {"class": "breadcrumb--no-underline"},
+                {"text": "Home", "link": "ui.html"}, 
+                {"text": "Middl East", "active": true} 
+            ]) }}
+            </div>
+
+            <!-- FILTERING AREA -->
+            {% include "components/_sm-toggle-buttons.html" %}
+            <form action="/" class="filter international__filter js-filter">
+                <div class="filter__text d-sm-none">
+                    Ramadan Gift Baskets to Middle East
+                    <br>
+                    - Ramadan Gift Delivery to ...
+                </div>
+                <div class="filter__filter filter__filter--sm-right-centered">
+                    <div class="filter__select-wrapper filter__select-wrapper--left-centered">
+                        <a href="#" class="filter__country-flag">
+                            <img class="js-selected-counry-flag" src="./assets/img/general/ru.png" alt="">
+                        </a>
+                        <div class="filter__select-image">
+                            <img src="./assets/img/general/globus-ico.png" alt="">
+                        </div>
+                        <div class="filter__select">
+                            {# SELECT-1 #}
+                            {{select_builder.sel(selects_set.countriesSelect)}}
+                        </div>
+                        <div class="filter__tooltip js-tooltip" title="{{selects_set.tooltip}}">
+                            {{mixins.icon('info')}}
+                        </div>
+                    </div>
+                    <div class="filter__select-wrapper">
+                        {# SELECT-2 #}
+                        <div class="filter__select">
+                            {{select_builder.sel(selects_set.sortingTypesSelect)}}
+                        </div>
+                        <div class="filter__tooltip js-tooltip" title="{{selects_set.tooltip}}">
+                            {{mixins.icon('info')}}
+                        </div>
+                    </div>
+                    <div class="filter__range">
+                        {{range_input.range(0, 1000, 0, 1000)}}
+                    </div>
+                </div>
+            </form>
+
+            <div class="international__main-title">
+                {{titles.titleBig('why send gifts to middle east with us?')}}
+            </div>
+            <div class="international__descr">
+                {{titles.titleMiddle('Why send gifts to Middle East with us?')}}
+                <div class="international__links">
+                    <ul class="general-links">
+                        <li class="general-links__item"><a href="#" class="general-links__link">Gift Catalog in Middle East and Beyond</a></li>
+                        <li class="general-links__item"><a href="#" class="general-links__link">Fortune 500 & SMB Clients</a></li>
+                        <li class="general-links__item"><a href="#" class="general-links__link">A-ranked Member of BBB</a></li>
+                        <li class="general-links__item"><a href="#" class="general-links__link">Testimonials & Reviews</a></li>
+                        <li class="general-links__item"><a href="#" class="general-links__link">Corporate Discounts</a></li>
+                        <li class="general-links__item"><a href="#" class="general-links__link">How to order? (Bulk Order Form)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <main class="gift-catalog__main">
+                <div class="gift-catalog__container inner">
+                    <div class="gift-catalog__subtitle d-sm-none">
+                        <h5 class="subtitle">
+                            Need help with your gift selection? - Try our
+                            <a href="#" class="text__link">Corporate</a>
+                            or
+                            <a href="#" class="text__link">Personal</a>
+                            Gift Wizard
+                        </h5>
+                    </div>
+                    <div class="filter__found d-sm-none">
+                        <span class="filter__found--bold">243</span>
+                        items found
+                    </div>
+                    <div class="gift-catalog__cards">
+                        <div class="cards sm-one-column js-cards-container">
+                            {{cards_builder.card(cards_set.cardsOnlineCatalogSet)}}
+                        </div>
+                    </div>
+                    <div class="gift-catalog__add-cards">
+                        <button class="btn btn-rounded btn-rounded--green btn-load-more">Load More</button>
+                    </div>
+                </div>
+            </main>
+            <div class="gift-catalog__recommendation special">
+                <div class="gift-catalog__container inner">
+                    <div class="subtitle">
+                        Can't find the gift were you looking for? - Try our
+                        <a href="#" class="text__link">Bussiness Gift</a>
+                        or
+                        <a href="#" class="text__link">Personal Gift</a>
+                        Recommendation Tool or
+                        <a href="#" class="text__link">contact us</a>
+                        <br>
+                        in the following
+                        <a href="#" class="text__link">towns and cities</a>
+                    </div>
+                </div>
+            </div>
+            <div class="gift-catalog__video-upper inner">
+                <div class="video video-middle">
+                    <iframe src="https://www.youtube.com/embed/n_GA_vQRu9c?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+                </div>
+            </div>
+            <div class="gift-catalog__testimonials">
+                <div class="gift-catalog__testimonials-container inner">
+                    <h4 class="gift-catalog__testimonials-title">
+                        What our Customers Say About Our Service
+                    </h4>
+                    <div class="testimonial">
+                        <div class="testimonial__text">
+                            I have ordered several bouquets from Russian Flora from the USA and they are fantastic! Nancy, Katherine, Natalie, Margaret and all of the team there are so professional and helpful, and make international floral delivery so easy for me. The flowers have been absolutely gorgeous on every occasion! The personalized attention my orders have received has been beyond compare, and they have gone over and above on every delivery! I will continue to use them and would highly recommend them to everyone.
+                        </div>
+                        <div class="testimonial__details">
+                            • Reviewed by Debora - October 16, 2015 (USA)
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial__text">
+                            You guys are seriously AMAZING. I order a lot of flowers internationally and you are the absolute BEST!
+                        </div>
+                        <div class="testimonial__details">
+                            • Reviewed by Ronda - October 16, 2015 (El Cajon CA, USA)
+                        </div>
+                    </div>
+                    <div class="gift-catalog__another-testimonials">
+                        <div class="subtitle">
+                            Read other
+                            <a href="#" class="text__link">testimonials</a>
+                            or leave your feedback
+                            <a href="#" class="text__link">here</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gift-catalog__video-bottom inner">
+                <div class="video video-big">
+                    <iframe src="https://www.youtube.com/embed/n_GA_vQRu9c?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+                </div>
+            </div>
+        </div>
+        {% include "components/_subscribe.html" %}
+        {% include "partials/_footer.html" %}
+    {% endblock %}

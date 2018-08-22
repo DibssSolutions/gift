@@ -19,19 +19,21 @@
         height: 12px
 
 .range
-    display: flex
+    display: inline-flex
     justify-content: flex-start
+    align-items: center
     +md
         flex-flow: column
         justify-content: center
         align-items: flex-start
     +sm 
-        align-items: center
+        align-items: flex-start
     &__slider
-        width: 230px
+        width: 207px
         +md
             order: -1
-            // width: 266px
+        +sm 
+            width: 200px        
     &__numbers
         font-family: $corp
         font-size: 16px

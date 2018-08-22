@@ -30,7 +30,7 @@ as select_builder %} {% macro sel_location_tooltip() %}
     <div class="filter__select-wrapper">
         {# SELECT WITH TOOLTIP COMPONENT #}
         <label class="filter__select-label">
-            What city are you sending gift to?
+            * What gift are you looking for? 
         </label>
         <div class="filter__select">
             {{select_builder.sel(selects_set.occasionSet)}}
@@ -39,7 +39,7 @@ as select_builder %} {% macro sel_location_tooltip() %}
     <div class="filter__select-wrapper">
         {# SELECT WITH TOOLTIP COMPONENT #}
         <label class="filter__select-label">
-            What city are you sending gift to?
+            When should we deliver by?
         </label>
         <div class="filter__select">
             {{select_builder.sel(selects_set.datesSet)}}

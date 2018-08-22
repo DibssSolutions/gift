@@ -9,16 +9,15 @@
         display: none
         flex-flow: column
         margin: 20px auto
+        justify-content: center
+        align-items: center
     &--center 
         justify-content: center
         flex-wrap: wrap
         align-items: flex-end
-        .filter__select-wrapper
-            flex: 0 0 25%
-            +sm 
-                width: 100%
     &--single
         justify-content: center
+    
     &__filter
         display: flex
         flex-wrap: wrap
@@ -32,10 +31,17 @@
             width: 100%
             align-items: center
             justify-content: center
-            
+            margin-left: 0
+        &--sm-right-centered
+            +sm 
+                align-items: flex-end
+                max-width: 300px
+                margin: 0 auto
+                .filter__range
+                    justify-content: flex-end
     &__text
-        min-width: 440px
-        padding-bottom: 26px
+        min-width: 450px
+        padding-bottom: 24px
         +lg 
             min-width: 250px
         +sm 
@@ -54,9 +60,13 @@
         &--bold
             font-weight: 700
     &__select-wrapper
-        padding: 0 20px 26px
+        padding: 0 20px 24px
         font-size: 0
         text-align: center
+        &--left-centered
+            margin-left: -20px
+            +sm 
+                margin-left: 0
         +sm 
             padding: 0 0 14px 0
             text-align: center
@@ -65,14 +75,15 @@
             display: inline-block
             vertical-align: middle
     &__country-flag
-        max-height: 30px
         max-width: 40px
         overflow: hidden
         margin-right: 15px
         img
-            max-height: 30px
+            height: 30px
             display: inline-block
             vertical-align: middle
+            +sm 
+                height: 26px
     &__select-image
         margin-right: 15px 
         .icon
@@ -90,14 +101,16 @@
         +sm 
             width: 200px
     &__select-label
-        font-size: 16px
+        font-size: 18px
         font-weight: 700
         text-transform: uppercase
         color: $text_black
-        width: 100%
+        display: block
         margin-bottom: 8px
-        +sm 
+        +lg 
             font-size: 14px
+        +sm 
+            font-size: 12px
             margin-bottom: 4px
     &__tooltip
         margin-left: 6px
@@ -105,30 +118,29 @@
         .icon
             font-size: 28px
     &__range
+        display: flex
         flex: 0 0 400px
         +md 
             flex: 0 0 auto
             padding-left: 24px
-            padding-top: 8px
         +sm 
             width: 100%
             padding: 0
+            justify-content: center
+            align-items: center
     &__breadcrumb
         margin-right: auto
     &__btn
         flex: 0 0 100%
         text-align: center
         width: 100%
-        margin-top: 20px
-        +sm 
-            margin-top: 0
     &__or
         text-align: center
-        height: 100%
         align-self: flex-end
         line-height: 30px
-        padding-bottom: 26px
+        padding-bottom: 24px
+        font-size: 18px
         +sm 
-            height: auto
             line-height: 1
-            
+            font-size: 14px
+            padding-bottom: 14px

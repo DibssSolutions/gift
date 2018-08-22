@@ -4,6 +4,7 @@
 {% macro card(props) %}
     {% for prop in props %}
         <div class="card card__{{prop.size}}">
+            
             <div class="card__top">
                 <a class="card__image" href="{{prop.image.link}}" style='background-image: url(./assets/img/general/gifts-1/{{prop.image.src}})'>
                     {% if prop.free_mark %}
@@ -16,11 +17,13 @@
                     <h3>{{prop.title.text}}</h3>
                 </a>
             </div>
+
             <div class="card__bottom">
+
                     {% if prop.title_divider %}
                         <div class="card__divider divider-grey"></div>
                     {% endif %}
-
+                    
                     {% if prop.id %}
                         <div class="card__id">
                             <span class="card__id--id">ID:</span><span class="card__id--number">{{prop.id}}</span>
@@ -28,7 +31,7 @@
                     {% endif %}
 
                     {% if prop.button_link %}
-                        <a class="card__button-link" href="{{prop.button_link.link_link}}">
+                        <a class="card__button-link {% if prop.button_link.modifier %}{{prop.button_link.modifier}}{% endif %}" href="{{prop.button_link.link_link}}">
                             {{prop.button_link.link_text}}
                         </a>
                     {% endif %}

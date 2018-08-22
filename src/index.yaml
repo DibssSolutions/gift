@@ -17,3 +17,7 @@ PageList:
   ready: 50
 - file: gifts-online-catalog.html
   ready: 50
+- file: holiday-traditions.html
+  ready: 50
+- file: international-delivery.html
+  ready: 50
