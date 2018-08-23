@@ -126,5 +126,56 @@
         .icon
             font-size: 28px
 
-
+.select
+    &-image
+        margin-right: 15px 
+        display: inline-block
+        vertical-align: middle
+        .icon
+            font-size: 28px
+        +md 
+            display: none
+    &-select
+        width: 232px
+        display: inline-block
+        vertical-align: middle
+        &--long 
+            width: 278px
+            +md 
+                width: 232px
+            +sm 
+                width: 200px
+        +sm 
+            width: 200px
+    &-label
+        font-size: 18px
+        font-weight: 700
+        text-transform: uppercase
+        color: $text_black
+        display: block 
+        margin-bottom: 8px
+        +lg 
+            font-size: 14px
+        +sm 
+            font-size: 12px
+            margin-bottom: 4px
+    &-tooltip
+        display: inline-block
+        vertical-align: middle
+        margin-left: 6px
+        cursor: pointer
+        .icon
+            font-size: 28px
+    &-country-flag
+        display: inline-block
+        vertical-align: middle
+        max-width: 40px
+        overflow: hidden
+        margin-right: 15px
+        img
+            height: 30px
+            display: inline-block
+            vertical-align: middle
+            +sm 
+                height: 26px
 

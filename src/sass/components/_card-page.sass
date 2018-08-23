@@ -53,11 +53,17 @@
         display: flex
         align-items: stretch
         &-item 
+            +md 
+                margin-bottom: 10px
             &:first-child
                 margin-right: 8px
+                +md 
+                    margin-right: 0
             &:last-child
                 flex-grow: 1
                 height: auto
+        +md 
+            flex-flow: column
     &__budget
         margin: 22px 0
     &__review
@@ -135,12 +141,18 @@
         align-items: center
         justify-content: space-between
         margin-bottom: 12px
+        flex-wrap: wrap
+        +md 
+            align-items: flex-start
+            justify-content: flex-start
     &__label
         margin-right: 5px
         font-family: $corp
         font-size: 16px
         line-height: 31px
         color: $dark_blue
+        +md 
+            flex: 0 0 100%
     &__select
         width: 262px
         .select2-container--default .select2-selection--single
@@ -170,6 +182,7 @@
         margin-bottom: 1.2em
         display: flex
         align-items: center
+        flex-wrap: wrap
         & > *
             // display: inline-block
             // vertical-align: middle
@@ -183,6 +196,10 @@
         letter-spacing: -0.6px
         text-align: left
         color: $dark-grey
+        +md 
+            flex: 1 0 100%
+            font-size: 20px
+            margin: 10px auto
     &__single-review
         margin-bottom: 0.5em
         font-size: 17px

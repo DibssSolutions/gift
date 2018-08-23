@@ -15,9 +15,10 @@
         justify-content: center
         flex-wrap: wrap
         align-items: flex-end
+        .filter__select-wrapper
+            flex: 0 0 27%
     &--single
         justify-content: center
-    
     &__filter
         display: flex
         flex-wrap: wrap
@@ -71,52 +72,6 @@
             padding: 0 0 14px 0
             text-align: center
             flex: 0 0 100%
-        & > *
-            display: inline-block
-            vertical-align: middle
-    &__country-flag
-        max-width: 40px
-        overflow: hidden
-        margin-right: 15px
-        img
-            height: 30px
-            display: inline-block
-            vertical-align: middle
-            +sm 
-                height: 26px
-    &__select-image
-        margin-right: 15px 
-        .icon
-            font-size: 28px
-        +md 
-            display: none
-    &__select
-        width: 232px
-        &--long 
-            width: 278px
-            +md 
-                width: 232px
-            +sm 
-                width: 200px
-        +sm 
-            width: 200px
-    &__select-label
-        font-size: 18px
-        font-weight: 700
-        text-transform: uppercase
-        color: $text_black
-        display: block
-        margin-bottom: 8px
-        +lg 
-            font-size: 14px
-        +sm 
-            font-size: 12px
-            margin-bottom: 4px
-    &__tooltip
-        margin-left: 6px
-        cursor: pointer
-        .icon
-            font-size: 28px
     &__range
         display: flex
         flex: 0 0 400px

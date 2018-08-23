@@ -43,25 +43,25 @@
 			</div>
 			<div class="filter__filter filter__filter--sm-right-centered">
 				<div class="filter__select-wrapper filter__select-wrapper--left-centered">
-					<a href="#" class="filter__country-flag">
+					<a href="#" class="select-country-flag">
 						<img class="js-selected-counry-flag" src="./assets/img/general/ru.png" alt="">
 					</a>
-					<div class="filter__select-image">
+					<div class="select-image">
 						<img src="./assets/img/general/globus-ico.png" alt="">
 					</div>
-					<div class="filter__select">
+					<div class="select-select">
 						{# SELECT-1 #} {{select_builder.sel(selects_set.countriesSelect)}}
 					</div>
-					<div class="filter__tooltip js-tooltip" title="{{selects_set.tooltip}}">
+					<div class="select-tooltip js-tooltip" title="{{selects_set.tooltip}}">
 						{{mixins.icon('info')}}
 					</div>
 				</div>
 				<div class="filter__select-wrapper">
 					{# SELECT-2 #}
-					<div class="filter__select">
+					<div class="select-select">
 						{{select_builder.sel(selects_set.sortingTypesSelect)}}
 					</div>
-					<div class="filter__tooltip js-tooltip" title="{{selects_set.tooltip}}">
+					<div class="select-tooltip js-tooltip" title="{{selects_set.tooltip}}">
 						{{mixins.icon('info')}}
 					</div>
 				</div>
