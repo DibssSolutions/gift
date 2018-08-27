@@ -201,7 +201,8 @@
 			.col-2,
 			.col-3,
 			.col-4,
-			.col-5
+			.col-5, 
+			.col-25
 				flex: 0 0 100%
 			.card__price
 				font-size: 18px
@@ -212,7 +213,7 @@
 			.card__title
 				padding: 0 6px
 			.card__select
-				max-width: 300px
+				max-width: 250px
 				margin: 0 auto
 			.card__button-link
 				font-size: 14px
@@ -227,7 +228,8 @@
 			.col-2,
 			.col-3,
 			.col-4,
-			.col-5
+			.col-5, 
+			.col-25
 				flex: 0 0 50%	
 			.card
 				padding: 6px 0 16px
@@ -257,6 +259,10 @@
 
 .card-with-icons
 	border-radius: 5px
+	+md 
+		max-width: 300px
+	&-image 
+		font-size: 0
 	&-title
 		font-size: 22px
 		font-weight: bold
@@ -268,6 +274,10 @@
 		color: $blue
 		+lg 
 			font-size: 20px
+		+md 
+			font-size: 18px
+		+sm 
+			font-size: 16px
 	&-text
 		font-family: CorpidE1sSCd
 		font-size: 20px
@@ -278,11 +288,17 @@
 		// letter-spacing: -0.5px
 		text-align: left
 		color: $dark_blue
+		+lg 
+			font-size: 18px
+		+md 
+			font-size: 16px
 
 .time-card 
 	background-color: $special_bg
 	height: 100%
 	padding: 12px 14px 12px 10px
+	+md 
+		padding: 12px
 	&__image
 		float: left	
 		margin-right: 7px

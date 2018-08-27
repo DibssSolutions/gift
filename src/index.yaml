@@ -21,3 +21,9 @@ PageList:
   ready: 50
 - file: international-delivery.html
   ready: 50
+- file: main.html
+  ready: 50
+- file: login-page.html
+  ready: 50
+- file: gift-basket-to-city.html
+  ready: 50

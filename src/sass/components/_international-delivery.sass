@@ -1,6 +1,8 @@
 .international
     font-family: $corp
     margin-bottom: 76px
+    +sm 
+        margin-bottom: 16px
     &__breadcrumbs
         margin: 20px auto
     &__filter
@@ -20,21 +22,18 @@
         .title-middle
             margin-bottom: 28px
             flex: 0 0 100%
+            +md 
+                margin-bottom: 14px
             +sm 
                 flex: 1 0 100%
+                margin-bottom: 6px
     &__general-links
-        // float: left
-        // width: 30%
         flex: 0 0 30%
         padding-right: 40px
         padding-top: 20px
         +sm
-            float: none
-            // width: 100%
             flex: 1 0 100%
     &__quarantee
-        // float: left
-        // width: 70%
         flex: 0 0 70%
         +sm 
             flex: 1 0 100%
@@ -65,11 +64,7 @@
     &__cards
         margin-bottom: 32px
     &__order
-        h3 
-            font-size: 29px
-            font-weight: 300
-            text-transform: uppercase
-            color: $title_dark
+        .title-thin 
             text-align: center
         .subtitle
             text-align: center
@@ -98,6 +93,11 @@
             font-size: 20px
             color: $main-green
             font-weight: 900
+            +sm 
+                font-size: 16px
+        +sm 
+            font-size: 16px
+
 
 .local-links
     display: flex
@@ -107,8 +107,11 @@
         flex-flow: column
     &__col
         padding: 0 18px
+        +sm 
+            text-align: center
     a
         display: inline-block
+        text-decoration: underline
         color: $text_black
         font-size: 20px
         font-weight: bold
@@ -119,21 +122,23 @@
         +hover
             color: $text-link
             +colorTrans
-            &:after
-                background-color: $text-link
-                +colorTrans
+            // &:after
+            //     background-color: $text-link
+            //     +colorTrans
         +md 
-            font-size: 18px
+            font-size: 16px
+            margin-bottom: 10px
         +sm 
             font-size: 16px
-        &:after
-            position: absolute
-            content: ''
-            top: 100%
-            left: 0
-            right: 0
-            height: 2px
-            background-color: $title_dark
+            margin-right: 30px  
+        // &:after
+        //     position: absolute
+        //     content: ''
+        //     top: 100%
+        //     left: 0
+        //     right: 0
+        //     height: 2px
+        //     background-color: $title_dark
 
 .global-button-link
     display: inline-block
@@ -156,6 +161,9 @@
 .inline-form
     display: inline-block
     padding: 10px 
+    
+    +sm 
+        display: block
     &__input
         border: 1px solid $text-link
         padding: 6px 20px
@@ -169,6 +177,9 @@
         +placeholder
             font-size: inherit
             color: inherit
+        +sm 
+            display: block
+            width: 100%
     &__submit
         font-size: 20px
         color: $white
@@ -180,3 +191,7 @@
         +hover
             background-color: $dark-green
             +colorTrans
+        +sm 
+            display: block
+            width: 100%
+            margin-top: 16px

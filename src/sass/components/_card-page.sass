@@ -10,16 +10,24 @@
         +sm 
             float: none
             width: 100%
+            margin-bottom: 24px
     &__right 
         margin-left: 426px
+        +lg 
+            margin-left: 400px
         +sm
             float: none
             width: 100%
             margin-left: 0
+    &__image
+        border: 2px solid #fbf3e5
+        text-align: center
     &__go-back
         margin: 32px auto
     &__tabs
         margin-bottom: 24px
+        +sm 
+            margin-bottom: 12px
     &__download
         margin: 14px auto
     &__purchased-number-title
@@ -40,6 +48,8 @@
 .card-page
     &__main-title
         margin-bottom: 34px
+        +sm 
+            margin-bottom: 16px
     &__id
         font-size: 24px
         color: #6f6f6e
@@ -70,6 +80,8 @@
         margin: 12px 0 24px
     &__recently-viewed
         margin: 21px 0 54px
+        +sm 
+            margin: 21px 0 21px
         .cards-container
             display: flex
             margin: 22px 0 24px
@@ -85,7 +97,7 @@
     &__icon
         font-size: 0
         .icon
-            font-size: 49px
+            font-size: 38px
             fill: $main-green
             +colorTrans
     &__text
@@ -93,6 +105,7 @@
         font-size: 18px
         font-weight: bold
         color: $main-green
+        text-transform: uppercase
         +colorTrans
     +hover
         .go-back__icon .icon
@@ -128,6 +141,9 @@
     padding: 14px 15px 18px 14px
     background-color: $extra-light-green
     border-radius: 5px
+    +md 
+        max-width: 400px
+        padding: 12px
     &__title
         font-size: 16px
         font-weight: bold
@@ -135,7 +151,10 @@
         font-stretch: normal
         line-height: 1.38
         color: #3c3c3b
-        margin-bottom: 1em
+        margin-bottom: 16px
+        +lg 
+            margin-bottom: 8px
+
     &__select-wrapper
         display: flex
         align-items: center
@@ -145,6 +164,7 @@
         +md 
             align-items: flex-start
             justify-content: flex-start
+            margin-bottom: 6px
     &__label
         margin-right: 5px
         font-family: $corp
@@ -159,11 +179,17 @@
             border: none
         &--countries
             width: 194px
+            +lg 
+                width: 156px
+            +md
+                width: 194px
     &__country-flag
         max-height: 30px
         max-width: 40px
         overflow: hidden
         margin-right: 8px
+        +lg 
+            margin-right: 4px
         img
             max-height: 30px
             display: inline-block
@@ -173,8 +199,12 @@
 .budget-form
     &__title
         margin-bottom: 14px
+        +sm 
+            margin-bottom: 8px
     &__select
         margin-bottom: 18px
+        +sm     
+            margin-bottom: 12px
 
 .review
     font-family: $corp

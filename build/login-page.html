@@ -13,153 +13,74 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <div class="shopping-page">
-        <div class="shopping-page__container inner">
-          <div class="shopping-page__breadcrumbs">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb ">
-                <li class="breadcrumb-item"> <a href="ui.html">Home</a> </li>
-                <li class="breadcrumb-item"> <a href="#">How to check-table</a> </li>
-                <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
-              </ol>
-            </nav>
-          </div>
-          <div class="shopping-page__title">
-            <h2 class="title-biggest">Shopping Cart</h2>
+      <div class="login-page">
+        <div class="login-page__special special">
+          <div class="login-page__container inner">
+            <ul class="progress">
+              <li class="progress__item is-checked">
+                <div class="progress__details"> 888.776.5801 </div>
+                <div class="progress__dot"> <svg class="icon icon-check"><use xlink:href="assets/img/general/sprite.svg#icon-check"></use></svg> </div>
+                <div class="progress__status"> gift options </div>
+              </li>
+              <li class="progress__item is-active">
+                <div class="progress__dot"> <svg class="icon icon-check"><use xlink:href="assets/img/general/sprite.svg#icon-check"></use></svg> </div>
+                <div class="progress__status"> sign in </div>
+              </li>
+              <li class="progress__item">
+                <div class="progress__dot"> <svg class="icon icon-check"><use xlink:href="assets/img/general/sprite.svg#icon-check"></use></svg> </div>
+                <div class="progress__status"> delivery </div>
+              </li>
+              <li class="progress__item">
+                <div class="progress__dot"> <svg class="icon icon-check"><use xlink:href="assets/img/general/sprite.svg#icon-check"></use></svg> </div>
+                <div class="progress__status"> gift message </div>
+              </li>
+              <li class="progress__item">
+                <div class="progress__dot"> <svg class="icon icon-check"><use xlink:href="assets/img/general/sprite.svg#icon-check"></use></svg> </div>
+                <div class="progress__status"> payment info </div>
+              </li>
+              <li class="progress__item">
+                <div class="progress__dot"> <svg class="icon icon-check"><use xlink:href="assets/img/general/sprite.svg#icon-check"></use></svg> </div>
+                <div class="progress__status"> review </div>
+              </li>
+              <li class="progress__checkout">
+                <div class="progress__lock"> <svg class="icon icon-lock"><use xlink:href="assets/img/general/sprite.svg#icon-lock"></use></svg> </div>
+                <div class="progress__status"> secure <br> checkout </div>
+              </li>
+            </ul>
           </div>
         </div>
-        <!-- COUPONS -->
-        <div class="shopping-page__special special">
-          <div class="shopping-page__container inner coupons">
-            <div class="coupons__title">
-              <h5 class="title-small">Coupons &amp; Offer Codes</h5> <span class="coupons__tooltip js-tooltip js-tooltip-right" title="Here some text">
-					
-<svg class="icon icon-info"><use xlink:href="assets/img/general/sprite.svg#icon-info"></use></svg>
+        <div class="login-page__container">
+          <h2 class="title-biggest">Please login or continue as guest</h2>
+          <form action="" class="login">
+            <div class="login__left">
+              <h5 class="title-small">Returning Customers</h5>
+              <p class="d-sm-none">Sign-in for a quicker checkout, if you have ordered with us before.</p> <input type="email" placeholder="Email"> <input type="password" placeholder="Password">
+              <div class="login__group"> <input type="checkbox" name="showPassword" id="showPassword"> <label for="showPassword">Show Password
+                        <span class="check-icon">
+<svg class="icon icon-check"><use xlink:href="assets/img/general/sprite.svg#icon-check"></use></svg>
+</span>
+                    </label> <a href="#" class="btn btn-underline">Forgot password?</a> </div> <button class="login__btn">
+                    Sign In 
+<svg class="icon icon-chevron-right"><use xlink:href="assets/img/general/sprite.svg#icon-chevron-right"></use></svg>
 
-				</span> </div>
-            <div class="coupons__form">
-              <form action="" class="coupons-form"> <input type="text" class="coupons-form__input" placeholder="Enter Code"> <button type="submit" class="btn btn-rounded btn-rounded--green coupons-form__submit">Apply</button> </form>
-              <div class="coupons__subtotal"> Subtotal: <span class="coupons__subtotal--price">
-						$89.99
-					</span> </div>
-            </div>
+                </button> </div>
+            <div class="login__divider"> OR </div>
+            <div class="login__right">
+              <h5 class="title-small">New Customers and Guests</h5>
+              <p class="d-sm-none">You'll have a chance to create an account later.</p> <input type="email" placeholder="Email"> <button class="login__btn">
+                    Continue as guest 
+<svg class="icon icon-chevron-right"><use xlink:href="assets/img/general/sprite.svg#icon-chevron-right"></use></svg>
+
+                </button> </div>
+          </form>
+          <div class="divider-grey divider-grey--bold"></div>
+          <div class="login-page__checkout-descr">
+            <h4>Secure Checkout</h4>
+            <p> All transactions with this web site are secure, as indicated by the icon on your browser window. </p>
           </div>
         </div>
-        <div class="shopping-page__container inner">
-          <main class="chekout">
-            <div class="checkout__top">
-              <div class="checkout__buttons">
-                <div class="js-dropdown-container shopping"> <button class="js-dropdown-btn btn-square btn">
-			<span class="btn-square__text">CONTINUE SHOPPING</span>	
-		
-			<span class="btn-square__icon">
-<svg class="icon icon-chevron-down"><use xlink:href="assets/img/general/sprite.svg#icon-chevron-down"></use></svg>
-</span>
-		
-	</button>
-                  <ul class="shopping__list">
-                    <li class="shopping__item"> <a href="#" class="shopping__link">Homepage</a> </li>
-                    <li class="shopping__item"> <a href="#" class="shopping__link">Recently Viewed Item</a> </li>
-                    <li class="shopping__item"> <a href="#" class="shopping__link">Gifts to CountryX</a> </li>
-                    <li class="shopping__item"> <a href="#" class="shopping__link">Recently Viewed Item</a> </li>
-                  </ul>
-                </div> <button class="hover-bg btn-square btn">
-			<span class="btn-square__text">to shopping cart</span>	
-		
-			<span class="btn-square__icon">
-<svg class="icon icon-chevron-right"><use xlink:href="assets/img/general/sprite.svg#icon-chevron-right"></use></svg>
-</span>
-		
-	</button> </div>
-            </div>
-            <div class="checkout__table">
-              <table class="check-table">
-                <thead>
-                  <tr>
-                    <th class="check-table__title">Product</th>
-                    <th class="check-table__title">Price</th>
-                    <th class="check-table__title check-table__title--center">Quantity</th>
-                    <th class="check-table__title">TOTAL</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td data-label="Product" class="check-table__descr">
-                      <div class="check-table__photo"> <img class="check-table__img" src="./assets/img/general/gifts-1/gift_img_2.jpg" alt=""> <button class="btn-underline btn">Remove Item</button> </div>
-                      <div class="check-table__text">
-                        <h5 class="check-table__name"> Jim Beam Distiller's Masterpiece Limited Edition </h5>
-                        <div class="check-table__id"> Product ID: <span class="check-table__id--number">11019</span> </div>
-                      </div>
-                    </td>
-                    <td class="check-table__price" data-label="Price"> $ <span class="js-table-price">59.95</span> </td>
-                    <td class="check-table__amount" data-label="Quantity">
-                      <div class="plus-minus"> <button class="plus-minus__btn js-table-minus">
-        
-<svg class="icon icon-minus"><use xlink:href="assets/img/general/sprite.svg#icon-minus"></use></svg>
-
-    </button> <input type="text" class="plus-minus__input js-table-input" value="1"> <button class="plus-minus__btn js-table-plus">
-        
-<svg class="icon icon-plus"><use xlink:href="assets/img/general/sprite.svg#icon-plus"></use></svg>
-
-    </button> </div>
-                    </td>
-                    <td class="check-table__total" data-label="Total"> $ <span class="js-table-total">59.95</span> </td>
-                  </tr>
-                  <tr>
-                    <td class="check-table__descr" data-label="Product">
-                      <div class="check-table__photo"> <img class="check-table__img" src="./assets/img/general/gifts-1/gift_img_2.jpg" alt=""> <button class="btn-underline btn">Remove Item</button> </div>
-                      <div class="check-table__text">
-                        <h5 class="check-table__name"> Valentine Melody </h5>
-                        <div class="check-table__id"> Product ID: <span class="check-table__id--number">504008</span> </div>
-                      </div>
-                    </td>
-                    <td class="check-table__price" data-label="Price"> $ <span class="js-table-price">129.95</span> </td>
-                    <td class="check-table__amount" data-label="Quantity">
-                      <div class="plus-minus"> <button class="plus-minus__btn js-table-minus">
-        
-<svg class="icon icon-minus"><use xlink:href="assets/img/general/sprite.svg#icon-minus"></use></svg>
-
-    </button> <input type="text" class="plus-minus__input js-table-input" value="1"> <button class="plus-minus__btn js-table-plus">
-        
-<svg class="icon icon-plus"><use xlink:href="assets/img/general/sprite.svg#icon-plus"></use></svg>
-
-    </button> </div>
-                    </td>
-                    <td class="check-table__total" data-label="Total"> $ <span class="js-table-total">129.95</span> </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="checkout__bottom">
-              <div class="checkout__descr">
-                <p>The above subtotal does not include tax and <a href="#" class="green-link">shipping</a>, which will be calculated during checkout after entering the delivery zip code and preferred shipping method. </p>
-                <p>You will have a chance to review the final total before submitting your order.</p>
-              </div>
-              <div class="checkout__buttons">
-                <div class="js-dropdown-container shopping"> <button class="js-dropdown-btn btn-square btn">
-			<span class="btn-square__text">CONTINUE SHOPPING</span>	
-		
-			<span class="btn-square__icon">
-<svg class="icon icon-chevron-down"><use xlink:href="assets/img/general/sprite.svg#icon-chevron-down"></use></svg>
-</span>
-		
-	</button>
-                  <ul class="shopping__list">
-                    <li class="shopping__item"> <a href="#" class="shopping__link">Homepage</a> </li>
-                    <li class="shopping__item"> <a href="#" class="shopping__link">Recently Viewed Item</a> </li>
-                    <li class="shopping__item"> <a href="#" class="shopping__link">Gifts to CountryX</a> </li>
-                    <li class="shopping__item"> <a href="#" class="shopping__link">Recently Viewed Item</a> </li>
-                  </ul>
-                </div> <button class="hover-bg btn-square btn">
-			<span class="btn-square__text">to shopping cart</span>	
-		
-			<span class="btn-square__icon">
-<svg class="icon icon-chevron-right"><use xlink:href="assets/img/general/sprite.svg#icon-chevron-right"></use></svg>
-</span>
-		
-	</button> </div>
-            </div>
-          </main>
+        <div class="login-page__special special">
+          <div class="login-page__policy inner"> <a href="#" class="btn btn-underline">Privacy Policy</a> <a href="#" class="btn btn-underline">Terms Of Use</a> <a href="#" class="btn btn-underline">Site Feedback</a> <span>888.776.5801</span> </div>
         </div>
       </div>
       <div class="subscribe">
