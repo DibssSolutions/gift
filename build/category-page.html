@@ -13,12 +13,12 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <div class="special">
-        <div class="inner">
-          <h4 class="special__text"> <strong class="special__bold-dark">Happy Women's Day, March, 8!</strong> Order and get <span class="special__bold-light">7%</span> off any order with coupon code: <span class="special__bold-light">WSR53</span> <strong class="special__bold-dark">- FREE Delivery to Moscow</strong>            </h4>
-        </div>
-      </div>
       <div class="category">
+        <div class="category__special special">
+          <div class="category__container inner">
+            <h4 class="special__text"> <strong class="special__bold-dark">Happy Women's Day, March, 8!</strong> Order and get <span class="special__bold-light">7%</span> off any order with coupon code: <span class="special__bold-light">WSR53</span> <strong class="special__bold-dark">- FREE Delivery to Moscow</strong>              </h4>
+          </div>
+        </div>
         <div class="category__container inner">
           <div class="category__breadcrumb">
             <nav aria-label="breadcrumb">
@@ -30,21 +30,22 @@
             </nav>
           </div>
           <!-- FILTERING AREA -->
-          <div class="card-sm-buttons">
-            <div class="js-cards-1-column card-sm-button is-active"> <svg class="icon icon-square-inside-a-circle"><use xlink:href="assets/img/general/sprite.svg#icon-square-inside-a-circle"></use></svg> </div>
-            <div class="js-cards-2-columns card-sm-button"> <svg class="icon icon-four-squares-button"><use xlink:href="assets/img/general/sprite.svg#icon-four-squares-button"></use></svg> </div>
-            <div class="sm-filter-btn-wrapper"> <button class="btn btn-rounded btn-rounded--green btn-load-more sm-filter-btn js-sm-filter-btn">Filter</button> </div>
-          </div>
-          <form action="/" class="category__filter filter js-filter">
-            <div class="filter__text">
-              <div class="filter__found"> <span class="filter__found--bold">243</span> items found </div>
+          <section class="category__filter">
+            <div class="card-sm-buttons">
+              <div class="js-cards-1-column card-sm-button is-active"> <svg class="icon icon-square-inside-a-circle"><use xlink:href="assets/img/general/sprite.svg#icon-square-inside-a-circle"></use></svg> </div>
+              <div class="js-cards-2-columns card-sm-button"> <svg class="icon icon-four-squares-button"><use xlink:href="assets/img/general/sprite.svg#icon-four-squares-button"></use></svg> </div>
+              <div class="sm-filter-btn-wrapper"> <button class="btn btn-rounded btn-rounded--green btn-load-more sm-filter-btn js-sm-filter-btn">Filter</button> </div>
             </div>
-            <div class="filter__filter filter__filter--sm-right-centered">
-              <div class="filter__select-wrapper filter__select-wrapper--left-centered"> <a href="#" class="select-country-flag">
-						<img class="js-selected-counry-flag" src="./assets/img/general/ru.png" alt="">
-					</a>
-                <div class="select-image"> <img src="./assets/img/general/globus-ico.png" alt=""> </div>
-                <div class="select-select"> <select name='countries' id="countries" class="js-select-flag select-with-flag" data-placeholder="sel1">
+            <form action="/" class="filter js-filter">
+              <div class="filter__text">
+                <div class="filter__found"> <span class="filter__found--bold">243</span> items found </div>
+              </div>
+              <div class="filter__filter filter__filter--sm-right-centered">
+                <div class="filter__select-wrapper filter__select-wrapper--left-centered"> <a href="#" class="select-country-flag">
+                                <img class="js-selected-counry-flag" src="./assets/img/general/ru.png" alt="">
+                            </a>
+                  <div class="select-image"> <img src="./assets/img/general/globus-ico.png" alt=""> </div>
+                  <div class="select-select"> <select name='countries' id="countries" class="js-select-flag select-with-flag" data-placeholder="sel1">
         
             <option value='1'data-flag='russia_flag'>Russia</option>
         
@@ -59,16 +60,16 @@
             <option value='53'data-flag='australia_flag'>Australia</option>
         
     </select> </div>
-                <div class="select-tooltip js-tooltip" title="Our payment processing is always completed in US Dollars (USD). The price in other currency is estimated based on the today&#39;s bank rate. 
+                  <div class="select-tooltip js-tooltip" title="Our payment processing is always completed in US Dollars (USD). The price in other currency is estimated based on the today&#39;s bank rate. 
 
 If your account currency is not USD - the actual amount charged in your currency may be slightly different based on your bank&#39;s current rate on the date of transaction. 
 
 Current exchange rate is estimated: 
 
 Please see Google Finance website for more details."> <svg class="icon icon-info"><use xlink:href="assets/img/general/sprite.svg#icon-info"></use></svg> </div>
-              </div>
-              <div class="filter__select-wrapper">
-                <div class="select-select"> <select name='sorting' id="sorting" class="js-select" data-placeholder="sel1">
+                </div>
+                <div class="filter__select-wrapper">
+                  <div class="select-select"> <select name='sorting' id="sorting" class="js-select" data-placeholder="sel1">
         
             <option value='1'>Sort By: Most Popular</option>
         
@@ -79,22 +80,23 @@ Please see Google Finance website for more details."> <svg class="icon icon-info
             <option value='4'>Sort By: The Newest</option>
         
     </select> </div>
-                <div class="select-tooltip js-tooltip" title="Our payment processing is always completed in US Dollars (USD). The price in other currency is estimated based on the today&#39;s bank rate. 
+                  <div class="select-tooltip js-tooltip" title="Our payment processing is always completed in US Dollars (USD). The price in other currency is estimated based on the today&#39;s bank rate. 
 
 If your account currency is not USD - the actual amount charged in your currency may be slightly different based on your bank&#39;s current rate on the date of transaction. 
 
 Current exchange rate is estimated: 
 
 Please see Google Finance website for more details."> <svg class="icon icon-info"><use xlink:href="assets/img/general/sprite.svg#icon-info"></use></svg> </div>
-              </div>
-              <div class="filter__range">
-                <div class="range ">
-                  <div class="range__numbers"> €<span class="js-range-min">0</span> - €<span class="js-range-max">1000</span> </div>
-                  <div class="js-range-slider range__slider" data-range-max="1000" data-range-min="0" data-range-start="0" data-range-end="1000"></div>
+                </div>
+                <div class="filter__range">
+                  <div class="range ">
+                    <div class="range__numbers"> €<span class="js-range-min">0</span> - €<span class="js-range-max">1000</span> </div>
+                    <div class="js-range-slider range__slider" data-range-max="1000" data-range-min="0" data-range-start="0" data-range-end="1000"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </section>
           <div class="category__title">
             <h2 class="title-big">March 8 Flowers Gifts</h2>
           </div>
@@ -291,146 +293,147 @@ Please see Google Finance website for more details."> <svg class="icon icon-info
           <div class="category__add-cards"> <button class="btn btn-rounded btn-rounded--green btn-load-more">Load More</button> </div>
         </div>
       </div>
-      <div class="subscribe">
-        <div class="subcribe__container inner">
-          <form action="#" class="subscribe-form"> <label for="subscribe">Subscribe & Save: </label> <input type="email" placeholder="Your Email Address"> <button type="submit">Sign up</button> </form>
-        </div>
+    </div>
+    <div class="subscribe">
+      <div class="subcribe__container inner">
+        <form action="#" class="subscribe-form"> <label for="subscribe">Subscribe & Save: </label> <input type="email" placeholder="Your Email Address"> <button type="submit">Sign up</button> </form>
       </div>
-      <footer class="footer">
-        <div class="footer__container inner">
-          <div class="footer__container-inner">
-            <div class="footer__menus d-md-none">
-              <div class="footer__column">
-                <div class="footer-menu">
-                  <h4 class="footer-menu__title"> Worldwide Service </h4>
-                  <ul class="footer-menu__list">
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts to Africa</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts to Asia</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts to Caribbean</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts to Europe</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts to Middle East</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts to Latin America</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts to North America</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts to Oceania</a> </li>
-                  </ul>
-                </div>
-                <div class="footer-menu">
-                  <h4 class="footer-menu__title"> Customer Care </h4>
-                  <ul class="footer-menu__list">
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Contact Us 24x7</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">About Us</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Delivery Policy</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Delivery Area</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">FAQ</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">How to Order</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Payments</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Testimonials</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Track Order</a> </li>
-                  </ul>
-                </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__container inner">
+        <div class="footer__container-inner">
+          <div class="footer__menus d-md-none">
+            <div class="footer__column">
+              <div class="footer-menu">
+                <h4 class="footer-menu__title"> Worldwide Service </h4>
+                <ul class="footer-menu__list">
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts to Africa</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts to Asia</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts to Caribbean</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts to Europe</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts to Middle East</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts to Latin America</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts to North America</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts to Oceania</a> </li>
+                </ul>
               </div>
-              <div class="footer__column">
-                <div class="footer-menu">
-                  <h4 class="footer-menu__title"> Gift Types </h4>
-                  <ul class="footer-menu__list">
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Baby Gift Baskets</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Beer Gift Baskets</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Cakes</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Champagne Gifts</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Chocolate Gift Baskets</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">New Year Gift Baskets</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Corporate Gifts</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Flowers</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Fruit Baskets</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gift Towers</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gourmet Gift Baskets</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Jewelry</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Kosher Gift Baskets</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Spa Gifts</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Spirits</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Sweet Bouquets</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Sweet Gourmet Gifts</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Tea Coffee Gifts</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Wine Gift Baskets</a> </li>
-                  </ul>
-                </div>
-                <div class="footer-menu">
-                  <h4 class="footer-menu__title"> Speciality </h4>
-                  <ul class="footer-menu__list">
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gluten Free Gift Baskets</a> </li>
-                  </ul>
-                </div>
+              <div class="footer-menu">
+                <h4 class="footer-menu__title"> Customer Care </h4>
+                <ul class="footer-menu__list">
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Contact Us 24x7</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">About Us</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Delivery Policy</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Delivery Area</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">FAQ</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">How to Order</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Payments</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Testimonials</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Track Order</a> </li>
+                </ul>
               </div>
-              <div class="footer__column">
-                <div class="footer-menu">
-                  <h4 class="footer-menu__title"> Occasions </h4>
-                  <ul class="footer-menu__list">
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Anniversary Gift Baskets</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Apology Gift Baskets</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Back to School Gifts</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Birthday Gift Baskets</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Boss Day</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Congratulations Gifts</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Get Well Gifts</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Graduation Gifts</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Housewarming Gift Baskets</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Romantic Gifts</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Thank You Gifts</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Wedding Gifts</a> </li>
-                  </ul>
-                </div>
-                <div class="footer-menu">
-                  <h4 class="footer-menu__title"> Gift recipients </h4>
-                  <ul class="footer-menu__list">
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts For Bosses</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts For Bussiness Associates</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts For Couples</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts For Exchange Students</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts For Fathers</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts For Friends</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts For Host Family</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts For Kids</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts For Men</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts For Women</a> </li>
-                  </ul>
-                </div>
+            </div>
+            <div class="footer__column">
+              <div class="footer-menu">
+                <h4 class="footer-menu__title"> Gift Types </h4>
+                <ul class="footer-menu__list">
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Baby Gift Baskets</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Beer Gift Baskets</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Cakes</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Champagne Gifts</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Chocolate Gift Baskets</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">New Year Gift Baskets</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Corporate Gifts</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Flowers</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Fruit Baskets</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gift Towers</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gourmet Gift Baskets</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Jewelry</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Kosher Gift Baskets</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Spa Gifts</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Spirits</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Sweet Bouquets</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Sweet Gourmet Gifts</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Tea Coffee Gifts</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Wine Gift Baskets</a> </li>
+                </ul>
               </div>
-              <div class="footer__column">
-                <div class="footer-menu">
-                  <h4 class="footer-menu__title"> International Holidays </h4>
-                  <ul class="footer-menu__list">
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Chinese New Year Gifts</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Diwali Gift Baskets</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Easter Gift Baskets</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Fathers Day Gifts</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Chocolate Gift Baskets</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">New Year Gift Baskets</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Corporate Gifts</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Flowers</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Fruit Baskets</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gift Towers</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gourmet Gift Baskets</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Jewelry</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Kosher Gift Baskets</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Spa Gifts</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Spirits</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Sweet Bouquets</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Sweet Gourmet Gifts</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Tea Coffee Gifts</a> </li>
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Wine Gift Baskets</a> </li>
-                  </ul>
-                </div>
-                <div class="footer-menu">
-                  <h4 class="footer-menu__title"> Speciality </h4>
-                  <ul class="footer-menu__list">
-                    <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gluten Free Gift Baskets</a> </li>
-                  </ul>
-                </div>
+              <div class="footer-menu">
+                <h4 class="footer-menu__title"> Speciality </h4>
+                <ul class="footer-menu__list">
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gluten Free Gift Baskets</a> </li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__column">
+              <div class="footer-menu">
+                <h4 class="footer-menu__title"> Occasions </h4>
+                <ul class="footer-menu__list">
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Anniversary Gift Baskets</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Apology Gift Baskets</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Back to School Gifts</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Birthday Gift Baskets</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Boss Day</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Congratulations Gifts</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Get Well Gifts</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Graduation Gifts</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Housewarming Gift Baskets</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Romantic Gifts</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Thank You Gifts</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Wedding Gifts</a> </li>
+                </ul>
+              </div>
+              <div class="footer-menu">
+                <h4 class="footer-menu__title"> Gift recipients </h4>
+                <ul class="footer-menu__list">
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts For Bosses</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts For Bussiness Associates</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts For Couples</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts For Exchange Students</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts For Fathers</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts For Friends</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts For Host Family</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts For Kids</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts For Men</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gifts For Women</a> </li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__column">
+              <div class="footer-menu">
+                <h4 class="footer-menu__title"> International Holidays </h4>
+                <ul class="footer-menu__list">
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Chinese New Year Gifts</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Diwali Gift Baskets</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Easter Gift Baskets</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Fathers Day Gifts</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Chocolate Gift Baskets</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">New Year Gift Baskets</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Corporate Gifts</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Flowers</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Fruit Baskets</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gift Towers</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gourmet Gift Baskets</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Jewelry</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Kosher Gift Baskets</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Spa Gifts</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Spirits</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Sweet Bouquets</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Sweet Gourmet Gifts</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Tea Coffee Gifts</a> </li>
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Wine Gift Baskets</a> </li>
+                </ul>
+              </div>
+              <div class="footer-menu">
+                <h4 class="footer-menu__title"> Speciality </h4>
+                <ul class="footer-menu__list">
+                  <li class="footer-menu__item"> <a href="#" class="footer-menu__link">Gluten Free Gift Baskets</a> </li>
+                </ul>
               </div>
             </div>
           </div>
-          <div class="footer__divider divider-grey d-md-none"></div>
-          <div class="footer__partners d-sm-none"> <a href="#" class="footer__partner">
+        </div>
+        <div class="footer__divider divider-grey d-md-none"></div>
+        <div class="footer__partners d-sm-none"> <a href="#" class="footer__partner">
 				<img src="./assets/img/general/footer/mcafe.png" alt="">
 			</a> <a href="#" class="footer__partner">
 				<img src="./assets/img/general/footer/digicept.png" alt="">
@@ -443,35 +446,35 @@ Please see Google Finance website for more details."> <svg class="icon icon-info
 			</a> <a href="#" class="footer__partner">
 				<img src="./assets/img/general/footer/satisfaction.png" alt="">
 			</a> </div>
-          <div class="footer__divider divider-blue"></div>
-          <div class="footer__container-inner payments d-md-none">
-            <div class="payments__title"> WE ACCEPT </div>
-            <a href="#" class="payments__brands">
-              <div class="payments__brand"> <svg class="icon icon-visa"><use xlink:href="assets/img/general/sprite.svg#icon-visa"></use></svg> </div>
-              <div class="payments__brand"> <svg class="icon icon-master-card"><use xlink:href="assets/img/general/sprite.svg#icon-master-card"></use></svg> </div>
-              <div class="payments__brand"> <svg class="icon icon-jcb"><use xlink:href="assets/img/general/sprite.svg#icon-jcb"></use></svg> </div>
-              <div class="payments__brand"> <svg class="icon icon-western-union"><use xlink:href="assets/img/general/sprite.svg#icon-western-union"></use></svg> </div>
-              <div class="payments__brand"> <svg class="icon icon-ria"><use xlink:href="assets/img/general/sprite.svg#icon-ria"></use></svg> </div>
-              <div class="payments__brand"> <svg class="icon icon-mol-pay"><use xlink:href="assets/img/general/sprite.svg#icon-mol-pay"></use></svg> </div>
-              <div class="payments__brand"> <svg class="icon icon-bolero"><use xlink:href="assets/img/general/sprite.svg#icon-bolero"></use></svg> </div>
-              <div class="payments__brand"> <svg class="icon icon-poli"><use xlink:href="assets/img/general/sprite.svg#icon-poli"></use></svg> </div>
-              <div class="payments__brand"> <svg class="icon icon-oxxo"><use xlink:href="assets/img/general/sprite.svg#icon-oxxo"></use></svg> </div>
-              <div class="payments__brand"> <svg class="icon icon-qiwi"><use xlink:href="assets/img/general/sprite.svg#icon-qiwi"></use></svg> </div>
-              <div class="payments__brand"> <svg class="icon icon-giro-pay"><use xlink:href="assets/img/general/sprite.svg#icon-giro-pay"></use></svg> </div>
-              <div class="payments__brand"> <svg class="icon icon-amex"><use xlink:href="assets/img/general/sprite.svg#icon-amex"></use></svg> </div>
-              <div class="payments__brand"> <svg class="icon icon-discover"><use xlink:href="assets/img/general/sprite.svg#icon-discover"></use></svg> </div>
-              <div class="payments__brand"> <svg class="icon icon-diners"><use xlink:href="assets/img/general/sprite.svg#icon-diners"></use></svg> </div>
-              <div class="payments__brand"> <svg class="icon icon-paypal"><use xlink:href="assets/img/general/sprite.svg#icon-paypal"></use></svg> </div>
-              <div class="payments__brand"> <svg class="icon icon-sofort"><use xlink:href="assets/img/general/sprite.svg#icon-sofort"></use></svg> </div>
-              <div class="payments__brand"> <svg class="icon icon-wire-transfer"><use xlink:href="assets/img/general/sprite.svg#icon-wire-transfer"></use></svg> </div>
-              <div class="payments__brand"> <svg class="icon icon-ideal"><use xlink:href="assets/img/general/sprite.svg#icon-ideal"></use></svg> </div>
-              <div class="payments__brand"> <svg class="icon icon-payoneer"><use xlink:href="assets/img/general/sprite.svg#icon-payoneer"></use></svg> </div>
-              <div class="payments__brand"> <svg class="icon icon-union-pay"><use xlink:href="assets/img/general/sprite.svg#icon-union-pay"></use></svg> </div>
-              <div class="payments__brand"> <svg class="icon icon-alipay"><use xlink:href="assets/img/general/sprite.svg#icon-alipay"></use></svg> </div>
-            </a>
-          </div>
-          <div class="footer__divider divider-blue d-md-none"></div>
-          <div class="footer__social"> <a href="#" class="footer__social-icon youtube">
+        <div class="footer__divider divider-blue"></div>
+        <div class="footer__container-inner payments d-md-none">
+          <div class="payments__title"> WE ACCEPT </div>
+          <a href="#" class="payments__brands">
+            <div class="payments__brand"> <svg class="icon icon-visa"><use xlink:href="assets/img/general/sprite.svg#icon-visa"></use></svg> </div>
+            <div class="payments__brand"> <svg class="icon icon-master-card"><use xlink:href="assets/img/general/sprite.svg#icon-master-card"></use></svg> </div>
+            <div class="payments__brand"> <svg class="icon icon-jcb"><use xlink:href="assets/img/general/sprite.svg#icon-jcb"></use></svg> </div>
+            <div class="payments__brand"> <svg class="icon icon-western-union"><use xlink:href="assets/img/general/sprite.svg#icon-western-union"></use></svg> </div>
+            <div class="payments__brand"> <svg class="icon icon-ria"><use xlink:href="assets/img/general/sprite.svg#icon-ria"></use></svg> </div>
+            <div class="payments__brand"> <svg class="icon icon-mol-pay"><use xlink:href="assets/img/general/sprite.svg#icon-mol-pay"></use></svg> </div>
+            <div class="payments__brand"> <svg class="icon icon-bolero"><use xlink:href="assets/img/general/sprite.svg#icon-bolero"></use></svg> </div>
+            <div class="payments__brand"> <svg class="icon icon-poli"><use xlink:href="assets/img/general/sprite.svg#icon-poli"></use></svg> </div>
+            <div class="payments__brand"> <svg class="icon icon-oxxo"><use xlink:href="assets/img/general/sprite.svg#icon-oxxo"></use></svg> </div>
+            <div class="payments__brand"> <svg class="icon icon-qiwi"><use xlink:href="assets/img/general/sprite.svg#icon-qiwi"></use></svg> </div>
+            <div class="payments__brand"> <svg class="icon icon-giro-pay"><use xlink:href="assets/img/general/sprite.svg#icon-giro-pay"></use></svg> </div>
+            <div class="payments__brand"> <svg class="icon icon-amex"><use xlink:href="assets/img/general/sprite.svg#icon-amex"></use></svg> </div>
+            <div class="payments__brand"> <svg class="icon icon-discover"><use xlink:href="assets/img/general/sprite.svg#icon-discover"></use></svg> </div>
+            <div class="payments__brand"> <svg class="icon icon-diners"><use xlink:href="assets/img/general/sprite.svg#icon-diners"></use></svg> </div>
+            <div class="payments__brand"> <svg class="icon icon-paypal"><use xlink:href="assets/img/general/sprite.svg#icon-paypal"></use></svg> </div>
+            <div class="payments__brand"> <svg class="icon icon-sofort"><use xlink:href="assets/img/general/sprite.svg#icon-sofort"></use></svg> </div>
+            <div class="payments__brand"> <svg class="icon icon-wire-transfer"><use xlink:href="assets/img/general/sprite.svg#icon-wire-transfer"></use></svg> </div>
+            <div class="payments__brand"> <svg class="icon icon-ideal"><use xlink:href="assets/img/general/sprite.svg#icon-ideal"></use></svg> </div>
+            <div class="payments__brand"> <svg class="icon icon-payoneer"><use xlink:href="assets/img/general/sprite.svg#icon-payoneer"></use></svg> </div>
+            <div class="payments__brand"> <svg class="icon icon-union-pay"><use xlink:href="assets/img/general/sprite.svg#icon-union-pay"></use></svg> </div>
+            <div class="payments__brand"> <svg class="icon icon-alipay"><use xlink:href="assets/img/general/sprite.svg#icon-alipay"></use></svg> </div>
+          </a>
+        </div>
+        <div class="footer__divider divider-blue d-md-none"></div>
+        <div class="footer__social"> <a href="#" class="footer__social-icon youtube">
 <svg class="icon icon-youtube"><use xlink:href="assets/img/general/sprite.svg#icon-youtube"></use></svg>
 </a> <a href="#" class="footer__social-icon facebook">
 <svg class="icon icon-facebook"><use xlink:href="assets/img/general/sprite.svg#icon-facebook"></use></svg>
@@ -486,11 +489,11 @@ Please see Google Finance website for more details."> <svg class="icon icon-info
 </a> <a href="#" class="footer__social-icon wordpress">
 <svg class="icon icon-wordpress"><use xlink:href="assets/img/general/sprite.svg#icon-wordpress"></use></svg>
 </a> </div>
-          <div class="footer__divider divider-blue"></div>
-          <div class="footer__copyright">
-            <p>Copyright© 2002-2018</p> <a href="www.drinkablegifts.com">www.drinkablegifts.com</a> </div>
-        </div>
-      </footer>
+        <div class="footer__divider divider-blue"></div>
+        <div class="footer__copyright">
+          <p>Copyright© 2002-2018</p> <a href="www.drinkablegifts.com">www.drinkablegifts.com</a> </div>
+      </div>
+    </footer>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
