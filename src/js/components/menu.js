@@ -1,105 +1,110 @@
 import { isTouch } from '../_utils';
-let nav = $('.js-nav');
-let menu = $('.js-menu');
-let left;
+import { DOC } from '../_constants';
 
-let width = $(window).width();
+DOC.ready(() => {
+  let nav = $('.js-nav');
+  let menu = $('.js-menu');
+  let left;
 
-function setEvent() {
-  width = $(window).width();
-  if (width < 960) {
-    nav.on('touch click', function(event) {
-      // event.preventDefault();
-      let that = $(this);
-      if (!that.hasClass('is-open')) {
-        nav.removeClass('is-open');
-        that.addClass('is-open');
-      }
-      else {
-        that.removeClass('is-open');
-      }
-    });
-  } else {
-    nav.on('mouseenter', function(event) {
-      event.preventDefault();
-      $('.js-nav').removeClass('is-open');
-      $(this).addClass('is-open');
-      let topMenuLeft = menu.offset().left;
-      let itemMenuLeft = $(this).offset().left + 40;
-      left = itemMenuLeft - topMenuLeft - 5;
-      setMenuSize($(this));
+  let width = $(window).width();
 
-    });
-    nav.on('mouseleave', function() {
-      $(this).removeClass('is-open');
-    });
-  }
-
-}
-setEvent();
-
-function setMenuSize( item) {
-  let height = item.find('.nav__drop_main').height();
-  let liLength = item.find('.nav__drop_main > li').length;
-  let containerWidth = $('.header__inner').innerWidth();
-
-
-  if (width <= 1180) {
-    containerWidth = containerWidth - 20;
-  } else {
-    containerWidth = containerWidth - 50;
-  }
-  if (liLength > 1) {
-    if (height >= 1000 || item.find('.nav__drop_main').hasClass('is-big')) {
-      item.find('.nav__drop_main')
-        .css({
-          'column-count': 2,
-        })
-        .addClass('is-big');
-      item.find('.nav__in').css({
-        'left': -(left),
-        'width': containerWidth
+  function setEvent() {
+    width = $(window).width();
+    if (width < 960) {
+      nav.on('touch click', function(event) {
+        // event.preventDefault();
+        let that = $(this);
+        if (!that.hasClass('is-open')) {
+          nav.removeClass('is-open');
+          that.addClass('is-open');
+        }
+        else {
+          that.removeClass('is-open');
+        }
       });
-
     } else {
-      if (width < 1380 ) {
-        liLength = 2;
-        item.find('.nav__drop_main').css({
-          'column-count': liLength,
-        });
+      nav.on('mouseenter', function(event) {
+        event.preventDefault();
+        $('.js-nav').removeClass('is-open');
+        $(this).addClass('is-open');
+        let topMenuLeft = menu.offset().left;
+        let itemMenuLeft = $(this).offset().left + 40;
+        left = itemMenuLeft - topMenuLeft - 5;
+        setMenuSize($(this));
 
-      } else if (width < 1024 ) {
-        liLength = 2;
-        item.find('.nav__drop_main').css({
-          'column-count': liLength,
-        });
-      } else {
-        item.find('.nav__drop_main').css({
-          'column-count': liLength,
-        });
-      }
+      });
+      nav.on('mouseleave', function() {
+        $(this).removeClass('is-open');
+        $('.nav__drop_main').removeAttr('style');
+        $('.nav__in').removeAttr('style');
+      });
+    }
 
-      if (width < 960) {
+  }
+  setEvent();
+
+  function setMenuSize( item) {
+    let height = item.find('.nav__drop_main').innerHeight();
+    let liLength = item.find('.nav__drop_main > li').length;
+    let containerWidth = $('.header__inner').innerWidth();
+    width = $(window).width();
+
+    if (liLength > 1) {
+      if (item.find('.nav__drop_main').hasClass('is-big')) {
         item.find('.nav__in').css({
-          'width': '100%',
+          'left': -(left),
+          'width': containerWidth
         });
+
       } else {
-        item.find('.nav__in').css({
-          'width': 140 * liLength,
-        });
-
+        let inner = item.find('.nav__drop_main');
+        let innerWidth = inner.innerWidth();
+        let innerPosition = inner.offset().left;
+        let innerSum = innerPosition + innerWidth;
+        let distinction = 0;
+       
+        if (width < 960) {
+          item.find('.nav__in').css({
+            'width': '100%',
+          });
+        } else {
+          distinction = width - innerSum - 15;
+          if (innerSum >= width && innerWidth < width - 40 ) {
+            item.find('.nav__in').css({
+              'width': innerWidth + 5,
+              'left': distinction,
+              'white-space': 'normal'
+            });
+          }
+          else {
+            if (innerWidth >= width - 40 ) innerWidth = width - 40;
+            innerSum = innerPosition + innerWidth;
+            distinction = width - innerSum - 15;
+            if (distinction > 0 ) distinction = 0;
+            distinction = distinction;
+            console.log(innerWidth, width, distinction);
+            item.find('.nav__in').css({
+              'width': innerWidth + 5,
+              'left': distinction,
+              'white-space': 'normal'
+            });
+          }
+        }
       }
-
     }
   }
-}
-
-$(window).on('resize', function() {
-  if (!isTouch()) {
-    width = $(window).width();
-    nav.removeClass('is-open');
-    $('.nav__drop_main').removeAttr('style');
-    $('.nav__in').removeAttr('style');
-    setEvent();
-  }
+  let timeout;
+  $(window).on('resize', function() {
+    if (!isTouch()) {
+      timeout = setTimeout(() => {
+        width = $(window).width();
+        nav.removeClass('is-open');
+        $('.nav__drop_main').removeAttr('style');
+        $('.nav__in').removeAttr('style');
+        setEvent();
+      }, 100);
+      clearTimeout(timeout);
+    }
+  });
 });
+

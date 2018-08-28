@@ -44,8 +44,8 @@
                             items found
                         </div>
                     </div>
-                    <div class="filter__filter filter__filter--sm-right-centered">
-                        <div class="filter__select-wrapper filter__select-wrapper--left-centered">
+                    <div class="filter__filter">
+                        <div class="filter__select-wrapper filter__select-wrapper--left-centered sm-select-tooltip">
                             <a href="#" class="select-country-flag">
                                 <img class="js-selected-counry-flag" src="./assets/img/general/ru.png" alt="">
                             </a>
@@ -60,7 +60,7 @@
                                 {{mixins.icon('info')}}
                             </div>
                         </div>
-                        <div class="filter__select-wrapper">
+                        <div class="filter__select-wrapper sm-select-tooltip">
                             {# SELECT-2 #}
                             <div class="select-select">
                                 {{select_builder.sel(selects_set.sortingTypesSelect)}}

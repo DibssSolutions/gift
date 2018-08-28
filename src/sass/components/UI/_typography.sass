@@ -37,6 +37,20 @@
     +sm 
         font-size: 22px
 
+.title-middle-uppercase
+    font-family: $corp
+    font-size: 21px
+    font-weight: 800
+    letter-spacing: -0.02em
+    color: $title_dark
+    text-transform: uppercase
+    word-spacing: 0.1em
+    line-height: 1
+    // +md 
+    //     font-size: 28px
+    // +sm 
+    //     font-size: 26px
+
 .title-small
     font-family: $corp
     line-height: 1
@@ -47,11 +61,14 @@
     color: $text_black
 
 .title-thin
+    font-family: $corp
     font-size: 30px
     font-weight: 300
     text-transform: uppercase
     color: $title_dark
     letter-spacing: -0.05em
+    word-spacing: 0.1em
+    vertical-align: middle
     +sm 
         font-size: 22px
 
@@ -66,14 +83,30 @@
     text-align: left
     color: $dark_blue
     line-height: 1.22
-    &-link
-        text-decoration: underline
-        color: $text-link
     &--bold 
         color: $text_black
         font-weight: bold
     p
         margin-bottom: 16px
+
+.text-link,
+.text-link-green
+    position: relative
+    &:after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 1px
+        background-color: $text-link 
+
+.text-link
+    color: $text-link
+.text-link-green
+    color: $main-green
+    &:after
+        background-color: $main-green
 
 .subtitle
     font-family: $corp
@@ -115,3 +148,8 @@
         font-weight: 700
         +sm 
             font-size: 14px
+
+.roboto
+    +rob-r
+.roboto-light
+    +rob-l

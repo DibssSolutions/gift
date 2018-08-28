@@ -27,13 +27,15 @@
         justify-content: center
         align-items: flex-start
     +sm 
-        align-items: flex-start
+        align-items: center
+        width: 100%
     &__slider
         width: 207px
         +md
             order: -1
         +sm 
-            width: 200px        
+            // width: 200px    
+            width: calc(100% - 14px)
     &__numbers
         font-family: $corp
         font-size: 16px
@@ -45,6 +47,6 @@
         +md 
             text-align: center
             width: 232px
-            margin-top: 6px
+            margin-top: 10px
 
             

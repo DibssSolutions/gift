@@ -26,7 +26,7 @@
             <section class="nation__filter">
                 <!-- FILTERING AREA -->
                 {{toggle.filter_buttons()}}
-                <form action="/" class="filter  js-filter">
+                <form action="/" class="filter js-filter">
                     <div class="filter__text d-sm-none">
                         <div class="filter__breadcrumb">
                             {{breadcrumb.make([ {"class": "breadcrumb--colored breadcrumb--big"}, {"text": "Gift Baskets to USA", "link": "ui.html"},
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div class="filter__filter">
-                        <div class="filter__select-wrapper">
+                        <div class="filter__select-wrapper sm-select-tooltip">
                             <div class="select-image">
                                 <img src="./assets/img/general/globus-ico.png" alt="">
                             </div>
@@ -46,7 +46,7 @@
                                 {{mixins.icon('info')}}
                             </div>
                         </div>
-                        <div class="filter__select-wrapper">
+                        <div class="filter__select-wrapper sm-select-tooltip">
                             {# SELECT WITH TOOLTIP COMPONENT #}
                             <div class="select-select">
                                 {{select_builder.sel(selects_set.sortingTypesSelect)}}
