@@ -14,7 +14,16 @@
 {# MAIN LAYOUT #}
 {% extends "layouts/_layout.html" %}
 {% block content %}
+    {{header_gbo.header({
+        logo: {
+            description: 
+                {
+                    'text_top': 'Gift delivery to USA and internationally',
+                    'text_bottom': 'Gift baskets to Hawaii'
+                }
+            }
 
+    })}}
     <div class="basket-to-city">
         <div class="basket-to-city__container inner">
             {# BREADCRUMBS #}

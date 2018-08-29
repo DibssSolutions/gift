@@ -1,21 +1,19 @@
 {# --- title: Index page --- #}
 {# IMPORTING DATA COMPONENTS #}
-{% import "data/_cards.html" as cards_set %}
-{% import "data/_selects.html" as selects_set %}
-{# IMPORTING MIXINS #}
-{% import "partials/_mixins.html" as mixins %}
-{% import "components/_titles.html" as titles %}
-{% import "components/_cards.html" as cards_builder %}
-{% import "components/_select.html" as select_builder %}
-{% import "components/_filter.html" as filter %}
-{% import "components/_sm-toggle-buttons.html" as toggle %}
-{% import "components/_range.html" as range_input %}
-{% import "components/_dropdown-menu.html" as dd_menu %}
-{% import "components/_breadcrumb.html" as breadcrumb %}
+
 {# MAIN LAYOUT #}
 {% extends "layouts/_layout.html" %}
-
 {% block content %}
+    {{header_gbo.header({
+        logo: {
+            description: 
+                {
+                    'text_top': 'Gift delivery to USA and internationally',
+                    'text_bottom': 'Gift baskets to Hawaii'
+                }
+            }
+
+    })}}
     <div class="gift-catalog">
         <div class="gift-catalog__container inner">
             {# BREADCRUMBS #}
