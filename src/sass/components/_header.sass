@@ -600,9 +600,13 @@
         font-weight: 300
         color: $dark-blue
         float: left
+        width: 420px
+        +lg 
+          width: 345px
         .icon
           vertical-align: middle
           font-size: 25px
+          fill: $dark-blue
         .header__currency
           text-transform: uppercase
           text-decoration: underline
@@ -644,6 +648,8 @@
         flex: 0 0 50%
         text-align: center
         display: block
+        &--long 
+          flex: 0 0 440px
         img 
           max-width: 100%
           display: inline-block
@@ -699,10 +705,14 @@
         display: inline-block
     .lang
       margin-right: 100px
+      font-family: $corp
+      +lg 
+        margin-right: 10px
       +r(960)
         position: absolute
-        margin-right: 10px
         top: 12px
+    .lang__arr
+      background-image: url(../assets/img/general/arr_dark.png);
     .lang__link
       font-size: 17px
       span 
@@ -724,6 +734,9 @@
     .links__text
       color: $dark_blue
       margin-left: 10px
+    .links__dt
+      +r(960)
+        display: none
     .links__item_cont
       .links__pic
         background-image: url('../assets/img/general/contacts-gbo.png')
@@ -773,8 +786,9 @@
       .nav__list>li:hover .nav__link_mod:after,
       .nav__link_mod:after
         content: url('../assets/img/general/chevron-down-black.svg')
-      
+
     .header__country
+      font-family: $corp
       padding: 10px 10px 10px 70px
       max-width: 440px
       width: 100%
@@ -790,6 +804,7 @@
       +r(960)
         width: 100%
       input
+        font-family: $corp
         width: 260px
         font-size: 17px
         font-weight: 300
@@ -849,11 +864,23 @@
       height: 31px
       background-size: cover
     .search 
+      input
+        color: $text-link
+        font-family: $corp
+        +placeholder
+          color: inherit
       +lg 
         width: 100%
         text-align: left
       +r(960)
         background-color: $dark-green
+      .search__button
+        background-image: none
+        .icon
+          fill: $text-link
+          font-size: 24px
+          margin-top: -2px
+          margin-right: 2px
     .links__dropdown-list a
       color: #000
       font-size: 17px
@@ -864,3 +891,6 @@
       +sm 
         font-size: 17px
         color: $text-link
+
+.no-touch .header_main .nav__list>li:hover .nav__link_mod:after
+  content: url('../assets/img/general/chevron-down-black.svg')
