@@ -10,7 +10,7 @@ $(document).ready(function() {
     slider.owlCarousel({
       onInitialized: sliderVisible,
       loop: true,
-      dots: false,
+      // dots: false,
       smartSpeed: 500,
       margin: 0,
       lazyLoad:true,
@@ -33,13 +33,20 @@ $(document).ready(function() {
           items: 3,
           nav: false
         },
+        1023: {
+          items: 4,
+          nav: false,
+          dots: true
+        },
         1024: {
           items: 4,
-          nav: true
+          nav: true,
+          dots: false
         },
         1220: {
           items: 5,
-          nav: true
+          nav: true,
+          dots: false
         }
       }
     });

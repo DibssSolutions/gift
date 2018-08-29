@@ -8,6 +8,7 @@
 {% import "components/_cards.html" as cards_builder %}
 {% import "components/_select.html" as select_builder %}
 {% import "components/_filter.html" as filter %}
+{% import "components/_sm-toggle-buttons.html" as toggle %}
 {% import "components/_range.html" as range_input %}
 {% import "components/_dropdown-menu.html" as dd_menu %}
 {% import "components/_breadcrumb.html" as breadcrumb %}
@@ -37,7 +38,7 @@
         </div>
         <div class="gift-catalog__container special">
             <div class="gift-catalog__filter inner">
-                {% include "components/_sm-toggle-buttons.html" %}
+                {{toggle.filter_buttons()}}
                 {{filter.filter_3_selects_with_label_and_OR()}}
             </div>
         </div>
@@ -119,7 +120,7 @@
             </div>
         </div>
         <div class="gift-catalog__video-bottom inner">
-            <div class="video video-big">
+            <div class="video-big">
                 <iframe src="https://www.youtube.com/embed/n_GA_vQRu9c?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
             </div>
         </div>

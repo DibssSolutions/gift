@@ -6,6 +6,7 @@
 {% import "partials/_mixins.html" as mixins %}
 {% import "components/_titles.html" as titles %} 
 {% import "components/_cards.html" as cards_builder %} 
+{% import "components/_sm-toggle-buttons.html" as toggle %}
 {% import "components/_select.html" as select_builder %}
 {% import "components/_breadcrumb.html" as breadcrumb %} 
 {% import "components/_range.html" as range_input %} 
@@ -43,7 +44,7 @@
         <div class="gift-deliver-to__container inner">
             {# FILTERING AREA #}
             <div class="gift-deliver-to__filter">
-                {% include "components/_sm-toggle-buttons.html" %}
+                {{toggle.filter_buttons()}}
                 {{filter.filter_3_selects_with_label()}}
             </div>
         </div>

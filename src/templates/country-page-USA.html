@@ -6,64 +6,62 @@
 {% import "partials/_mixins.html" as mixins %}
 {% import "components/_titles.html" as titles %}
 {% import "components/_cards.html" as cards_builder %}
+{% import "components/_sm-toggle-buttons.html" as toggle %}
 {% import "components/_select.html" as select_builder %}
 {% import "components/_breadcrumb.html" as breadcrumb %}
 {% import "components/_range.html" as range_input %}
 {% import "components/_dropdown-menu.html" as dd_menu %}
 {# MAIN LAYOUT #}
 {% extends "layouts/_layout.html" %}
-
 {% block content %}
-
     {% include "components/_carousel.html" %}
 
     <div class="nation">
         <div class="nation__container inner">
             {# BREADCRUMBS #}
             <div class="nation__breadcrumbs">
-                {{breadcrumb.make([ {"class": "breadcrumb--no-underline"}, {"text": "Home", "link": "ui.html"}, {"text": "USA", "active": true} ]) }}
+                {{breadcrumb.make([ {"class": "breadcrumb--no-underline"}, {"text": "Home", "link": "ui.html"}, {"text": "USA", "active":
+            true} ]) }}
             </div>
+            <section class="nation__filter">
+                <!-- FILTERING AREA -->
+                {{toggle.filter_buttons()}}
+                <form action="/" class="filter js-filter">
+                    <div class="filter__text d-sm-none">
+                        <div class="filter__breadcrumb">
+                            {{breadcrumb.make([ {"class": "breadcrumb--colored breadcrumb--big"}, {"text": "Gift Baskets to USA", "link": "ui.html"},
+                        {"text": "Hawaii Hampers", "active": true} ]) }}
+                        </div>
+                    </div>
+                    <div class="filter__filter">
+                        <div class="filter__select-wrapper sm-select-tooltip">
+                            <div class="select-image">
+                                <img src="./assets/img/general/globus-ico.png" alt="">
+                            </div>
+                            <div class="select-select filter__select--long">
+                                {# SELECTOR-1 #}
+                                {{select_builder.sel(selects_set.citySelect)}}
+                            </div>
+                            <div class="select-tooltip js-tooltip" title="{{selects_set.tooltip}}">
+                                {{mixins.icon('info')}}
+                            </div>
+                        </div>
+                        <div class="filter__select-wrapper sm-select-tooltip">
+                            {# SELECT WITH TOOLTIP COMPONENT #}
+                            <div class="select-select">
+                                {{select_builder.sel(selects_set.sortingTypesSelect)}}
+                            </div>
+                            <div class="select-tooltip js-tooltip" title="{{selects_set.tooltip}}">
+                                {{mixins.icon('info')}}
+                            </div>
+                        </div>
+                        <div class="filter__range">
+                            {{range_input.range(0, 1000, 0, 1000)}}
+                        </div>
+                    </div>
 
-            <!-- FILTERING AREA -->
-            {% include "components/_sm-toggle-buttons.html" %}
-            <form action="/" class="filter nation__filter js-filter">
-                <div class="filter__text d-sm-none">
-                    <div class="filter__breadcrumb">
-                        {{breadcrumb.make([ 
-                        {"class": "breadcrumb--colored breadcrumb--big"}, 
-                        {"text": "Gift Baskets to USA", "link": "ui.html"},
-                        {"text": "Hawaii Hampers", "active": true} ]) 
-                    }}
-                    </div>
-                </div>
-                <div class="filter__filter">
-                    <div class="filter__select-wrapper">
-                        <div class="select-image">
-                            <img src="./assets/img/general/globus-ico.png" alt="">
-                        </div>
-                        <div class="select-select filter__select--long">
-                            {# SELECTOR-1 #}
-                            {{select_builder.sel(selects_set.citySelect)}}
-                        </div>
-                        <div class="select-tooltip js-tooltip" title="{{selects_set.tooltip}}">
-                            {{mixins.icon('info')}}
-                        </div>
-                    </div>
-                    <div class="filter__select-wrapper">
-                        {# SELECT WITH TOOLTIP COMPONENT #}
-                        <div class="select-select">
-                            {{select_builder.sel(selects_set.sortingTypesSelect)}}
-                        </div>
-                        <div class="select-tooltip js-tooltip" title="{{selects_set.tooltip}}">
-                            {{mixins.icon('info')}}
-                        </div>
-                    </div>
-                    <div class="filter__range">
-                        {{range_input.range(0, 1000, 0, 1000)}}
-                    </div>
-                </div>
-
-            </form>
+                </form>
+            </section>
             {# TITLE #}
             <main class="nation__main">
                 <div class="nation__main-title">

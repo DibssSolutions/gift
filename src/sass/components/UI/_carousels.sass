@@ -1,19 +1,17 @@
 .slider-wrapper
     max-width: 1000px
+    width: 100%
     margin: 0 auto
     border-left: 1px solid $card-border-color
     border-bottom: 1px solid $card-border-color
     margin-bottom: 40px
-    .card
-    //     width: auto
-    //     max-width: 250px
-        &__title
-            font-size: 16px
+    .card__title
+        font-size: 16px
+    +r(1200)
+        max-width: 900px
 .slider
     .owl-prev,
     .owl-next 
-        height: 48px
-        width: 48px
         position: absolute
         top: 50%
         transform: translateY(-50%)
@@ -23,10 +21,16 @@
             +colorTrans
             +hover
                 fill: $main-green
+            +r(1200)
+                font-size: 40px
     .owl-prev 
         left: -76px
+        +r(1200) 
+            left: -44px
     .owl-next 
         right: -76px
+        +r(1200) 
+            right: -44px
 
 
 
@@ -76,7 +80,8 @@
         +sm 
             font-size: 20px
 
-.carousel
+.carousel,
+.slider
     position: relative
     .owl-dots
         position: absolute
@@ -93,6 +98,8 @@
         margin: 0 4px
         &.active
             background-color: $main-green
+    
+.carousel
     .owl-next,
     .owl-prev 
         position: absolute

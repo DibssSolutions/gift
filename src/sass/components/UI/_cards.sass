@@ -43,7 +43,6 @@
 		background-size: contain
 		background-position: center
 		background-repeat: no-repeat
-		// +cover
 		position: relative
 		margin-bottom: 16px
 	&__freemark
@@ -95,6 +94,7 @@
 	  	color: $id-color-darker
 	&__divider
 		margin: 16px auto 16px
+		// @extend .divider-grey
 	&__button-link
 		display: inline-block
 		text-align: center
@@ -110,7 +110,7 @@
 			background-color: $dark-green
 			+colorTrans
 		&--thin
-			padding: 7px 26px
+			padding: 7px 20px
 	&__link
 		display: block
 		font-size: 22px
@@ -123,7 +123,7 @@
 		letter-spacing: -0.02em
 		text-decoration: underline
 
-.card__big
+.card.card__big
 	.card__bottom
 		padding: 0 48px
 		+md
@@ -135,18 +135,34 @@
 	.card__image
 		padding-bottom: 275px
 		margin-bottom: 24px
+		+md 
+			padding-bottom: 225px
 	.card__link
 		margin-top: 10px
 	.card__button-link
 		margin: 0
 
-.card__middle
+.card.card__middle
+	padding-top: 28px
 	.card__image
 		padding-bottom: 300px
+		+md 
+			padding-bottom: 225px
 	.card__bottom
 		padding: 0 12px
 	.card__title
 		padding: 0 12px
+
+.card.card__slider
+	padding: 2px 0 22px
+	+md 
+		padding: 2px 0 54px
+	.card__image
+		padding-bottom: 200px
+	.card__title
+		font-size: 20px
+		letter-spacing: -1px
+		padding: 0 18px 8px
 
 .card__minimal.card
 	padding: 14px 0 44px
@@ -182,14 +198,6 @@
 		line-height: normal
 		color: $blue
 
-.card__slider-small
-	.card__image
-		padding-bottom: 200px
-	.card__title
-		font-size: 20px
-		letter-spacing: -1px
-		padding: 18px
-	
 .cards
 	&.sm-one-column
 		+sm 
