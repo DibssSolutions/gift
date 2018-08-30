@@ -54,14 +54,5 @@ $(document).ready(function() {
     function sliderVisible() {
       $('.slider').css({ opacity: '1', visibility: 'visible' });
     }
-
-    slider.on('mousewheel', '.owl-stage', function(e) {
-      if (e.originalEvent.deltaY > 0) {
-        slider.trigger('next.owl');
-      } else {
-        slider.trigger('prev.owl');
-      }
-      e.preventDefault();
-    });
   }
 });
